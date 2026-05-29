@@ -320,7 +320,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 </nav>
 
 <!-- HOME -->
-<div class="page active" id="page-home">
+<div class="page" id="page-home">
   <section class="hero">
     <div class="circle-deco"></div>
     <div class="circle-deco-2"></div>
@@ -869,7 +869,21 @@ function showPage(id) {
   if (page) { page.classList.add('active'); window.scrollTo(0, 0); }
   const navEl = document.getElementById('nav-' + id);
   if (navEl) navEl.classList.add('active');
+  history.pushState(null, '', '#' + id);
 }
+
+// Carica la pagina giusta all'apertura del link
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = location.hash.replace('#', '');
+  if (hash) showPage(hash);
+  else showPage('home');
+});
+
+// Gestisce il tasto indietro/avanti del browser
+window.addEventListener('popstate', () => {
+  const hash = location.hash.replace('#', '');
+  showPage(hash || 'home');
+});
 
 // Invio AJAX per tutti i form Formspree
 document.addEventListener('submit', async function(e) {
