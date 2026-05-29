@@ -5,6 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Follucida Teatro — Paolo Frigo</title>
 <meta name="description" content="Laboratori teatrali di Paolo Frigo. Pratiche teatrali per il lavoro su di sé, per aziende e gruppi organizzati. Verona.">
+<meta name="keywords" content="laboratorio teatrale Verona, teatro sociale, formazione teatrale, lavoro su di sé, teatro aziende, Paolo Frigo, Follucida Teatro">
+<meta name="author" content="Paolo Frigo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://follucida-teatro-24v3.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://follucida-teatro-24v3.vercel.app/">
+<meta property="og:title" content="Follucida Teatro — Paolo Frigo">
+<meta property="og:description" content="Laboratori teatrali per il lavoro su di sé e per aziende. Verona.">
+<meta property="og:image" content="https://follucida-teatro-24v3.vercel.app/img/ritratto-01.jpg">
+<meta property="og:locale" content="it_IT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Follucida Teatro — Paolo Frigo">
+<meta name="twitter:description" content="Laboratori teatrali per il lavoro su di sé e per aziende. Verona.">
+<meta name="twitter:image" content="https://follucida-teatro-24v3.vercel.app/img/ritratto-01.jpg">
+
+<!-- Dati strutturati -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Paolo Frigo",
+  "jobTitle": "Formatore teatrale e Regista",
+  "url": "https://follucida-teatro-24v3.vercel.app/",
+  "image": "https://follucida-teatro-24v3.vercel.app/img/ritratto-01.jpg",
+  "email": "pao.frigo@gmail.com",
+  "telephone": "+393495122159",
+  "address": { "@type": "PostalAddress", "addressLocality": "Verona", "addressCountry": "IT" },
+  "sameAs": ["https://instagram.com/follucida", "https://t.me/FollucidaTeatri"]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -288,6 +323,118 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .info-block-value a:hover{color:var(--mauve)}
 .info-note{font-size:.88rem;line-height:1.75;color:var(--muted);padding:1.5rem;border:1.5px solid var(--sage-light);margin-top:2rem;font-style:italic;background:white}
 
+/* ======== HAMBURGER ======== */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--muted);transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ======== RESPONSIVE ======== */
+@media(max-width:768px){
+
+  /* Nav */
+  nav{padding:1rem 1.5rem;position:relative}
+  .hamburger{display:flex}
+  .nav-links{
+    display:none;flex-direction:column;gap:0;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--cream);border-bottom:3px solid #9EC0A2;
+    padding:1rem 1.5rem 1.5rem;z-index:200
+  }
+  .nav-links.open{display:flex}
+  .nav-links li{padding:.6rem 0;border-bottom:1px solid var(--line)}
+  .nav-links li:last-child{border-bottom:none}
+  .nav-links a{font-size:.85rem}
+
+  /* Sezioni */
+  .section{padding:2.5rem 1.5rem}
+  footer{padding:1.5rem;flex-direction:column;gap:1rem;text-align:center}
+
+  /* Hero home */
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{min-height:280px}
+  .hero-left{padding:3rem 1.5rem}
+  .circle-deco,.circle-deco-2{display:none}
+
+  /* Due percorsi */
+  .home-two-col{grid-template-columns:1fr}
+
+  /* Lab grid */
+  .lab-grid{grid-template-columns:1fr}
+
+  /* Quote */
+  .quote-section{padding:3rem 1.5rem;flex-direction:column;gap:1.5rem}
+  .quote-line{width:40px;height:4px}
+
+  /* Laboratori hero */
+  .labs-hero{padding:3rem 1.5rem}
+  .labs-cards{grid-template-columns:1fr;padding:1.5rem}
+
+  /* Io chi */
+  .io-hero{padding:3rem 1.5rem}
+  .outcomes-grid{grid-template-columns:1fr}
+  .info-grid-4{grid-template-columns:1fr 1fr}
+  .cta-warm{padding:3rem 1.5rem}
+
+  /* Pratiche */
+  .pratiche-hero{padding:3rem 1.5rem}
+  .pratiche-layout{grid-template-columns:1fr;gap:2rem}
+
+  /* Aziende */
+  .az-hero{padding:3rem 1.5rem}
+  .az-hero-circle{display:none}
+  .az-labs{grid-template-columns:1fr}
+  .az-lab-card+.az-lab-card{border-left:1.5px solid var(--line);border-top:none}
+  .az-two-col{grid-template-columns:1fr;gap:2rem}
+  .how-grid{grid-template-columns:1fr}
+  .how-item{padding:1.5rem 0;border-right:none;border-bottom:1px solid var(--line)}
+  .how-item:last-child{border-bottom:none}
+  .how-item:nth-child(2){padding-left:0}
+
+  /* La Stessa Strada */
+  .lss-hero{padding:3rem 1.5rem}
+  .lss-c1,.lss-c2,.lss-c3{display:none}
+
+  /* Dall'Altra Parte */
+  .dap-hero{grid-template-columns:1fr;min-height:auto}
+  .dap-left{padding:3rem 1.5rem}
+  .dap-right{padding:2.5rem 1.5rem}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .step{border-right:none;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+
+  /* Stare */
+  .stare-hero{padding:3rem 1.5rem}
+  .stare-layout{grid-template-columns:1fr;gap:2rem}
+  .stare-title{font-size:clamp(3.5rem,15vw,6rem)}
+  .timeline-steps{grid-template-columns:1fr 1fr}
+  .outcomes-3col{grid-template-columns:1fr}
+  .oc3{padding:1.5rem 0;border-right:none;border-bottom:1px solid var(--line-ink)}
+  .oc3:last-child{border-bottom:none;padding-left:0}
+  .oc3:nth-child(2){padding-left:0}
+  .info-grid-4-ink{grid-template-columns:1fr 1fr}
+  .igi{padding:1.25rem 0}
+  .igi:not(:first-child){padding-left:0}
+  .stare-cta{padding:3rem 1.5rem;flex-direction:column;gap:2rem;align-items:flex-start}
+
+  /* Chi sono */
+  .chi-hero{grid-template-columns:1fr;min-height:auto}
+  .chi-left{min-height:320px}
+  .chi-right{padding:2.5rem 1.5rem;border-left:none;border-top:3px solid #9EC0A2}
+  .formation-3{grid-template-columns:1fr}
+  .fi{padding:1.25rem 0;border-right:none;border-bottom:1px solid var(--line)}
+  .fi:last-child{border-bottom:none;padding-left:0}
+  .fi:nth-child(2){padding-left:0}
+  .foto-section{grid-template-columns:1fr}
+
+  /* Contatti */
+  .cont-hero{padding:3rem 1.5rem}
+  .cont-body{grid-template-columns:1fr}
+  .form-sec{padding:2.5rem 1.5rem;border-right:none;border-bottom:3px solid #9EC0A2}
+  .info-sec{padding:2.5rem 1.5rem}
+}
+
 /* ======== CAROSELLO ======== */
 .carousel{position:relative;width:100%;max-height:680px;overflow:hidden}
 .carousel-inner{display:flex;height:100%;transition:transform .7s ease}
@@ -311,11 +458,14 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 
 <nav>
   <div class="logo" onclick="showPage('home')">Follucida Teatro</div>
-  <ul class="nav-links">
-    <li><a onclick="showPage('laboratori')" id="nav-laboratori">Laboratori</a></li>
-    <li><a onclick="showPage('aziende')" id="nav-aziende">Per le aziende</a></li>
-    <li><a onclick="showPage('chi-sono')" id="nav-chi-sono">Paolo Frigo</a></li>
-    <li><a onclick="showPage('contatti')" id="nav-contatti">Contatti</a></li>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a onclick="showPage('laboratori');closeMenu()" id="nav-laboratori">Laboratori</a></li>
+    <li><a onclick="showPage('aziende');closeMenu()" id="nav-aziende">Per le aziende</a></li>
+    <li><a onclick="showPage('chi-sono');closeMenu()" id="nav-chi-sono">Paolo Frigo</a></li>
+    <li><a onclick="showPage('contatti');closeMenu()" id="nav-contatti">Contatti</a></li>
   </ul>
 </nav>
 
@@ -870,6 +1020,16 @@ function showPage(id) {
   const navEl = document.getElementById('nav-' + id);
   if (navEl) navEl.classList.add('active');
   history.pushState(null, '', '#' + id);
+}
+
+// Hamburger menu
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('nav-links').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
 }
 
 // Carica la pagina giusta all'apertura del link
