@@ -871,6 +871,39 @@ function showPage(id) {
   if (navEl) navEl.classList.add('active');
 }
 
+// Invio AJAX per tutti i form Formspree
+document.addEventListener('submit', async function(e) {
+  const form = e.target;
+  if (!form.action.includes('formspree.io')) return;
+  e.preventDefault();
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = 'Invio in corso...';
+  btn.disabled = true;
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.innerHTML = `
+        <div style="padding:2rem 0;text-align:center">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--sage-dark);margin-bottom:.75rem">Messaggio inviato.</p>
+          <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Grazie — ti rispondo entro 48 ore.</p>
+        </div>`;
+    } else {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      alert('Qualcosa è andato storto. Riprova o scrivimi direttamente a pao.frigo@gmail.com');
+    }
+  } catch {
+    btn.textContent = originalText;
+    btn.disabled = false;
+    alert('Errore di connessione. Riprova o scrivimi direttamente a pao.frigo@gmail.com');
+  }
+});
+
 // Caroselli ritratto (home + chi sono)
 const ritrattoCfg = [
   { id: 'carousel-ritratto', total: 2 },
