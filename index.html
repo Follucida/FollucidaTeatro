@@ -287,6 +287,24 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .info-block-value a{color:var(--sage-dark);text-decoration:none}
 .info-block-value a:hover{color:var(--mauve)}
 .info-note{font-size:.88rem;line-height:1.75;color:var(--muted);padding:1.5rem;border:1.5px solid var(--sage-light);margin-top:2rem;font-style:italic;background:white}
+
+/* ======== CAROSELLO ======== */
+.carousel{position:relative;width:100%;height:100%;overflow:hidden}
+.carousel-inner{display:flex;height:100%;transition:transform .7s ease}
+.carousel-slide{min-width:100%;height:100%;flex-shrink:0}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.carousel-dots{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:3}
+.carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:background .3s}
+.carousel-dot.active{background:#fff}
+
+/* carosello laboratori */
+.labs-carousel-wrap{position:relative;overflow:hidden;border-bottom:3px solid #9EC0A2}
+.labs-carousel-inner{display:flex;transition:transform .7s ease}
+.labs-carousel-slide{min-width:100%}
+.labs-carousel-slide img{width:100%;max-height:520px;object-fit:cover;display:block}
+.labs-carousel-dots{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:3}
+.labs-carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:background .3s}
+.labs-carousel-dot.active{background:#fff}
 </style>
 </head>
 <body>
@@ -314,8 +332,15 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
       <span class="hero-cta" onclick="showPage('laboratori')">Scopri i laboratori →</span>
     </div>
     <div class="hero-right">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--bg-warm),var(--bg-soft));display:flex;align-items:center;justify-content:center">
-        <p style="font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500">[foto Paolo Frigo]</p>
+      <div class="carousel" id="carousel-ritratto">
+        <div class="carousel-inner">
+          <div class="carousel-slide"><img src="img/ritratto-01.jpg" alt="Paolo Frigo"></div>
+          <div class="carousel-slide"><img src="img/ritratto-02.jpg" alt="Paolo Frigo"></div>
+        </div>
+        <div class="carousel-dots">
+          <div class="carousel-dot active" onclick="goTo('carousel-ritratto',0)"></div>
+          <div class="carousel-dot" onclick="goTo('carousel-ritratto',1)"></div>
+        </div>
       </div>
       <div class="circle-solid"></div>
     </div>
@@ -386,6 +411,24 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
     <h1 class="labs-hero-title">Esperienze teatrali<br>per <em>conoscerti</em><br>più a fondo.</h1>
     <p style="font-size:1rem;line-height:1.85;color:var(--muted);max-width:500px;margin-top:1.5rem">Non serve esperienza teatrale. Serve voglia di osservarsi, di mettersi in gioco, di andare a fondo.</p>
   </section>
+  <div class="labs-carousel-wrap" id="carousel-labs">
+    <div class="labs-carousel-inner">
+      <div class="labs-carousel-slide"><img src="img/rimini-01.jpg" alt="Laboratorio"></div>
+      <div class="labs-carousel-slide"><img src="img/rimini-02.jpg" alt="Laboratorio"></div>
+      <div class="labs-carousel-slide"><img src="img/rimini-03.jpg" alt="Laboratorio"></div>
+      <div class="labs-carousel-slide"><img src="img/pratiche-01.jpg" alt="Pratiche teatrali"></div>
+      <div class="labs-carousel-slide"><img src="img/pratiche-02.jpg" alt="Pratiche teatrali"></div>
+      <div class="labs-carousel-slide"><img src="img/iochi-01.jpg" alt="Io... chi?"></div>
+    </div>
+    <div class="labs-carousel-dots">
+      <div class="labs-carousel-dot active" onclick="labsGoTo(0)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo(1)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo(2)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo(3)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo(4)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo(5)"></div>
+    </div>
+  </div>
   <div class="labs-cards">
     <div class="lab-full-card" onclick="showPage('io-chi')">
       <span class="lfc-tag">Laboratorio di una giornata &nbsp;·&nbsp; Percorso</span>
@@ -709,8 +752,15 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 <div class="page" id="page-chi-sono">
   <section class="chi-hero">
     <div class="chi-left">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--bg-warm),var(--bg-soft));display:flex;align-items:center;justify-content:center">
-        <p style="font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500">[foto Paolo Frigo]</p>
+      <div class="carousel" id="carousel-ritratto-chi">
+        <div class="carousel-inner">
+          <div class="carousel-slide"><img src="img/ritratto-01.jpg" alt="Paolo Frigo"></div>
+          <div class="carousel-slide"><img src="img/ritratto-02.jpg" alt="Paolo Frigo"></div>
+        </div>
+        <div class="carousel-dots">
+          <div class="carousel-dot active" onclick="goTo('carousel-ritratto-chi',0)"></div>
+          <div class="carousel-dot" onclick="goTo('carousel-ritratto-chi',1)"></div>
+        </div>
       </div>
       <div class="chi-circle"></div>
       <div class="chi-circle-2"></div>
@@ -802,6 +852,44 @@ function showPage(id) {
   const navEl = document.getElementById('nav-' + id);
   if (navEl) navEl.classList.add('active');
 }
+
+// Caroselli ritratto (home + chi sono)
+const ritrattoCfg = [
+  { id: 'carousel-ritratto', total: 2 },
+  { id: 'carousel-ritratto-chi', total: 2 }
+];
+const ritrattoIdx = {};
+ritrattoCfg.forEach(cfg => { ritrattoIdx[cfg.id] = 0; });
+
+function goTo(id, idx) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const cfg = ritrattoCfg.find(c => c.id === id);
+  ritrattoIdx[id] = idx;
+  el.querySelector('.carousel-inner').style.transform = `translateX(-${idx * 100}%)`;
+  el.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
+ritrattoCfg.forEach(cfg => {
+  setInterval(() => {
+    const next = (ritrattoIdx[cfg.id] + 1) % cfg.total;
+    goTo(cfg.id, next);
+  }, 4000);
+});
+
+// Carosello laboratori
+let labsIdx = 0;
+const labsTotal = 6;
+
+function labsGoTo(idx) {
+  labsIdx = idx;
+  const el = document.getElementById('carousel-labs');
+  if (!el) return;
+  el.querySelector('.labs-carousel-inner').style.transform = `translateX(-${idx * 100}%)`;
+  el.querySelectorAll('.labs-carousel-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
+setInterval(() => { labsGoTo((labsIdx + 1) % labsTotal); }, 3500);
 </script>
 
 </body>
