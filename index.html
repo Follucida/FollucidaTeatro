@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Follucida Teatro — Paolo Frigo</title>
+<meta name="description" content="Laboratori teatrali di Paolo Frigo. Pratiche teatrali per il lavoro su di sé, per aziende e gruppi organizzati. Verona.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#F8F4F1;
+  --bg-soft:#F0E8EC;
+  --bg-warm:#EDE0D8;
+  --ink:#1A1520;
+  --muted:#4A3F48;
+  --mauve:#8C6070;
+  --mauve-dark:#5C3A48;
+  --sage:#6A9470;
+  --sage-light:#9EC0A2;
+  --sage-pale:#DFF0E2;
+  --sage-dark:#4A7050;
+  --rose:#D4A0B0;
+  --rose-pale:#F0DDE5;
+  --rose-deep:#B86878;
+  --tension:#3D2A35;
+  --line:rgba(140,96,112,0.18);
+  --line-ink:rgba(26,21,32,0.12);
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;min-height:100vh;font-size:16px;line-height:1.7}
+.page{display:none}
+.page.active{display:block}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;border-bottom:3px solid #9EC0A2;position:sticky;top:0;background:var(--cream);z-index:100}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mauve);cursor:pointer;font-weight:600}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;cursor:pointer;transition:color .2s;font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:var(--sage-dark)}
+
+/* SHARED */
+.section{padding:4rem 3rem;border-bottom:3px solid #9EC0A2}
+.section-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2.5rem;display:flex;align-items:center;gap:.85rem;font-weight:600}
+.section-label::before{content:'';width:1.3rem;height:1.3rem;border-radius:50%;background:var(--sage-dark);display:block;flex-shrink:0}
+.lead{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;line-height:1.55;color:var(--mauve);font-style:italic;max-width:640px;margin-bottom:2rem}
+.body-text{font-size:.97rem;line-height:1.85;color:var(--muted);max-width:620px;font-weight:400}
+.back-link{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);cursor:pointer;text-decoration:none;font-weight:500}
+.back-link:hover{color:var(--sage-dark)}
+footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--mauve);background:var(--mauve)}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);font-weight:600}
+
+/* ======== HOME ======== */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:85vh;border-bottom:3px solid #9EC0A2;position:relative;overflow:hidden}
+.circle-deco{position:absolute;width:420px;height:420px;border-radius:50%;border:1.5px solid rgba(106,148,112,0.25);top:-80px;left:-120px;pointer-events:none;z-index:0}
+.circle-deco-2{position:absolute;width:200px;height:200px;border-radius:50%;border:1px solid rgba(106,148,112,0.15);bottom:60px;left:200px;pointer-events:none;z-index:0}
+.hero-left{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line);position:relative;z-index:1}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2.5rem;font-weight:600}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.2rem);font-weight:500;line-height:1.08;margin-bottom:2rem;color:var(--ink)}
+.hero-title em{font-style:italic;color:var(--mauve)}
+.hero-divider{width:3.5rem;height:3px;background:var(--sage);margin-bottom:2rem}
+.hero-sub{font-size:1rem;line-height:1.85;color:var(--muted);max-width:28rem;margin-bottom:3rem;font-weight:400}
+.hero-cta{display:inline-flex;align-items:center;gap:.75rem;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:.25rem;width:fit-content;cursor:pointer;font-weight:600}
+.hero-right{position:relative;overflow:hidden;background:var(--bg-soft)}
+.circle-solid{position:absolute;width:120px;height:120px;border-radius:50%;background:var(--sage-dark);bottom:3rem;left:-3rem;z-index:2;opacity:.7}
+
+.home-two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.path-card{padding:2.5rem;border:1.5px solid var(--line);background:transparent;transition:background .2s,border-color .2s;cursor:pointer;position:relative;overflow:hidden}
+.path-card::after{content:'';position:absolute;bottom:-30px;right:-30px;width:80px;height:80px;border-radius:50%;border:1.5px solid var(--sage-light);transition:transform .3s}
+.path-card:hover{background:var(--sage-pale);border-color:var(--sage-light)}
+.path-card:hover::after{transform:scale(1.4)}
+.path-title{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:500;margin-bottom:.75rem;color:var(--mauve)}
+.path-desc{font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:1.5rem}
+.path-link{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;font-weight:600}
+
+.lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.lab-card{border:1.5px solid var(--line);padding:1.75rem;cursor:pointer;transition:background .2s,border-color .2s}
+.lab-card:hover{background:var(--sage-pale);border-color:var(--sage-light)}
+.lab-tag{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:1rem;display:block;font-weight:600}
+.lab-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;margin-bottom:.5rem;line-height:1.2;color:var(--ink)}
+.lab-info{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+.lab-date{font-size:.75rem;letter-spacing:.1em;color:var(--sage-dark);background:var(--sage-pale);padding:.35rem .8rem;display:inline-block;font-weight:500}
+
+.quote-section{padding:5rem 3rem;background:var(--rose-pale);border-top:2px solid var(--rose-pale);border-bottom:2px solid var(--rose-pale);display:flex;gap:3rem;align-items:center}
+.quote-line{width:4px;height:130px;background:var(--sage-dark);flex-shrink:0}
+.quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:500;font-style:italic;color:var(--mauve);line-height:1.55}
+.quote-author{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-top:1.25rem;font-weight:600}
+
+/* ======== LABORATORI ======== */
+.labs-hero{padding:5rem 3rem;border-bottom:3px solid #9EC0A2;position:relative;overflow:hidden}
+.labs-hero-circle{position:absolute;width:500px;height:500px;border-radius:50%;border:1px solid rgba(106,148,112,0.2);top:-200px;right:-150px}
+.labs-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;line-height:1.08;color:var(--ink);max-width:600px;margin-bottom:1.5rem}
+.labs-hero-title em{font-style:italic;color:var(--mauve)}
+
+.labs-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;padding:3rem}
+.lab-full-card{border:1.5px solid var(--line);padding:2.5rem;cursor:pointer;transition:background .2s,border-color .2s;position:relative;overflow:hidden}
+.lab-full-card:hover{background:var(--sage-pale);border-color:var(--sage-light)}
+.lab-full-card .lfc-tag{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:1rem;display:block;font-weight:600}
+.lab-full-card .lfc-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;margin-bottom:.75rem;color:var(--ink)}
+.lab-full-card .lfc-desc{font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:1.5rem}
+.lab-full-card .lfc-date{font-size:.75rem;letter-spacing:.1em;color:var(--sage-dark);margin-bottom:1.5rem;display:block;font-weight:500}
+.lab-full-card .lfc-link{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;border-bottom:1.5px solid var(--sage);padding-bottom:.2rem;font-weight:600}
+
+/* ======== IO CHI ======== */
+.io-hero{background:var(--bg-soft);padding:6rem 3rem;position:relative;overflow:hidden;border-bottom:3px solid #9EC0A2}
+.io-hero-c1{position:absolute;width:500px;height:500px;border-radius:50%;border:1.5px solid rgba(212,160,176,0.25);top:-150px;right:-150px}
+.io-hero-c2{position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(212,160,176,0.15);top:-50px;right:50px}
+.io-hero-c3{position:absolute;width:150px;height:150px;border-radius:50%;background:rgba(106,148,112,0.15);bottom:2rem;left:2rem}
+.io-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,4.8rem);font-weight:500;line-height:1.02;margin-bottom:1.5rem;max-width:700px}
+.io-title em{font-style:italic;color:var(--mauve)}
+.io-sub{font-size:1.02rem;line-height:1.85;color:var(--muted);max-width:540px;margin-bottom:2.5rem}
+.btn-primary{display:inline-flex;align-items:center;gap:.75rem;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:.3rem;cursor:pointer;font-weight:600}
+
+.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.outcome-card{background:var(--sage-pale);padding:1.75rem;border-left:3px solid var(--sage)}
+.outcome-card strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--sage-dark);margin-bottom:.6rem}
+.outcome-card p{font-size:.9rem;line-height:1.75;color:var(--muted)}
+
+.info-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem}
+.info-item .il{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.5rem;font-weight:600}
+.info-item .iv{font-size:.95rem;color:var(--ink);font-weight:500}
+
+.cta-warm{padding:5rem 3rem;background:var(--sage-pale);text-align:center;border-top:2px solid var(--sage-light)}
+.cta-warm-title{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:500;color:var(--sage-dark);margin-bottom:1rem;font-style:italic}
+.cta-warm-sub{font-size:.97rem;color:var(--muted);margin-bottom:2.5rem;line-height:1.8}
+.btn-mauve{display:inline-block;padding:.9rem 2.75rem;background:var(--mauve);color:#fff;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+.btn-sage-solid{display:inline-block;padding:.9rem 2.75rem;background:var(--sage-dark);color:#fff;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+
+/* ======== PRATICHE ======== */
+.pratiche-hero{padding:7rem 3rem 6rem;border-bottom:3px solid var(--sage);position:relative}
+.pratiche-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end}
+.pratiche-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,4.8rem);font-weight:500;line-height:.95;color:var(--ink)}
+.pratiche-title em{font-style:italic;color:var(--mauve)}
+
+/* ======== AZIENDE ======== */
+.az-hero{padding:6rem 3rem;border-bottom:3px solid #9EC0A2;position:relative;overflow:hidden}
+.az-hero-circle{position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(106,148,112,0.2);top:-200px;right:-200px}
+.az-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;line-height:1.08;color:var(--ink);max-width:700px;margin-bottom:2rem}
+.az-title em{font-style:italic;color:var(--mauve)}
+.az-divider{width:3rem;height:3px;background:var(--sage);margin-bottom:2rem}
+.az-sub{font-size:1rem;line-height:1.85;color:var(--muted);max-width:580px;margin-bottom:1rem}
+.az-note{font-size:.88rem;line-height:1.75;color:var(--sage-dark);max-width:500px;font-style:italic;font-weight:500}
+
+.az-labs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2rem}
+.az-lab-card{border:1.5px solid var(--line);padding:2.5rem 2rem;cursor:pointer;transition:background .2s,border-color .2s;position:relative;overflow:hidden}
+.az-lab-card:hover{background:var(--sage-pale);border-color:var(--sage-light)}
+.az-lab-card+.az-lab-card{border-left:none}
+.az-accent{width:2.5rem;height:3px;margin-bottom:1.5rem}
+.az-lab-tag{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;display:block;font-weight:600}
+.az-lab-name{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;margin-bottom:.75rem;line-height:1.08;color:var(--ink)}
+.az-lab-sub{font-size:.88rem;color:var(--muted);margin-bottom:1.25rem;font-style:italic;font-weight:400}
+.az-lab-desc{font-size:.9rem;line-height:1.75;color:var(--muted);margin-bottom:2rem}
+.az-lab-link{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;border-bottom:1.5px solid var(--sage);padding-bottom:.2rem;font-weight:600}
+
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:3px solid #9EC0A2;margin-top:2rem}
+.how-item{padding:2rem 2rem 2rem 0;border-right:1px solid var(--line)}
+.how-item:last-child{border-right:none;padding-left:2rem}
+.how-item:nth-child(2){padding-left:2rem}
+.how-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--sage-light);line-height:1;margin-bottom:.75rem}
+.how-title{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:.5rem;font-weight:600}
+.how-desc{font-size:.9rem;line-height:1.75;color:var(--muted)}
+
+.az-two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+
+/* ======== LA STESSA STRADA ======== */
+.lss-hero{background:var(--bg-soft);padding:6rem 3rem;position:relative;overflow:hidden;border-bottom:3px solid #9EC0A2}
+.lss-c1{position:absolute;width:500px;height:500px;border-radius:50%;border:1.5px solid rgba(212,160,176,0.25);top:-150px;right:-150px}
+.lss-c2{position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(212,160,176,0.15);top:-50px;right:50px}
+.lss-c3{position:absolute;width:150px;height:150px;border-radius:50%;background:rgba(106,148,112,0.12);bottom:2rem;left:2rem}
+
+/* ======== DALL'ALTRA PARTE ======== */
+.dap-hero{display:grid;grid-template-columns:1fr 1fr;min-height:60vh;border-bottom:3px solid #9EC0A2;overflow:hidden}
+.dap-left{background:var(--tension);padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.dap-left::after{content:'';position:absolute;top:0;right:0;width:2px;height:100%;background:var(--sage);opacity:.5}
+.d1{position:absolute;top:20%;left:-10%;width:140%;height:1px;background:rgba(106,148,112,0.2);transform:rotate(-8deg)}
+.d2{position:absolute;top:45%;left:-10%;width:140%;height:0.5px;background:rgba(106,148,112,0.15);transform:rotate(-8deg)}
+.d3{position:absolute;top:70%;left:-10%;width:140%;height:1px;background:rgba(106,148,112,0.2);transform:rotate(-8deg)}
+.dap-right{background:var(--cream);padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.dap-title-dark{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,4.4rem);font-weight:500;line-height:1.02;color:var(--cream);position:relative;z-index:1}
+.dap-title-dark em{font-style:italic;color:var(--sage-light)}
+.dap-tag{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-light);margin-bottom:2rem;display:block;position:relative;z-index:1;font-weight:600}
+
+.conflict-layout{display:grid;grid-template-columns:4px 1fr;gap:2.5rem;align-items:start}
+.conflict-line{background:var(--sage-dark);height:100%;min-height:120px}
+
+.steps-line{width:100%;height:2px;background:linear-gradient(to right,var(--sage-dark),transparent);margin-bottom:2rem}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+.step{padding:1.75rem;border-right:1px solid var(--line)}
+.step:last-child{border-right:none}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;color:var(--sage-light);line-height:1;margin-bottom:.75rem}
+.step-title{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.5rem;font-weight:600}
+.step-desc{font-size:.88rem;line-height:1.75;color:var(--muted)}
+
+.outcomes-list .outcome{display:flex;gap:1.5rem;padding:1.4rem 0;border-bottom:3px solid #9EC0A2;align-items:start}
+.outcomes-list .outcome:last-child{border-bottom:none}
+.outcome-dash{width:1.75rem;height:2px;background:var(--sage-dark);flex-shrink:0;margin-top:.75rem}
+.outcome-text{font-size:.92rem;line-height:1.75;color:var(--muted)}
+.outcome-text strong{font-weight:600;color:var(--ink);display:block;margin-bottom:.25rem}
+
+.dap-cta{padding:5rem 3rem;background:var(--tension);position:relative;overflow:hidden}
+.dap-cta-diag{position:absolute;top:30%;left:-5%;width:110%;height:1px;background:rgba(106,148,112,0.2);transform:rotate(-3deg)}
+.dap-cta-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--cream);margin-bottom:1rem;font-style:italic;position:relative;z-index:1}
+.dap-cta-sub{font-size:.92rem;color:rgba(245,240,232,.65);margin-bottom:2.5rem;line-height:1.8;position:relative;z-index:1}
+.btn-sage-outline{display:inline-block;padding:.9rem 2.75rem;border:2px solid var(--sage-light);color:var(--sage-light);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;z-index:1;font-weight:600}
+
+/* ======== STARE ======== */
+.stare-hero{padding:7rem 3rem 6rem;border-bottom:3px solid var(--ink);position:relative}
+.stare-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end}
+.stare-title{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,10vw,8rem);font-weight:500;line-height:.92;color:var(--ink);letter-spacing:-.02em}
+
+.timeline-line{width:100%;height:2px;background:var(--ink);margin-bottom:2rem}
+.timeline-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:2rem}
+.ts{padding-right:1.5rem}
+.ts-dot{width:10px;height:10px;border-radius:50%;background:var(--ink);margin-bottom:1rem}
+.ts-label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:.5rem;font-weight:600}
+.ts-desc{font-size:.85rem;line-height:1.7;color:var(--muted)}
+
+.outcomes-3col{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);margin-top:2rem}
+.oc3{padding:2rem 2rem 2rem 0;border-right:1px solid var(--line-ink)}
+.oc3:last-child{border-right:none;padding-left:2rem}
+.oc3:nth-child(2){padding-left:2rem}
+.oc3-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:400;color:rgba(26,21,32,.1);line-height:1;margin-bottom:.75rem}
+.oc3-title{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:.5rem;font-weight:600}
+.oc3-desc{font-size:.9rem;line-height:1.75;color:var(--muted)}
+
+.info-grid-4-ink{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid rgba(26,21,32,.2);margin-top:2rem}
+.igi{padding:1.75rem 0;border-right:1px solid var(--line-ink)}
+.igi:last-child{border-right:none;padding-left:0}
+.igi:not(:first-child){padding-left:2rem}
+.igi .il{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;font-weight:600}
+.igi .iv{font-size:1rem;color:var(--ink);font-weight:500}
+
+.stare-cta{padding:6rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:3px solid var(--ink)}
+.stare-cta-title{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:500;color:var(--ink);max-width:500px;line-height:1.25}
+.btn-ink{display:inline-block;padding:.9rem 2.75rem;background:var(--ink);color:#fff;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;white-space:nowrap;cursor:pointer;border:none;font-weight:600}
+
+/* ======== CHI SONO ======== */
+.chi-hero{display:grid;grid-template-columns:1fr 1fr;min-height:80vh;border-bottom:3px solid #9EC0A2}
+.chi-left{position:relative;overflow:hidden;background:var(--bg-soft);min-height:500px;display:flex;align-items:center;justify-content:center}
+.chi-circle{position:absolute;width:100px;height:100px;border-radius:50%;border:2px solid var(--sage-light);top:3rem;left:3rem;opacity:.6;z-index:1}
+.chi-circle-2{position:absolute;width:55px;height:55px;border-radius:50%;background:var(--sage);bottom:4rem;right:3rem;opacity:.3;z-index:1}
+.chi-right{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line)}
+.chi-tag{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2rem;display:block;font-weight:600}
+.chi-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,3.6rem);font-weight:500;line-height:1.02;margin-bottom:.5rem;color:var(--ink)}
+.chi-role{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--mauve);margin-bottom:2.5rem;font-weight:500}
+.chi-divider{width:2.5rem;height:3px;background:var(--sage);margin-bottom:2.5rem}
+.chi-bio{font-size:.97rem;line-height:1.85;color:var(--muted);max-width:420px}
+.chi-bio+.chi-bio{margin-top:1.25rem}
+
+.formation-3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2rem;border-top:3px solid #9EC0A2}
+.fi{padding:2rem 2rem 2rem 0;border-right:1px solid var(--line)}
+.fi:last-child{border-right:none;padding-left:2rem}
+.fi:nth-child(2){padding-left:2rem}
+.fi .fl{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.5rem;font-weight:600}
+.fi .fv{font-size:.95rem;color:var(--ink);line-height:1.6;font-weight:500}
+
+.foto-section{display:grid;grid-template-columns:2fr 1fr;border-bottom:3px solid #9EC0A2}
+.foto-main{overflow:hidden;min-height:300px;background:var(--bg-warm);display:flex;align-items:center;justify-content:center}
+.foto-main img{width:100%;height:100%;object-fit:cover;display:block}
+.foto-side{padding:3rem 2.5rem;background:var(--sage-pale);display:flex;flex-direction:column;justify-content:center;border-left:3px solid var(--sage)}
+.foto-quote{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;font-style:italic;color:var(--sage-dark);line-height:1.6;margin-bottom:1.5rem}
+.foto-caption{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+/* ======== CONTATTI ======== */
+.cont-hero{padding:6rem 3rem;border-bottom:3px solid #9EC0A2;position:relative;overflow:hidden;background:var(--mauve)}
+.cont-c1{position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(158,192,162,0.25);top:-100px;right:-100px}
+.cont-c2{position:absolute;width:200px;height:200px;border-radius:50%;border:1px solid rgba(158,192,162,0.15);bottom:2rem;left:3rem}
+.cont-tag{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-light);margin-bottom:2rem;display:block;font-weight:600}
+.cont-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;line-height:1.08;color:var(--cream);max-width:600px;margin-bottom:1.5rem}
+.cont-title em{font-style:italic;color:var(--sage-light)}
+.cont-sub{font-size:.97rem;line-height:1.85;color:rgba(245,240,232,.75);max-width:480px}
+
+.cont-body{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid #9EC0A2}
+.form-sec{padding:4rem 3rem;border-right:1px solid var(--line)}
+.form-group{margin-bottom:2rem}
+.form-label-t{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.6rem;display:block;font-weight:600}
+.form-input{width:100%;padding:.85rem 0;border:none;border-bottom:2px solid var(--line);background:transparent;font-family:'Jost',sans-serif;font-size:.97rem;color:var(--ink);font-weight:400;outline:none;transition:border-color .2s}
+.form-input:focus{border-bottom-color:var(--sage)}
+.form-textarea{width:100%;padding:.85rem 0;border:none;border-bottom:2px solid var(--line);background:transparent;font-family:'Jost',sans-serif;font-size:.97rem;color:var(--ink);font-weight:400;outline:none;resize:none;height:130px;transition:border-color .2s}
+.form-textarea:focus{border-bottom-color:var(--sage)}
+.form-select{width:100%;padding:.85rem 0;border:none;border-bottom:2px solid var(--line);background:transparent;font-family:'Jost',sans-serif;font-size:.97rem;color:var(--ink);font-weight:400;outline:none;appearance:none;cursor:pointer}
+
+.info-sec{padding:4rem 3rem;background:var(--sage-pale)}
+.info-block{margin-bottom:2.5rem}
+.info-block-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;font-weight:600}
+.info-block-value{font-size:1rem;color:var(--ink);line-height:1.7;font-weight:500}
+.info-block-value a{color:var(--sage-dark);text-decoration:none}
+.info-block-value a:hover{color:var(--mauve)}
+.info-note{font-size:.88rem;line-height:1.75;color:var(--muted);padding:1.5rem;border:1.5px solid var(--sage-light);margin-top:2rem;font-style:italic;background:white}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo" onclick="showPage('home')">Follucida Teatro</div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('laboratori')" id="nav-laboratori">Laboratori</a></li>
+    <li><a onclick="showPage('aziende')" id="nav-aziende">Per le aziende</a></li>
+    <li><a onclick="showPage('chi-sono')" id="nav-chi-sono">Chi sono</a></li>
+    <li><a onclick="showPage('contatti')" id="nav-contatti">Contatti</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="circle-deco"></div>
+    <div class="circle-deco-2"></div>
+    <div class="hero-left">
+      <p class="hero-eyebrow">Paolo Frigo &nbsp;·&nbsp; Formatore teatrale</p>
+      <h1 class="hero-title">Uso il teatro<br>come <em>specchio.</em><br>Per conoscerti,<br>sceglierti.</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Attraverso pratiche teatrali e l'esperienza nel corpo, lavoriamo insieme per prendere in mano la propria vita e affrontare le proprie sfide con presenza e consapevolezza.</p>
+      <span class="hero-cta" onclick="showPage('laboratori')">Scopri i laboratori →</span>
+    </div>
+    <div class="hero-right">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--bg-warm),var(--bg-soft));display:flex;align-items:center;justify-content:center">
+        <p style="font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500">[foto Paolo Frigo]</p>
+      </div>
+      <div class="circle-solid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Due percorsi</p>
+    <div class="home-two-col">
+      <div class="path-card" onclick="showPage('laboratori')">
+        <p class="path-title">Per chi vuole<br>conoscersi più a fondo</p>
+        <p class="path-desc">Laboratori aperti a chiunque voglia usare il teatro come strumento di indagine interiore. Non serve esperienza — serve voglia di andare a fondo.</p>
+        <span class="path-link">Vedi i laboratori →</span>
+      </div>
+      <div class="path-card" onclick="showPage('aziende')">
+        <p class="path-title">Per aziende<br>e gruppi organizzati</p>
+        <p class="path-desc">Laboratori su relazioni, comunicazione e presenza per team di lavoro. Il teatro come spazio concreto dove le persone si incontrano davvero.</p>
+        <span class="path-link">Scopri i progetti →</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Prossimi laboratori</p>
+    <div class="lab-grid">
+      <div class="lab-card" onclick="showPage('io-chi')">
+        <span class="lab-tag">Aperto al pubblico</span>
+        <p class="lab-name">"Io"... chi?</p>
+        <p class="lab-info">Le maschere che indossiamo ogni giorno, senza saperlo.</p>
+        <p class="lab-date">6 giugno &nbsp;·&nbsp; Verona</p>
+      </div>
+      <div class="lab-card" onclick="showPage('pratiche')">
+        <span class="lab-tag">Percorso continuativo</span>
+        <p class="lab-name">Pratiche teatrali di lavoro su di sé</p>
+        <p class="lab-info">Lunedì sera, da gennaio a maggio.</p>
+        <p class="lab-date">Prossima edizione: gen 2027</p>
+      </div>
+      <div class="lab-card" style="opacity:.6;border-style:dashed;cursor:default">
+        <span class="lab-tag">In arrivo</span>
+        <p class="lab-name">Nuovo laboratorio</p>
+        <p class="lab-info">Presto disponibile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="quote-line"></div>
+    <div>
+      <p class="quote">"Il corpo sa già la strada. A volte basta dargli il permesso di percorrerla."</p>
+      <p class="quote-author">Paolo Frigo</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Follucida Teatro</div>
+    <div style="display:flex;gap:2rem">
+      <a href="https://instagram.com/follucida" target="_blank" style="font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;font-weight:500">Instagram</a>
+      <a href="https://t.me/FollucidaTeatri" target="_blank" style="font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;font-weight:500">Telegram</a>
+      <a href="mailto:pao.frigo@gmail.com" style="font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;font-weight:500">pao.frigo@gmail.com</a>
+    </div>
+  </footer>
+</div>
+
+<!-- LABORATORI -->
+<div class="page" id="page-laboratori">
+  <section class="labs-hero">
+    <div class="labs-hero-circle"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2rem;display:block;font-weight:600">Laboratori aperti al pubblico</span>
+    <h1 class="labs-hero-title">Esperienze teatrali<br>per <em>conoscerti</em><br>più a fondo.</h1>
+    <p style="font-size:1rem;line-height:1.85;color:var(--muted);max-width:500px;margin-top:1.5rem">Non serve esperienza teatrale. Serve voglia di osservarsi, di mettersi in gioco, di andare a fondo.</p>
+  </section>
+  <div class="labs-cards">
+    <div class="lab-full-card" onclick="showPage('io-chi')">
+      <span class="lfc-tag">Laboratorio di una giornata &nbsp;·&nbsp; Percorso</span>
+      <p class="lfc-title">"Io"... chi?</p>
+      <p class="lfc-date">6 giugno 2026 &nbsp;·&nbsp; Verona &nbsp;·&nbsp; 70 €</p>
+      <p class="lfc-desc">Un laboratorio sulla frammentazione dell'io e le maschere quotidiane. Attraverso pratiche teatrali e l'esperienza nel corpo, riconosciamo i personaggi che ci abitano e impariamo a osservarli con consapevolezza.</p>
+      <span class="lfc-link">Scopri e iscriviti →</span>
+    </div>
+    <div class="lab-full-card" onclick="showPage('pratiche')">
+      <span class="lfc-tag">Percorso continuativo &nbsp;·&nbsp; 17 incontri</span>
+      <p class="lfc-title">Pratiche teatrali di lavoro su di sé</p>
+      <p class="lfc-date">Prossima edizione: gennaio 2027</p>
+      <p class="lfc-desc">Un percorso lungo per chi vuole usare il teatro come strumento di conoscenza e trasformazione personale. Lunedì sera, da gennaio a maggio. Meccanicità, maschere, emozioni, presenza.</p>
+      <span class="lfc-link">Scopri il percorso →</span>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo">Follucida Teatro</div>
+    <span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span>
+  </footer>
+</div>
+
+<!-- IO CHI -->
+<div class="page" id="page-io-chi">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('laboratori')">← Laboratori</span></div>
+  <section class="io-hero">
+    <div class="io-hero-c1"></div><div class="io-hero-c2"></div><div class="io-hero-c3"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:1.5rem;display:block;position:relative;z-index:1;font-weight:600">Laboratorio aperto al pubblico</span>
+    <h1 class="io-title" style="position:relative;z-index:1">"Io"...<br><em>chi?</em></h1>
+    <p class="io-sub" style="position:relative;z-index:1">Un laboratorio teatrale sulla frammentazione dell'io e le maschere quotidiane. Solo scoprendo chi "non siamo" possiamo avvicinarci a chi siamo veramente.</p>
+    <span class="btn-primary" onclick="showPage('contatti')" style="position:relative;z-index:1">Prenota il tuo posto →</span>
+  </section>
+  <section class="section">
+    <p class="section-label">Il laboratorio</p>
+    <p class="lead">"Siamo esseri meccanici. Veniamo trasportati nel mondo dai nostri automatismi, dalle posture e dalle abitudini."</p>
+    <p class="body-text">Attraverso pratiche teatrali e l'esperienza nel corpo, partiremo da noi stessi per accogliere e riconoscere le nostre maschere. Sperimentando diversi modi di essere, fare e stare, vivremo — in presenza — alcuni dei nostri personaggi, così da aumentare la nostra consapevolezza.</p>
+  </section>
+  <section class="section">
+    <p class="section-label">Cosa faremo</p>
+    <div class="outcomes-grid">
+      <div class="outcome-card"><strong>Centratura</strong><p>Introduzione e lavoro individuale su "chi sono io?" e sulla maschera scelta.</p></div>
+      <div class="outcome-card"><strong>Teatro Immagine</strong><p>Sviluppo del tema in cerchio attraverso sculture corporee e improvvisazione.</p></div>
+      <div class="outcome-card"><strong>Scena</strong><p>Lavoro con la maschera in scena, creazioni e rielaborazione collettiva.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Date e informazioni</p>
+    <div class="info-grid-4">
+      <div class="info-item"><p class="il">Data</p><p class="iv">Sabato 6 giugno 2026</p></div>
+      <div class="info-item"><p class="il">Orario</p><p class="iv">15:00 — 19:00</p></div>
+      <div class="info-item"><p class="il">Luogo</p><p class="iv">Il Giardino dei Sogni &nbsp;·&nbsp; Corrubbio (VR)</p></div>
+      <div class="info-item"><p class="il">Costo</p><p class="iv">70 € — include 2 online</p></div>
+    </div>
+    <p style="font-size:.9rem;line-height:1.8;color:var(--muted);margin-top:2rem;font-style:italic">Inclusi: incontro online di presentazione mer 3 giugno e incontro di feedback mer 10 giugno. Posti: massimo 15. Abbigliamento comodo consigliato.</p>
+  </section>
+  <section class="cta-warm">
+    <p class="cta-warm-title">Prenota il tuo posto.</p>
+    <p class="cta-warm-sub">Massimo 15 partecipanti. Anticipo di 30 € alla prenotazione, saldo il giorno del laboratorio.</p>
+    <span class="btn-mauve" onclick="showPage('contatti')">Iscriviti →</span>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- PRATICHE -->
+<div class="page" id="page-pratiche">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('laboratori')">← Laboratori</span></div>
+  <section class="pratiche-hero">
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:4rem;display:block;font-weight:600">Percorso continuativo &nbsp;·&nbsp; 17 incontri</span>
+    <div class="pratiche-layout">
+      <h1 class="pratiche-title">Pratiche<br>teatrali di<br>lavoro su<br><em>di sé.</em></h1>
+      <div style="padding-bottom:.5rem">
+        <p style="font-size:1rem;line-height:1.85;color:var(--muted);max-width:380px;margin-bottom:2.5rem">Un percorso lungo per chi vuole usare il teatro come strumento di conoscenza e trasformazione personale. Lunedì sera, da gennaio a maggio.</p>
+        <span class="hero-cta" onclick="showPage('contatti')">Informazioni →</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Il percorso</p>
+    <p class="lead">"Partendo dal corpo si possono esplorare posture e abitudini, situazioni che fanno emergere difficoltà, meccanicità e talenti."</p>
+    <p class="body-text">Nello spazio protetto del gruppo, esploreremo attraverso il teatro i temi fondanti del lavoro su di sé: la meccanicità e la presenza, la frammentazione dell'io, le maschere, la legge dello specchio. Ognuno lavorerà su di sé partendo dai propri meccanismi.</p>
+  </section>
+  <section class="section">
+    <p class="section-label">Informazioni pratiche</p>
+    <div class="info-grid-4">
+      <div class="info-item"><p class="il">Quando</p><p class="iv">Lunedì, 20:15 — 22:30</p></div>
+      <div class="info-item"><p class="il">Dove</p><p class="iv">Centro Culturale Thirtha, Pescantina</p></div>
+      <div class="info-item"><p class="il">Durata</p><p class="iv">17 incontri &nbsp;·&nbsp; gen — mag</p></div>
+      <div class="info-item"><p class="il">Costo</p><p class="iv">300 € (inclusa tessera)</p></div>
+    </div>
+  </section>
+  <section class="cta-warm">
+    <p class="cta-warm-title">Prossima edizione: gennaio 2027.</p>
+    <p class="cta-warm-sub">Scrivimi per essere tra i primi a ricevere informazioni.</p>
+    <span class="btn-mauve" onclick="showPage('contatti')">Contattami →</span>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- AZIENDE -->
+<div class="page" id="page-aziende">
+  <section class="az-hero">
+    <div class="az-hero-circle"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2rem;display:block;font-weight:600">Per aziende e gruppi organizzati</span>
+    <h1 class="az-title">Il teatro come spazio<br>in cui le persone si<br>incontrano <em>davvero.</em></h1>
+    <div class="az-divider"></div>
+    <p class="az-sub">Porto laboratori teatrali a team aziendali, cooperative, associazioni e gruppi di lavoro. Non esercizi teorici — esperienze concrete in cui le persone si incontrano con il corpo e con la presenza.</p>
+    <p class="az-note">Non sono laboratori di team building. Pongono una base solida di apertura, fiducia e collaborazione autentica tra le persone.</p>
+  </section>
+  <section class="section">
+    <p class="section-label">Perché il teatro</p>
+    <div class="az-two-col">
+      <div>
+        <p class="lead">"La voce, lo sguardo, il respiro, il movimento: tutto parla prima ancora che apriamo la bocca."</p>
+        <p class="body-text">Il teatro è uno strumento antico e potente per lavorare sulle relazioni umane. Nei laboratori che conduco, il corpo viene prima delle parole. Questo permette di accedere a dinamiche autentiche — quelle che nelle riunioni restano non dette.</p>
+      </div>
+      <div>
+        <p class="body-text" style="margin-bottom:1.5rem">Ogni laboratorio è adattabile nelle tempistiche secondo le esigenze della tua organizzazione. Non è richiesta alcuna esperienza teatrale.</p>
+        <p class="body-text"><strong style="font-weight:600;color:var(--ink)">Conduce Paolo Frigo</strong> &nbsp;—&nbsp; laureato in Scienze e Tecniche delle Arti e dello Spettacolo, specializzato in Teatro Sociale e nelle tecniche di Teatro dell'Oppresso.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">I laboratori</p>
+    <div class="az-labs">
+      <div class="az-lab-card" onclick="showPage('la-stessa-strada')">
+        <div class="az-accent" style="background:var(--rose)"></div>
+        <span class="az-lab-tag">Relazioni &nbsp;·&nbsp; Legami &nbsp;·&nbsp; Ascolto</span>
+        <p class="az-lab-name">La Stessa Strada</p>
+        <p class="az-lab-sub">Costruire relazioni nei gruppi di lavoro</p>
+        <p class="az-lab-desc">Uno spazio per incontrarsi davvero. Il teatro per andare oltre la superficie e scoprire, in chi ci sta di fronte, la stessa umanità.</p>
+        <span class="az-lab-link">Scopri il laboratorio →</span>
+      </div>
+      <div class="az-lab-card" onclick="showPage('dall-altra-parte')">
+        <div class="az-accent" style="background:var(--mauve)"></div>
+        <span class="az-lab-tag">Conflitto &nbsp;·&nbsp; Dialogo &nbsp;·&nbsp; Trasformazione</span>
+        <p class="az-lab-name">Dall'Altra Parte</p>
+        <p class="az-lab-sub">Il conflitto nei gruppi di lavoro</p>
+        <p class="az-lab-desc">Quando il dialogo manca, le tensioni si accumulano in silenzio. Questo laboratorio trasforma il conflitto in potenziale creativo.</p>
+        <span class="az-lab-link">Scopri il laboratorio →</span>
+      </div>
+      <div class="az-lab-card" onclick="showPage('stare')">
+        <div class="az-accent" style="background:var(--sage-dark)"></div>
+        <span class="az-lab-tag">Presenza &nbsp;·&nbsp; Comunicazione &nbsp;·&nbsp; Leadership</span>
+        <p class="az-lab-name">Stare</p>
+        <p class="az-lab-sub">Presenza, comunicazione e leadership personale</p>
+        <p class="az-lab-desc">Comunicare bene non è una questione di tecnica. È una questione di presenza. Queste non sono qualità innate — si allenano.</p>
+        <span class="az-lab-link">Scopri il laboratorio →</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Come funziona</p>
+    <div class="how-grid">
+      <div class="how-item"><div class="how-num">01</div><p class="how-title">Mi contatti</p><p class="how-desc">Raccontami il tuo gruppo e le esigenze. Definiremo insieme il laboratorio più adatto.</p></div>
+      <div class="how-item"><div class="how-num">02</div><p class="how-title">Progettiamo</p><p class="how-desc">Ogni proposta è adattabile nelle tempistiche. Concordiamo data, spazio e logistica.</p></div>
+      <div class="how-item"><div class="how-num">03</div><p class="how-title">Facciamo</p><p class="how-desc">4 ore di lavoro vivo, con il corpo e con la presenza. Materiali a carico del formatore.</p></div>
+    </div>
+  </section>
+  <section class="cta-warm" style="text-align:center">
+    <p class="cta-warm-title">Portiamo questo lavoro nel tuo gruppo.</p>
+    <p class="cta-warm-sub">Scrivimi per parlare del tuo contesto e trovare il laboratorio più adatto.</p>
+    <span class="btn-mauve" onclick="showPage('contatti')">Contattami →</span>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- LA STESSA STRADA -->
+<div class="page" id="page-la-stessa-strada">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('aziende')">← Per le aziende</span></div>
+  <section class="lss-hero">
+    <div class="lss-c1"></div><div class="lss-c2"></div><div class="lss-c3"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:1.5rem;display:block;position:relative;z-index:1;font-weight:600">Laboratorio per aziende e gruppi</span>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,4.8rem);font-weight:500;line-height:1.02;margin-bottom:1.5rem;max-width:700px;position:relative;z-index:1">La Stessa<br><em style="color:var(--mauve)">Strada</em></h1>
+    <p style="font-size:1.02rem;line-height:1.85;color:var(--muted);max-width:540px;margin-bottom:2.5rem;position:relative;z-index:1">Nei gruppi di lavoro le relazioni restano spesso in superficie, perché non c'è mai stato uno spazio per incontrarsi davvero. Questo laboratorio è quello spazio.</p>
+    <span class="btn-primary" onclick="showPage('contatti')" style="position:relative;z-index:1">Richiedi informazioni →</span>
+  </section>
+  <section class="section">
+    <p class="section-label">Il problema che affronta</p>
+    <p class="lead">"Nel gruppo ognuno diventa specchio per l'altro. Andando oltre la superficie si scopre, in chi ci sta di fronte, la stessa umanità."</p>
+    <p class="body-text">Uso il teatro come strumento per lavorare sulle relazioni nei gruppi. Non esercizi teorici, non discussioni: situazioni in cui le persone si incontrano davvero, con il corpo e con la presenza.</p>
+  </section>
+  <section class="section">
+    <p class="section-label">Cosa portano a casa</p>
+    <div class="outcomes-grid">
+      <div class="outcome-card"><strong>Qualità di presenza</strong><p>Una diversa qualità di presenza con i colleghi, più autentica e consapevole.</p></div>
+      <div class="outcome-card"><strong>Ascolto</strong><p>Una maggiore capacità di ascolto, di sé e degli altri.</p></div>
+      <div class="outcome-card"><strong>Apertura reale</strong><p>Un'esperienza concreta di cosa significa mettersi davvero nei panni dell'altro.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Informazioni pratiche</p>
+    <div class="info-grid-4">
+      <div class="info-item"><p class="il">Durata</p><p class="iv">4 ore</p></div>
+      <div class="info-item"><p class="il">Partecipanti</p><p class="iv">6 — 16 persone</p></div>
+      <div class="info-item"><p class="il">Esperienza richiesta</p><p class="iv">Nessuna</p></div>
+      <div class="info-item"><p class="il">Tariffa</p><p class="iv">600 €</p></div>
+    </div>
+  </section>
+  <section class="cta-warm" style="text-align:center">
+    <p class="cta-warm-title">Portiamo questo lavoro nel tuo gruppo.</p>
+    <p class="cta-warm-sub">Ogni proposta è adattabile nelle tempistiche secondo le esigenze della tua organizzazione.</p>
+    <span class="btn-mauve" onclick="showPage('contatti')">Scrivimi →</span>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- DALL'ALTRA PARTE -->
+<div class="page" id="page-dall-altra-parte">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('aziende')">← Per le aziende</span></div>
+  <section class="dap-hero">
+    <div class="dap-left">
+      <div class="d1"></div><div class="d2"></div><div class="d3"></div>
+      <span class="dap-tag">Laboratorio per aziende e gruppi</span>
+      <h1 class="dap-title-dark">Dall'Altra<br><em>Parte</em></h1>
+    </div>
+    <div class="dap-right">
+      <p style="font-size:1rem;line-height:1.85;color:var(--muted);margin-bottom:2.5rem">Nei gruppi di lavoro capita che le relazioni si inceppino, che la comunicazione si faccia difficile, che qualcosa resti non detto. Nel conflitto risiede un potenziale creativo. Questo laboratorio lo trasforma.</p>
+      <span class="btn-primary" onclick="showPage('contatti')">Richiedi informazioni →</span>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Il problema che affronta</p>
+    <div class="conflict-layout">
+      <div class="conflict-line"></div>
+      <div>
+        <p class="lead">"Quando il dialogo manca, l'energia del gruppo si disperde e le tensioni si accumulano in silenzio."</p>
+        <p class="body-text">Questo laboratorio lavora sul dialogo e sulla capacità di considerare lo sguardo dell'altro, prima che le tensioni esplodano. Attraverso il corpo, dinamiche di gruppo ed improvvisazioni, i partecipanti imparano a riconoscere i segnali del conflitto.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Come funziona</p>
+    <div class="steps-line"></div>
+    <div class="steps-grid">
+      <div class="step"><div class="step-num">01</div><p class="step-title">Corpo e gioco</p><p class="step-desc">Si parte dal corpo per creare un clima disteso e collaborativo.</p></div>
+      <div class="step"><div class="step-num">02</div><p class="step-title">Teatro Immagine</p><p class="step-desc">Sculture corporee e oggetti animati per dare forma a idee ed emozioni.</p></div>
+      <div class="step"><div class="step-num">03</div><p class="step-title">CNV</p><p class="step-desc">La Comunicazione Non Violenta come strumento pratico per nominare il conflitto.</p></div>
+      <div class="step"><div class="step-num">04</div><p class="step-title">Cerchio</p><p class="step-desc">Si chiude con un cerchio di dialogo e condivisione collettiva.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Cosa portano a casa</p>
+    <div class="outcomes-list">
+      <div class="outcome"><div class="outcome-dash"></div><div class="outcome-text"><strong>Riconoscere i segnali</strong>Una maggiore capacità di riconoscere il conflitto prima che esploda.</div></div>
+      <div class="outcome"><div class="outcome-dash"></div><div class="outcome-text"><strong>Strumento concreto</strong>La CNV per esprimere i propri bisogni in modo chiaro e non aggressivo.</div></div>
+      <div class="outcome"><div class="outcome-dash"></div><div class="outcome-text"><strong>Cambio di prospettiva</strong>Il conflitto non come problema da evitare, ma come segnale che qualcosa vuole cambiare.</div></div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Informazioni pratiche</p>
+    <div class="info-grid-4">
+      <div class="info-item"><p class="il">Durata</p><p class="iv">4 ore</p></div>
+      <div class="info-item"><p class="il">Partecipanti</p><p class="iv">6 — 16 persone</p></div>
+      <div class="info-item"><p class="il">Esperienza richiesta</p><p class="iv">Nessuna</p></div>
+      <div class="info-item"><p class="il">Tariffa</p><p class="iv">600 €</p></div>
+    </div>
+  </section>
+  <section class="dap-cta">
+    <div class="dap-cta-diag"></div>
+    <p class="dap-cta-title">Trasformiamo le tensioni in risorsa.</p>
+    <p class="dap-cta-sub">Ogni proposta è adattabile nelle tempistiche secondo le esigenze della tua organizzazione.</p>
+    <span class="btn-sage-outline" onclick="showPage('contatti')">Scrivimi</span>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- STARE -->
+<div class="page" id="page-stare">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('aziende')">← Per le aziende</span></div>
+  <section class="stare-hero">
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:4rem;display:block;font-weight:600">Laboratorio per aziende &nbsp;·&nbsp; Presenza, comunicazione, leadership</span>
+    <div class="stare-layout">
+      <h1 class="stare-title">Stare</h1>
+      <div style="padding-bottom:.5rem">
+        <p style="font-size:1rem;line-height:1.85;color:var(--muted);max-width:380px;margin-bottom:2.5rem">Comunicare bene non è una questione di tecnica. È una questione di presenza. Chi comunica con efficacia è centrato, chiaro, calmo. Queste non sono qualità innate — si allenano.</p>
+        <span class="hero-cta" onclick="showPage('contatti')">Richiedi informazioni →</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label" style="color:var(--muted)">L'approccio</p>
+    <p class="lead" style="color:var(--ink);font-style:normal">Uso il teatro come palestra della presenza.</p>
+    <p class="body-text">La voce, lo sguardo, il respiro, il movimento: tutto parla prima ancora che apriamo la bocca. Lavorando sul corpo si lavora sulla comunicazione, in modo diretto e concreto.</p>
+  </section>
+  <section class="section">
+    <p class="section-label" style="color:var(--muted)">Il percorso</p>
+    <div class="timeline-line"></div>
+    <div class="timeline-steps">
+      <div class="ts"><div class="ts-dot"></div><p class="ts-label">Centratura</p><p class="ts-desc">Ognuno entra in contatto con sé stesso e con la stanza.</p></div>
+      <div class="ts"><div class="ts-dot"></div><p class="ts-label">Movimento</p><p class="ts-desc">Gioco e presentazione per scoprire le versioni di sé già esistenti.</p></div>
+      <div class="ts"><div class="ts-dot"></div><p class="ts-label">Teatro Immagine</p><p class="ts-desc">Sculture di gruppo e improvvisazioni sul tema della presenza.</p></div>
+      <div class="ts"><div class="ts-dot"></div><p class="ts-label">Scrittura</p><p class="ts-desc">Si fissa sulla carta ciò che è emerso dall'esperienza.</p></div>
+      <div class="ts"><div class="ts-dot"></div><p class="ts-label">Cerchio</p><p class="ts-desc">Condivisione collettiva di quello che il corpo ha già capito.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label" style="color:var(--muted)">Cosa portano a casa</p>
+    <div class="outcomes-3col">
+      <div class="oc3"><div class="oc3-num">01</div><p class="oc3-title">Consapevolezza</p><p class="oc3-desc">Una maggiore consapevolezza del proprio modo di stare, muoversi e comunicare.</p></div>
+      <div class="oc3"><div class="oc3-num">02</div><p class="oc3-title">Presenza</p><p class="oc3-desc">La capacità di essere presenti senza essere agitati.</p></div>
+      <div class="oc3"><div class="oc3-num">03</div><p class="oc3-title">Leadership</p><p class="oc3-desc">Uno sguardo chiaro su cosa significa leadership personale, al di là di ruoli e gerarchie.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label" style="color:var(--muted)">Informazioni pratiche</p>
+    <div class="info-grid-4-ink">
+      <div class="igi"><p class="il">Durata</p><p class="iv">4 ore</p></div>
+      <div class="igi"><p class="il">Partecipanti</p><p class="iv">6 — 16 persone</p></div>
+      <div class="igi"><p class="il">Esperienza richiesta</p><p class="iv">Nessuna</p></div>
+      <div class="igi"><p class="il">Tariffa</p><p class="iv">600 €</p></div>
+    </div>
+  </section>
+  <section class="stare-cta">
+    <p class="stare-cta-title">Portiamo la presenza nel tuo team.</p>
+    <span class="btn-ink" onclick="showPage('contatti')">Scrivimi</span>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- CHI SONO -->
+<div class="page" id="page-chi-sono">
+  <section class="chi-hero">
+    <div class="chi-left">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--bg-warm),var(--bg-soft));display:flex;align-items:center;justify-content:center">
+        <p style="font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500">[foto Paolo Frigo]</p>
+      </div>
+      <div class="chi-circle"></div>
+      <div class="chi-circle-2"></div>
+    </div>
+    <div class="chi-right">
+      <span class="chi-tag">Chi sono</span>
+      <h1 class="chi-name">Paolo Frigo</h1>
+      <p class="chi-role">Formatore teatrale &amp; Regista</p>
+      <div class="chi-divider"></div>
+      <p class="chi-bio">Laureato in Scienze e Tecniche delle Arti e dello Spettacolo, mi sono specializzato in Teatro Sociale, immergendomi nelle tecniche di Teatro dell'Oppresso.</p>
+      <p class="chi-bio">Grande appassionato di musica e scrittura, ho militato in diversi progetti musicali e inciso un disco come cantautore. A novembre 2024 ho debuttato come regista con lo spettacolo "Insogna".</p>
+      <p class="chi-bio">Nella mia professione di formatore, fondo la ricerca interiore dell'essere umano e il lavoro su di sé con il potere trasformativo del teatro.</p>
+    </div>
+  </section>
+  <section class="section">
+    <p class="section-label">Il mio approccio</p>
+    <p class="lead">"Fondo la ricerca interiore e il lavoro su di sé con il potere trasformativo del teatro."</p>
+    <p class="body-text">Questo lavoro parte dalla mia formazione in teatro sociale e nel tempo ha inglobato il lavoro su di sé come individuo. Attraverso gli strumenti teatrali creo limiti e obiettivi concreti per osservarci, ascoltarci, mettere in discussione. Sciogliere e tornare a sé stessi.</p>
+  </section>
+  <section class="section">
+    <p class="section-label">Formazione e percorso</p>
+    <div class="formation-3">
+      <div class="fi"><p class="fl">Formazione</p><p class="fv">Scienze e Tecniche delle Arti e dello Spettacolo</p></div>
+      <div class="fi"><p class="fl">Specializzazione</p><p class="fv">Teatro Sociale &amp; Teatro dell'Oppresso</p></div>
+      <div class="fi"><p class="fl">Regia</p><p class="fv">"Insogna" — novembre 2024</p></div>
+    </div>
+  </section>
+  <section class="foto-section">
+    <div class="foto-main">
+      <div style="width:100%;min-height:340px;background:linear-gradient(135deg,var(--bg-warm),var(--bg-soft));display:flex;align-items:center;justify-content:center">
+        <p style="font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500">[foto di laboratorio]</p>
+      </div>
+    </div>
+    <div class="foto-side">
+      <p class="foto-quote">"Il gruppo ci sostiene e ci fa da specchio. Ci dà la possibilità di metterci nei panni degli altri."</p>
+      <p class="foto-caption">Dal lavoro in laboratorio</p>
+    </div>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- CONTATTI -->
+<div class="page" id="page-contatti">
+  <section class="cont-hero">
+    <div class="cont-c1"></div><div class="cont-c2"></div>
+    <span class="cont-tag">Scrivimi</span>
+    <h1 class="cont-title">Parliamo del tuo<br><em>progetto.</em></h1>
+    <p class="cont-sub">Che tu voglia partecipare a un laboratorio o portare un percorso nella tua organizzazione, scrivimi. Rispondo entro 48 ore.</p>
+  </section>
+  <section class="cont-body">
+    <div class="form-sec">
+      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" placeholder="Il tuo nome"></div>
+      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" placeholder="la@tua.email"></div>
+      <div class="form-group">
+        <label class="form-label-t">Mi stai scrivendo per</label>
+        <select class="form-select">
+          <option value="">Seleziona...</option>
+          <option>Partecipare a un laboratorio</option>
+          <option>Portare un laboratorio in azienda</option>
+          <option>Informazioni generali</option>
+          <option>Altro</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" placeholder="Raccontami..."></textarea></div>
+      <button class="btn-sage-solid">Invia messaggio</button>
+    </div>
+    <div class="info-sec">
+      <div class="info-block"><p class="info-block-label">Email</p><p class="info-block-value"><a href="mailto:pao.frigo@gmail.com">pao.frigo@gmail.com</a></p></div>
+      <div class="info-block"><p class="info-block-label">Telefono</p><p class="info-block-value"><a href="tel:+393495122159">349.51.22.159</a></p></div>
+      <div class="info-block">
+        <p class="info-block-label">Social</p>
+        <p class="info-block-value"><a href="https://instagram.com/follucida" target="_blank">@follucida</a><br><a href="https://t.me/FollucidaTeatri" target="_blank">Telegram</a></p>
+      </div>
+      <div class="info-note">Ogni proposta per aziende è adattabile nelle tempistiche. Scrivimi per raccontarmi il tuo contesto — ti rispondo con una proposta su misura.</div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">Follucida Teatro</div>
+    <span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">© 2026 Follucida Teatro &nbsp;·&nbsp; Paolo Frigo</span>
+  </footer>
+</div>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const page = document.getElementById('page-' + id);
+  if (page) { page.classList.add('active'); window.scrollTo(0, 0); }
+  const navEl = document.getElementById('nav-' + id);
+  if (navEl) navEl.classList.add('active');
+}
+</script>
+
+</body>
+</html>
