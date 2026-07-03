@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership in Azione — Webinar gratuito con Paolo Frigo</title>
+<meta name="description" content="Come la presenza corporea sblocca la comunicazione e le relazioni in azienda. Webinar gratuito, giovedì 9 luglio ore 20:00, posti limitati a 25.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#615346;
+    --surface:#564a3c;
+    --surface-2:#4c4133;
+    --paper:#f3efe7;
+    --brass:#d9a874;
+    --brass-dim:#8a5c34;
+    --moss:#7c8a68;
+    --text:#e8ded0;
+    --text-muted:#b9ac99;
+    --line:rgba(243,239,231,0.15);
+    --radius:2px;
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text);
+    font-family:'Work Sans', -apple-system, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Spectral', Georgia, serif;
+    font-weight:600;
+    line-height:1.15;
+    margin:0;
+    color:var(--paper);
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  ::selection{background:var(--brass);color:var(--ink);}
+  :focus-visible{outline:2px solid var(--brass);outline-offset:3px;}
+
+  .eyebrow{
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--brass);
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:20px;height:1px;
+    background:var(--brass);
+    display:inline-block;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 30px;
+    background:var(--brass);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
+    font-size:15.5px;
+    letter-spacing:.01em;
+    text-decoration:none;
+    border:none;
+    border-radius:var(--radius);
+    cursor:pointer;
+    transition:background .18s ease, transform .18s ease;
+  }
+  .btn:hover{background:#d9ac6c;}
+  .btn:active{transform:translateY(1px);}
+  .btn-ghost{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--brass);background:transparent;}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    position:relative;
+    padding:96px 0 100px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .hero h1{
+    font-size:clamp(2.5rem, 5vw, 3.6rem);
+    margin:18px 0 22px;
+    max-width:11ch;
+  }
+  .hero .sub{
+    font-size:1.18rem;
+    color:var(--text-muted);
+    max-width:46ch;
+    margin-bottom:34px;
+  }
+  .hero-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+    margin-bottom:36px;
+    font-size:14.5px;
+    color:var(--text-muted);
+  }
+  .hero-meta span{display:flex;align-items:center;gap:8px;}
+  .hero-meta strong{color:var(--paper);font-weight:600;}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--brass);flex:none;}
+
+  .breath-wrap{
+    position:relative;
+    aspect-ratio:1/1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .breath-wrap svg{width:100%;height:100%;}
+  .breath-ring{
+    fill:none;
+    stroke:var(--brass);
+    transform-origin:center;
+    transform-box:fill-box;
+  }
+  .breath-ring.r1{opacity:.9;animation:breathe 6s ease-in-out infinite;}
+  .breath-ring.r2{opacity:.55;animation:breathe 6s ease-in-out infinite .8s;}
+  .breath-ring.r3{opacity:.3;animation:breathe 6s ease-in-out infinite 1.6s;}
+  .breath-core{fill:var(--brass);}
+  @keyframes breathe{
+    0%,100%{transform:scale(.86);opacity:.35;}
+    50%{transform:scale(1);opacity:.85;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .breath-ring{animation:none !important;}
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:84px 0;}
+  .section-alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .section-head{max-width:640px;margin-bottom:52px;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-top:14px;}
+  .section-head .sub{color:var(--text-muted);margin-top:14px;font-size:1.05rem;}
+
+  /* problem */
+  .problem-list{
+    display:grid;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .problem-item{
+    background:var(--ink);
+    padding:26px 28px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:20px;
+    align-items:start;
+  }
+  .problem-item svg{width:22px;height:22px;stroke:var(--brass);flex:none;margin-top:3px;}
+  .problem-item p{color:var(--text-muted);font-size:15.5px;}
+  .problem-item strong{color:var(--paper);display:block;margin-bottom:4px;font-weight:600;}
+
+  /* audience */
+  .audience-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:8px;
+  }
+  .chip{
+    border:1px solid var(--line);
+    padding:10px 18px;
+    border-radius:100px;
+    font-size:14.5px;
+    color:var(--text);
+  }
+
+  /* program - real progression, so numbering is justified */
+  .program{
+    position:relative;
+    display:grid;
+    gap:0;
+  }
+  .program::before{
+    content:'';
+    position:absolute;
+    left:23px;top:8px;bottom:8px;
+    width:1px;
+    background:var(--line);
+  }
+  .program-item{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:24px;
+    padding:28px 0;
+    position:relative;
+  }
+  .program-item:not(:last-child){border-bottom:1px solid var(--line);}
+  .program-num{
+    width:48px;height:48px;
+    border-radius:50%;
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Spectral',serif;
+    color:var(--brass);
+    font-size:15px;
+    position:relative;z-index:1;
+  }
+  .program-item h3{font-size:1.15rem;margin-bottom:8px;}
+  .program-item p{color:var(--text-muted);font-size:15.5px;max-width:56ch;}
+
+  /* bridge / after webinar */
+  .bridge{
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:36px 38px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:26px;
+    align-items:start;
+  }
+  .bridge svg{width:26px;height:26px;stroke:var(--brass);margin-top:2px;}
+  .bridge p{color:var(--text-muted);font-size:15.5px;}
+  .bridge strong{color:var(--paper);}
+
+  /* practical info + scarcity */
+  .info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    margin-bottom:28px;
+  }
+  .info-cell{background:var(--ink);padding:26px 24px;}
+  .info-cell .eyebrow{font-size:11px;margin-bottom:10px;}
+  .info-cell strong{display:block;color:var(--paper);font-size:1.15rem;font-family:'Spectral',serif;font-weight:600;}
+  .scarcity-note{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    padding:22px 24px;
+    border:1px solid var(--brass-dim);
+    border-radius:var(--radius);
+    background:rgba(198,154,91,0.07);
+  }
+  .scarcity-note svg{width:20px;height:20px;stroke:var(--brass);flex:none;margin-top:2px;}
+  .scarcity-note p{font-size:14.5px;color:var(--text-muted);}
+  .scarcity-note strong{color:var(--paper);}
+
+  /* about */
+  .about{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:32px;
+    align-items:start;
+  }
+  .avatar{
+    width:130px;height:170px;
+    border-radius:var(--radius);
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Spectral',serif;
+    font-size:1.6rem;
+    color:var(--brass);
+    flex:none;
+    overflow:hidden;
+  }
+  .avatar img{
+    width:100%;height:100%;
+    object-fit:cover;
+    filter:grayscale(1) contrast(1.05);
+    display:block;
+  }
+  .about p{color:var(--text-muted);font-size:15.5px;max-width:60ch;}
+  .about .name{color:var(--paper);font-weight:600;font-size:1.05rem;margin-bottom:4px;display:block;}
+  .about .role{color:var(--brass);font-size:13.5px;letter-spacing:.03em;margin-bottom:12px;display:block;}
+
+  /* form */
+  .form-section{
+    background:var(--paper);
+    color:var(--ink);
+    border-top:1px solid var(--line);
+  }
+  .form-section .eyebrow{color:var(--brass-dim);}
+  .form-section .eyebrow::before{background:var(--brass-dim);}
+  .form-section h2{color:var(--ink);}
+  .form-section .sub{color:#5c5648;}
+  .form-card{
+    max-width:520px;
+    margin-top:36px;
+  }
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block;
+    font-size:13.5px;
+    font-weight:600;
+    margin-bottom:7px;
+    color:#3a362c;
+  }
+  .field input{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #d8d0bd;
+    border-radius:var(--radius);
+    background:#fff;
+    font-family:'Work Sans',sans-serif;
+    font-size:15.5px;
+    color:var(--ink);
+  }
+  .field input:focus-visible{outline:2px solid var(--brass-dim);outline-offset:1px;}
+  .form-card .btn{width:100%;padding:16px;font-size:16px;margin-top:6px;}
+  .form-note{font-size:13px;color:#7a7362;margin-top:14px;}
+  .form-status{font-size:14.5px;margin-top:14px;display:none;}
+  .form-status.ok{color:#3c5c2f;display:block;}
+  .form-status.err{color:#9c3b2b;display:block;}
+
+  footer{
+    padding:40px 0;
+    text-align:center;
+    color:var(--text-muted);
+    font-size:13.5px;
+  }
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .breath-wrap{max-width:220px;margin:0 auto;order:-1;}
+    .info-grid{grid-template-columns:1fr;}
+    .about{grid-template-columns:1fr;}
+    .bridge{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Webinar gratuito · Giovedì 9 Luglio, ore 20:00</span>
+      <h1>Leadership in Azione</h1>
+      <p class="sub">Come la presenza corporea sblocca la comunicazione e le relazioni in azienda. Una sessione interattiva, dal vivo, per tornare lucidi prima della ripartenza di settembre.</p>
+      <div class="hero-meta">
+        <span><span class="dot"></span> Online, su Zoom</span>
+        <span><span class="dot"></span> 90 minuti circa</span>
+        <span><span class="dot"></span> 25 posti, iscrizione obbligatoria</span>
+      </div>
+      <a href="#iscrizione" class="btn">Riserva il tuo posto</a>
+    </div>
+    <div class="breath-wrap" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <circle class="breath-ring r3" cx="100" cy="100" r="90"/>
+        <circle class="breath-ring r2" cx="100" cy="100" r="65"/>
+        <circle class="breath-ring r1" cx="100" cy="100" r="40"/>
+        <circle class="breath-core" cx="100" cy="100" r="6"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Il punto di partenza</span>
+      <h2>L'estate non basta a fermare il sovraccarico</h2>
+      <p class="sub">Se hai la responsabilità di persone, tempo o denaro, probabilmente riconosci questo schema anche durante le ferie.</p>
+    </div>
+    <div class="problem-list">
+      <div class="problem-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3v18M5 8l7-5 7 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><strong>La ricarica non arriva davvero</strong><p>Nonostante le ferie, la sensazione di non aver ritrovato il centro resta.</p></div>
+      </div>
+      <div class="problem-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+        <div><strong>Il sovraccarico segue anche sotto l'ombrellone</strong><p>Non si riesce mai davvero a staccare: il pensiero resta acceso.</p></div>
+      </div>
+      <div class="problem-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h16M4 6h16M4 18h10" stroke-linecap="round"/></svg>
+        <div><strong>La lucidità strategica si consuma</strong><p>Sotto la superficie, cresce il costo invisibile dei malintesi nel team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Per chi è pensato</span>
+      <h2>Per chi guida persone, tempo e decisioni</h2>
+    </div>
+    <div class="audience-row">
+      <span class="chip">Liberi professionisti</span>
+      <span class="chip">Imprenditori</span>
+      <span class="chip">Manager</span>
+      <span class="chip">Team leader</span>
+      <span class="chip">Chi gestisce persone o clienti</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Cosa succede in 90 minuti</span>
+      <h2>Un percorso in quattro passaggi, dal corpo alla parola</h2>
+      <p class="sub">Ogni passaggio costruisce sul precedente: si parte dal corpo, si arriva alla comunicazione.</p>
+    </div>
+    <div class="program">
+      <div class="program-item">
+        <div class="program-num">1</div>
+        <div><h3>Dalla testa al corpo</h3><p>Un esercizio pratico per uscire dal rimuginio e tornare al centro di te stesso, da rifare subito dopo il webinar.</p></div>
+      </div>
+      <div class="program-item">
+        <div class="program-num">2</div>
+        <div><h3>Oltre la bolla</h3><p>Ognuno vive in uno spazio dove le parole hanno un significato personale. Impari a mappare queste distanze per ridurre i conflitti.</p></div>
+      </div>
+      <div class="program-item">
+        <div class="program-num">3</div>
+        <div><h3>L'ascolto profondo</h3><p>Come creare uno spazio di decompressione per l'altro, bypassando il giudizio e il rimuginio.</p></div>
+      </div>
+      <div class="program-item">
+        <div class="program-num">4</div>
+        <div><h3>L'azione relazionale</h3><p>Uno strumento concreto per comunicare con assertività reale, senza aggressività né passività.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="bridge">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <p><strong>Durante la serata</strong> presenterò anche il percorso estivo: due laboratori pratici dal vivo a Verona, a luglio e agosto, a numero chiuso (massimo 12 persone). L'accesso prioritario sarà riservato a chi partecipa in diretta al webinar.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Informazioni pratiche</span>
+      <h2>Come partecipare</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-cell"><span class="eyebrow">Quando</span><strong>Giovedì 9 Luglio, ore 20:00</strong></div>
+      <div class="info-cell"><span class="eyebrow">Dove</span><strong>Online, Zoom</strong></div>
+      <div class="info-cell"><span class="eyebrow">Costo</span><strong>Gratuito</strong></div>
+    </div>
+    <div class="scarcity-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg>
+      <p><strong>Posti limitati a 25.</strong> È una sessione interattiva: voglio poter vedere e ascoltare ognuno dei partecipanti, non solo trasmettere. Per questo l'iscrizione è necessaria e i posti non sono illimitati.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="about">
+      <div class="avatar"><img src="img/ritratto-01.jpg" alt="Ritratto di Paolo Frigo"></div>
+      <div>
+        <span class="name">Paolo Frigo</span>
+        <span class="role">Formatore · Conduttore di laboratori esperienziali · Specialista in dinamiche relazionali</span>
+        <p style="margin-bottom:14px;">Laureato in Scienze dello Spettacolo con una specializzazione in Teatro Sociale e Teatro dell'Oppresso, Paolo non è un formatore che parla solo di teoria. Prima di dedicarsi interamente alla formazione, ha vissuto per anni i ritmi, le scadenze e le pressioni del mondo aziendale, lavorando sul campo nei settori della logistica, del customer service internazionale e del marketing. Conosce da vicino la fatica di un turno, la gestione di clienti in crisi e cosa succede concretamente in un team quando la comunicazione si interrompe.</p>
+        <p style="margin-bottom:14px;">Oggi unisce la sua solida esperienza nel mondo del lavoro alla sua ricerca artistica come musicista, autore e regista. Il suo approccio rifiuta le classiche lezioni frontali: crea situazioni pratiche in cui si prova, si sbaglia e ci si ascolta davvero, usando il corpo oltre che la testa.</p>
+        <p>Si occupa di formazione relazionale per team e organizzazioni, focalizzandosi su gestione del conflitto, presenza, comunicazione autentica e capacità di mettersi nei panni dell'altro. Il risultato più frequente del suo lavoro? Le persone comunicano meglio, il gruppo si compatta e ognuno trova lo spazio per esprimersi al meglio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="iscrizione">
+  <div class="wrap">
+    <span class="eyebrow">Iscrizione</span>
+    <h2>Riserva uno dei 25 posti</h2>
+    <p class="sub">Dopo l'iscrizione riceverai una mail di conferma con il link Zoom.</p>
+
+    <form class="form-card" id="webinarForm">
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <button type="submit" class="btn" id="submitBtn">Registrami al webinar</button>
+      <p class="form-note">Riceverai una mail di conferma. I tuoi dati sono usati solo per l'evento, nessuno spam.</p>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Follùcida Teatro · Paolo Frigo — Sant'Ambrogio di Valpolicella (VR)</div>
+</footer>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+/* =========================================================================
+   CONFIGURAZIONE DA COMPLETARE, Paolo
+   =========================================================================
+   1) FORMSPREE_ENDPOINT: sostituisci YOUR_FORM_ID con l'ID del form che
+      crei su formspree.io (stesso flusso già usato per gli altri progetti).
+   2) EmailJS: inserisci i tuoi SERVICE_ID, TEMPLATE_ID e PUBLIC_KEY.
+      Nel template EmailJS dovrai includere tu il link Zoom effettivo,
+      dato che non è stato fornito qui.
+   Finché questi valori restano segnaposto, il form NON invierà nulla:
+   mostrerà un messaggio di errore invece di far finta di funzionare.
+   ========================================================================= */
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  const EMAILJS_PUBLIC_KEY  = "YOUR_EMAILJS_PUBLIC_KEY";
+  const EMAILJS_SERVICE_ID  = "YOUR_EMAILJS_SERVICE_ID";
+  const EMAILJS_TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
+
+  // Link Zoom vero del webinar. Senza questo, chi si iscrive riceve comunque
+  // la mail di conferma ma senza modo di collegarsi: per questo è incluso
+  // nel controllo isConfigured qui sotto, che blocca l'invio finché manca.
+  const ZOOM_LINK = "YOUR_ZOOM_LINK_HERE";
+
+  const isConfigured = ![FORMSPREE_ENDPOINT, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, ZOOM_LINK]
+    .some(v => v.startsWith("YOUR_"));
+
+  if (window.emailjs && EMAILJS_PUBLIC_KEY && !EMAILJS_PUBLIC_KEY.startsWith("YOUR_")) {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
+  const form = document.getElementById('webinarForm');
+  const status = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'form-status';
+    status.textContent = '';
+
+    if (!isConfigured) {
+      status.textContent = 'Form non ancora collegato: manca la configurazione di Formspree/EmailJS in questo file.';
+      status.className = 'form-status err';
+      return;
+    }
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if (!nome || !email) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Invio in corso…';
+
+    try {
+      const fsResponse = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (!fsResponse.ok) throw new Error('formspree');
+
+      // Le variabili passate qui devono comparire nel template EmailJS
+      // come {{nome}}, {{email}}, {{titolo_webinar}}, {{data_evento}}, {{zoom_link}}
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        nome,
+        email,
+        titolo_webinar: "Leadership in Azione",
+        data_evento: "Giovedì 9 Luglio, ore 20:00",
+        zoom_link: ZOOM_LINK
+      });
+
+      status.textContent = 'Fatto! Controlla la tua email per il link Zoom.';
+      status.className = 'form-status ok';
+      form.reset();
+    } catch (err) {
+      status.textContent = 'Qualcosa non ha funzionato. Riprova o scrivimi direttamente.';
+      status.className = 'form-status err';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Registrami al webinar';
+    }
+  });
+</script>
+
+</body>
+</html>
