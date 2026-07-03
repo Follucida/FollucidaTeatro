@@ -539,15 +539,15 @@
    Finché questi valori restano segnaposto, il form NON invierà nulla:
    mostrerà un messaggio di errore invece di far finta di funzionare.
    ========================================================================= */
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-  const EMAILJS_PUBLIC_KEY  = "YOUR_EMAILJS_PUBLIC_KEY";
-  const EMAILJS_SERVICE_ID  = "YOUR_EMAILJS_SERVICE_ID";
-  const EMAILJS_TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnjklqey";
+  const EMAILJS_PUBLIC_KEY  = "0AkARzNP-kAOqyljJ";
+  const EMAILJS_SERVICE_ID  = "service_5vmv49c";
+  const EMAILJS_TEMPLATE_ID = "template_m5w75zj";
 
   // Link Zoom vero del webinar. Senza questo, chi si iscrive riceve comunque
   // la mail di conferma ma senza modo di collegarsi: per questo è incluso
   // nel controllo isConfigured qui sotto, che blocca l'invio finché manca.
-  const ZOOM_LINK = "YOUR_ZOOM_LINK_HERE";
+  const ZOOM_LINK = "https://us06web.zoom.us/j/85234433483?pwd=ISIv9jYGlbaJwM6S66NlPdxSpHXKJi.1";
 
   const isConfigured = ![FORMSPREE_ENDPOINT, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, ZOOM_LINK]
     .some(v => v.startsWith("YOUR_"));
