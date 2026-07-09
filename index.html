@@ -110,7 +110,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .path-desc{font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:1.5rem}
 .path-link{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;font-weight:600}
 
-.lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.lab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
 .lab-card{border:2px solid var(--sage-light);padding:1.75rem;cursor:pointer;transition:background .2s,border-color .2s}
 .lab-card:hover{background:var(--sage-pale);border-color:var(--sage-light)}
 .lab-card.rose{border-color:var(--rose-deep)}
@@ -458,6 +458,83 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .labs-carousel-dots{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:3}
 .labs-carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:background .3s}
 .labs-carousel-dot.active{background:#fff}
+
+/* ======== LABORATORI ESTIVI (scoped) ======== */
+#page-laboratori-estivi{--mauve:#8C6070;--mauve-dark:#5C3A48;--sage:#9EC0A2;--sage-text:#3D6B42;--rose-pale:#F7EEEF;--ink:#33262A}
+#page-laboratori-estivi h1,#page-laboratori-estivi h2,#page-laboratori-estivi h3{font-family:'Cormorant Garamond',serif;font-weight:600;margin:0;color:var(--ink)}
+#page-laboratori-estivi .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+#page-laboratori-estivi .eyebrow{font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--sage-text);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+#page-laboratori-estivi .eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--sage);display:inline-block}
+#page-laboratori-estivi .le-divider{height:1px;background:var(--sage);border:none;margin:56px 0}
+#page-laboratori-estivi .le-hero{background:var(--mauve);color:#fff;padding:90px 0 70px;text-align:center;position:relative;overflow:hidden}
+#page-laboratori-estivi .le-hero .wrap{position:relative;z-index:2}
+#page-laboratori-estivi .le-hero .eyebrow{color:#E7D2D9;justify-content:center}
+#page-laboratori-estivi .le-hero .eyebrow::before{background:var(--sage)}
+#page-laboratori-estivi .le-hero h1{font-size:46px;color:#fff;line-height:1.15;margin-bottom:20px}
+#page-laboratori-estivi .le-hero p.lede{font-size:18px;color:#F0E3E7;max-width:540px;margin:0 auto 30px}
+#page-laboratori-estivi .le-hero .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:#F0E3E7;margin-bottom:36px}
+#page-laboratori-estivi .hero-circle{position:absolute;border:1px solid rgba(255,255,255,.18);border-radius:50%}
+#page-laboratori-estivi .hero-circle.c1{width:260px;height:260px;top:-120px;left:-80px}
+#page-laboratori-estivi .hero-circle.c2{width:160px;height:160px;bottom:-60px;right:-40px}
+#page-laboratori-estivi .btn{display:inline-block;background:var(--sage-text);color:#fff;font-family:'Jost',sans-serif;font-weight:500;font-size:15px;text-decoration:none;padding:14px 34px;border-radius:2px;cursor:pointer;border:none;transition:background .15s ease}
+#page-laboratori-estivi .btn:hover{background:#2e5233}
+#page-laboratori-estivi section{padding:70px 0}
+#page-laboratori-estivi section.tinted{background:var(--rose-pale)}
+#page-laboratori-estivi h2{font-size:30px;margin-bottom:18px}
+#page-laboratori-estivi section>.wrap>p.intro{font-size:17px;color:#5A4B4F;max-width:560px;margin-bottom:40px}
+#page-laboratori-estivi .why-block{margin-bottom:34px}
+#page-laboratori-estivi .why-block h3{font-size:21px;color:var(--mauve-dark);margin-bottom:10px}
+#page-laboratori-estivi .why-block p{margin:0;color:#4A3D41}
+#page-laboratori-estivi .percorsi-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+#page-laboratori-estivi .percorso-card{border:1px solid var(--sage);padding:44px 38px;background:#fff}
+#page-laboratori-estivi .percorso-card .num{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--sage-text);font-weight:500;margin-bottom:12px}
+#page-laboratori-estivi .percorso-card h3{font-size:34px;line-height:1.15;color:var(--mauve-dark);margin-bottom:26px;padding-bottom:20px;border-bottom:2px solid var(--sage)}
+#page-laboratori-estivi .percorso-card ul{list-style:none;padding:0;margin:0}
+#page-laboratori-estivi .percorso-card li{padding:11px 0;border-top:1px solid #EDE0E3;font-size:16px;color:#4A3D41}
+#page-laboratori-estivi .percorso-card li:first-child{border-top:none}
+#page-laboratori-estivi .steps{display:flex;flex-direction:column;gap:0}
+#page-laboratori-estivi .le-step{display:flex;gap:22px;padding:26px 0;border-top:1px solid var(--sage)}
+#page-laboratori-estivi .le-step:first-child{border-top:none}
+#page-laboratori-estivi .le-step .label{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--sage-text);min-width:130px}
+#page-laboratori-estivi .le-step .content h3{font-size:19px;color:var(--ink);margin-bottom:6px}
+#page-laboratori-estivi .le-step .content p{margin:0;color:#4A3D41;font-size:15px}
+#page-laboratori-estivi .dates-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:10px}
+#page-laboratori-estivi .dates-col{background:#fff;border:1px solid var(--sage);padding:34px 32px}
+#page-laboratori-estivi .dates-col h3{font-size:26px;color:var(--mauve-dark);margin-bottom:24px;padding-bottom:18px;border-bottom:2px solid var(--sage)}
+#page-laboratori-estivi .date-row{padding:16px 0;border-top:1px solid #EDE0E3}
+#page-laboratori-estivi .date-row:first-of-type{border-top:none;padding-top:0}
+#page-laboratori-estivi .date-label{display:block;font-size:13px;font-weight:500;color:var(--sage-text);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+#page-laboratori-estivi .date-value{display:block;font-size:17px;color:var(--ink)}
+#page-laboratori-estivi .location-note{margin-top:22px;color:#5A4B4F;font-size:15px}
+#page-laboratori-estivi .costi-list{display:flex;flex-direction:column;gap:0;margin-top:10px}
+#page-laboratori-estivi .costo-row{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-top:1px solid var(--sage)}
+#page-laboratori-estivi .costo-row:first-child{border-top:none}
+#page-laboratori-estivi .costo-row .desc{font-size:16px}
+#page-laboratori-estivi .costo-row .price{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--mauve-dark)}
+#page-laboratori-estivi .costo-row.lancio{color:var(--sage-text)}
+#page-laboratori-estivi .costo-row.lancio .desc,#page-laboratori-estivi .costo-row.lancio .price{color:var(--sage-text)}
+#page-laboratori-estivi .costo-note{font-size:13px;color:#7A6B6F;margin-top:4px}
+#page-laboratori-estivi .bio{display:flex;gap:30px;align-items:flex-start}
+#page-laboratori-estivi .bio-photo{width:160px;height:160px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--sage)}
+#page-laboratori-estivi .bio h3{font-size:24px;color:var(--mauve-dark);margin-bottom:4px}
+#page-laboratori-estivi .bio .role{font-size:14px;color:var(--sage-text);margin-bottom:14px}
+#page-laboratori-estivi .bio p{font-size:15px;color:#4A3D41;margin:0 0 12px}
+#page-laboratori-estivi .form-box{background:#fff;border:1px solid var(--sage);padding:40px}
+#page-laboratori-estivi .form-box label{display:block;font-size:13px;font-weight:500;color:var(--mauve-dark);margin-bottom:6px;margin-top:18px}
+#page-laboratori-estivi .form-box label:first-child{margin-top:0}
+#page-laboratori-estivi .form-box input,#page-laboratori-estivi .form-box select,#page-laboratori-estivi .form-box textarea{width:100%;font-family:'Jost',sans-serif;font-size:15px;padding:10px 12px;border:1px solid #D8C4C9;background:#FBF6F7;color:var(--ink)}
+#page-laboratori-estivi .form-box textarea{resize:vertical;min-height:70px}
+#page-laboratori-estivi .form-box .fb-section-label{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--mauve-dark);margin-top:30px;padding-top:20px;border-top:1px solid var(--sage)}
+#page-laboratori-estivi .form-box .fb-section-label:first-child{border-top:none;padding-top:0;margin-top:0}
+#page-laboratori-estivi .form-box button{margin-top:26px;width:100%}
+#page-laboratori-estivi .gdpr-note{font-size:12px;color:#7A6B6F;margin-top:16px}
+@media (max-width:640px){
+  #page-laboratori-estivi .le-hero h1{font-size:32px}
+  #page-laboratori-estivi .percorsi-grid{grid-template-columns:1fr}
+  #page-laboratori-estivi .dates-grid{grid-template-columns:1fr}
+  #page-laboratori-estivi .bio{flex-direction:column;align-items:center;text-align:center}
+  #page-laboratori-estivi .form-box{padding:26px 20px}
+}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -539,17 +616,11 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   <section class="section">
     <p class="section-label">Prossimi laboratori</p>
     <div class="lab-grid">
-      <div class="lab-card" onclick="showPage('io-chi')">
+      <div class="lab-card" onclick="showPage('laboratori-estivi')">
         <span class="lab-tag">Aperto al pubblico</span>
-        <p class="lab-name">"Io"... chi?</p>
-        <p class="lab-info">Le maschere che indossiamo ogni giorno, senza saperlo.</p>
-        <p class="lab-date">20 giugno &nbsp;·&nbsp; Bergamo</p>
-      </div>
-      <div class="lab-card rose" onclick="showPage('taroteatro')">
-        <span class="lab-tag">Aperto al pubblico</span>
-        <p class="lab-name">TaroTeatro</p>
-        <p class="lab-info">Gli archetipi dei tarocchi come strumento teatrale.</p>
-        <p class="lab-date">28 giugno &nbsp;·&nbsp; Abano Terme (PD)</p>
+        <p class="lab-name">Laboratori estivi</p>
+        <p class="lab-info">Presenza, leadership, comunicazione e conflitti: due percorsi.</p>
+        <p class="lab-date">Luglio &amp; agosto &nbsp;·&nbsp; Verona</p>
       </div>
       <div class="lab-card" onclick="showPage('pratiche')" style="opacity:.7">
         <span class="lab-tag">Percorso continuativo</span>
@@ -598,18 +669,11 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     </div>
   </div>
   <div class="labs-cards">
-    <div class="lab-full-card" onclick="showPage('io-chi')">
-      <span class="lfc-tag">Laboratorio di una giornata &nbsp;·&nbsp; Aperto al pubblico</span>
-      <p class="lfc-title">"Io"... chi?</p>
-      <p class="lfc-date">Sabato 20 giugno 2026 &nbsp;·&nbsp; Bergamo &nbsp;·&nbsp; 70 €</p>
-      <p class="lfc-desc">Un laboratorio sulla frammentazione dell'io e le maschere quotidiane. Attraverso pratiche teatrali e l'esperienza nel corpo, riconosciamo i personaggi che ci abitano e impariamo a osservarli con consapevolezza.</p>
-      <span class="lfc-link">Scopri e iscriviti →</span>
-    </div>
-    <div class="lab-full-card rose" onclick="showPage('taroteatro')">
-      <span class="lfc-tag">Laboratorio di una giornata &nbsp;·&nbsp; Aperto al pubblico</span>
-      <p class="lfc-title">TaroTeatro</p>
-      <p class="lfc-date">Domenica 28 giugno 2026 &nbsp;·&nbsp; Abano Terme (PD) &nbsp;·&nbsp; 80 €</p>
-      <p class="lfc-desc">Un laboratorio teatrale attraverso gli archetipi dei tarocchi. Simboli e figure archetipiche come strumento di esplorazione interiore e presenza scenica.</p>
+    <div class="lab-full-card" onclick="showPage('laboratori-estivi')">
+      <span class="lfc-tag">Percorso estivo &nbsp;·&nbsp; Online + in presenza a Verona</span>
+      <p class="lfc-title">Laboratori estivi</p>
+      <p class="lfc-date">Luglio e agosto 2026 &nbsp;·&nbsp; Verona &nbsp;·&nbsp; da 130 €</p>
+      <p class="lfc-desc">Due percorsi per lavorare su di sé: presenza e leadership, comunicazione e conflitti. Un cammino in tre tappe, tra online e presenza, con aperitivo di networking incluso.</p>
       <span class="lfc-link">Scopri e iscriviti →</span>
     </div>
   </div>
@@ -619,48 +683,239 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   </footer>
 </div>
 
-<!-- IO CHI -->
-<div class="page" id="page-io-chi">
+<!-- LABORATORI ESTIVI -->
+<div class="page" id="page-laboratori-estivi">
   <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('laboratori')">← Laboratori</span></div>
-  <section class="io-hero">
-    <div class="io-hero-c1"></div><div class="io-hero-c2"></div><div class="io-hero-c3"></div>
-    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:1.5rem;display:block;position:relative;z-index:1;font-weight:600">Laboratorio aperto al pubblico</span>
-    <h1 class="io-title" style="position:relative;z-index:1">"Io"...<br><em>chi?</em></h1>
-    <p class="io-sub" style="position:relative;z-index:1">Un laboratorio teatrale sulla frammentazione dell'io e le maschere quotidiane. Solo scoprendo chi "non siamo" possiamo avvicinarci a chi siamo veramente.</p>
-    <span class="btn-primary" onclick="showPage('contatti')" style="position:relative;z-index:1">Prenota il tuo posto →</span>
-  </section>
-  <section class="section">
-    <p class="section-label">Il laboratorio</p>
-    <p class="lead">"Siamo esseri meccanici. Veniamo trasportati nel mondo dai nostri automatismi, dalle posture e dalle abitudini."</p>
-    <p class="body-text">Attraverso pratiche teatrali e l'esperienza nel corpo, partiremo da noi stessi per accogliere e riconoscere le nostre maschere. Sperimentando diversi modi di essere, fare e stare, vivremo — in presenza — alcuni dei nostri personaggi, così da aumentare la nostra consapevolezza.</p>
-  </section>
-  <section class="section">
-    <p class="section-label">Cosa faremo</p>
-    <div class="outcomes-grid">
-      <div class="outcome-card"><strong>Centratura</strong><p>Introduzione e lavoro individuale su "chi sono io?" e sulla maschera scelta.</p></div>
-      <div class="outcome-card"><strong>Teatro Immagine</strong><p>Sviluppo del tema in cerchio attraverso sculture corporee e improvvisazione.</p></div>
-      <div class="outcome-card"><strong>Scena</strong><p>Lavoro con la maschera in scena, creazioni e rielaborazione collettiva.</p></div>
+
+  <section class="le-hero">
+    <div class="hero-circle c1"></div>
+    <div class="hero-circle c2"></div>
+    <div class="wrap">
+      <div class="eyebrow">Percorso estivo · Luglio e Agosto</div>
+      <h1>Due percorsi per lavorare su di sé</h1>
+      <p class="lede">Presenza, leadership, comunicazione e conflitti. Un lavoro sul corpo e sulla relazione, prima di ripartire a settembre.</p>
+      <div class="meta">
+        <span>Online + in presenza a Verona</span>
+        <span>Max 8 partecipanti</span>
+        <span>Aperitivo di networking incluso</span>
+      </div>
+      <span class="btn" onclick="document.getElementById('le-iscrizione').scrollIntoView({behavior:'smooth'})">Iscriviti al percorso</span>
     </div>
   </section>
-  <section class="section">
-    <p class="section-label">Date e informazioni</p>
-    <div class="info-grid-4">
-      <div class="info-item"><p class="il">Data</p><p class="iv">Sabato 20 giugno 2026</p></div>
-      <div class="info-item"><p class="il">Orario</p><p class="iv">15:00 — 19:00</p></div>
-      <div class="info-item"><p class="il">Luogo</p><p class="iv">APS Cor Mundi &nbsp;·&nbsp; Grassobbio (BG)</p></div>
-      <div class="info-item"><p class="il">Costo</p><p class="iv">70 € — include 2 online</p></div>
+
+  <section class="tinted">
+    <div class="wrap">
+      <div class="eyebrow">I due percorsi</div>
+      <h2>Scegli il tuo tema</h2>
+      <p class="intro">Un percorso a scelta, o entrambi in sequenza nell'arco dell'estate.</p>
+      <div class="percorsi-grid">
+        <div class="percorso-card">
+          <div class="num">Percorso 1</div>
+          <h3>Presenza e leadership</h3>
+          <ul>
+            <li>Centratura</li>
+            <li>Presenza</li>
+            <li>Consapevolezza del corpo</li>
+            <li>Io e l'altro</li>
+            <li>Condurre / affidarsi</li>
+          </ul>
+        </div>
+        <div class="percorso-card">
+          <div class="num">Percorso 2</div>
+          <h3>Comunicazione e conflitti</h3>
+          <ul>
+            <li>Stare in gruppo</li>
+            <li>Complicità e relazione</li>
+            <li>Ascolto / connessione</li>
+            <li>Malcomprensione</li>
+            <li>Comunicare nel conflitto</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <p style="font-size:.9rem;line-height:1.8;color:var(--muted);margin-top:2rem;font-style:italic">Inclusi: incontro online di presentazione mar 16 giugno (18:30–19:30) e incontro di feedback mar 23 giugno (18:30–19:30). Posti: massimo 15. Abbigliamento comodo consigliato.</p>
   </section>
-  <section class="cta-warm">
-    <p class="cta-warm-title">Prenota il tuo posto.</p>
-    <p class="cta-warm-sub">Massimo 15 partecipanti. Anticipo di 30 € alla prenotazione, saldo il giorno del laboratorio.</p>
-    <p class="cta-warm-sub">Per informazioni e prenotazioni scrivi a:</p>
-    <div style="display:inline-flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--sage-dark);letter-spacing:.02em">pao.frigo@gmail.com</span>
-      <button onclick="navigator.clipboard.writeText('pao.frigo@gmail.com').then(()=>{this.textContent='Copiata ✓';setTimeout(()=>{this.textContent='Copia'},2000)})" style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);background:transparent;border:1.5px solid var(--sage);padding:.45rem 1rem;cursor:pointer;font-family:'Jost',sans-serif;font-weight:600">Copia</button>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Il metodo</div>
+      <h2>Un semplice laboratorio? No, un percorso</h2>
+      <p class="intro">Non un singolo incontro, ma un piccolo cammino: prima ci si prepara, poi si lavora dal vivo, infine si elabora insieme.</p>
+
+      <div class="why-block">
+        <h3>Raccontarsi, prima e dopo</h3>
+        <p>Nella mia esperienza teatrale ho capito l'importanza di creare il gruppo prima del lavoro fisico: vedersi e conoscersi un po' in anticipo, così da arrivare al laboratorio con un gruppo già formato. Ho visto anche quanto possa smuovere una pratica teatrale: da qui la necessità di "raccontarsi", in un incontro online dopo il laboratorio.</p>
+      </div>
+      <div class="why-block">
+        <h3>Un gruppo piccolo, di proposito</h3>
+        <p>Massimo 8 persone. In un gruppo piccolo c'è più possibilità di andare a fondo, di relazionarsi davvero e di conoscersi.</p>
+      </div>
+      <div class="why-block">
+        <h3>Un aperitivo, non solo un laboratorio</h3>
+        <p>Bello il lavoro con il corpo, e aver condiviso insieme dei bei momenti. Ancora meglio poter staccare la spina per un aperitivo di networking, dove rilassarsi e conoscere meglio le persone.</p>
+      </div>
+      <div class="why-block">
+        <h3>Perché proprio il teatro</h3>
+        <p>Il teatro lavora su più livelli: sta nel corpo e spinge a radicarsi dentro di sé; stimola la parte emotiva, portando luce sui talenti inespressi; tiene mentalmente attivi nel gioco e nell'improvvisazione; fa lavorare in gruppo, nelle dinamiche e nel gioco di squadra.</p>
+      </div>
+      <div class="why-block">
+        <h3>Perché proprio in estate</h3>
+        <p>In estate siamo più rilassati: un'ottima occasione per acquisire nuove competenze e nuove pratiche, e arrivare a settembre con una grande carica — pronti a crescere, a migliorare, a cambiare.</p>
+      </div>
     </div>
   </section>
+
+  <section class="tinted">
+    <div class="wrap">
+      <div class="eyebrow">Come funziona</div>
+      <h2>Tre momenti, un solo percorso</h2>
+      <div class="steps">
+        <div class="le-step">
+          <div class="label">Incontrarsi</div>
+          <div class="content">
+            <h3>Un'ora online, il mercoledì precedente</h3>
+            <p>Ci prepariamo insieme e iniziamo a conoscerci, prima ancora di lavorare con il corpo.</p>
+          </div>
+        </div>
+        <div class="le-step">
+          <div class="label">Laboratorio</div>
+          <div class="content">
+            <h3>In presenza a Verona, sabato 15:00–18:30</h3>
+            <p>Il cuore del percorso: corpo, tecniche teatrali, gruppo già formato. A seguire, aperitivo di networking incluso nel prezzo.</p>
+          </div>
+        </div>
+        <div class="le-step">
+          <div class="label">Raccontarsi</div>
+          <div class="content">
+            <h3>Un'ora online, il mercoledì successivo</h3>
+            <p>Restituzione e rielaborazione condivisa di quello che è emerso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Informazioni pratiche</div>
+      <h2>Date e sede</h2>
+      <div class="dates-grid">
+        <div class="dates-col">
+          <h3>Presenza e leadership</h3>
+          <div class="date-row">
+            <span class="date-label">Incontrarsi (online)</span>
+            <span class="date-value">Mercoledì 22 luglio</span>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Laboratorio (presenza)</span>
+            <span class="date-value">Sabato 25 luglio</span>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Raccontarsi (online)</span>
+            <span class="date-value">Mercoledì 29 luglio</span>
+          </div>
+        </div>
+        <div class="dates-col">
+          <h3>Comunicazione e conflitti</h3>
+          <div class="date-row">
+            <span class="date-label">Incontrarsi (online)</span>
+            <span class="date-value">Mercoledì 26 agosto</span>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Laboratorio (presenza)</span>
+            <span class="date-value">Sabato 29 agosto</span>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Raccontarsi (online)</span>
+            <span class="date-value">Mercoledì 2 settembre</span>
+          </div>
+        </div>
+      </div>
+      <p class="location-note">I laboratori in presenza si tengono presso il Maneki Studio, Via Tevere 22, 37136 Verona (VR).</p>
+    </div>
+  </section>
+
+  <section class="tinted">
+    <div class="wrap">
+      <div class="eyebrow">Costi</div>
+      <h2>Investimento</h2>
+      <div class="costi-list">
+        <div class="costo-row">
+          <span class="desc">1 percorso a scelta</span>
+          <span class="price">130 €</span>
+        </div>
+        <div class="costo-row">
+          <span class="desc">Pacchetto 2 percorsi</span>
+          <span class="price">240 €</span>
+        </div>
+        <div class="costo-row lancio">
+          <span class="desc">Prezzo di lancio — pacchetto 2 percorsi<div class="costo-note">valido fino a domenica 12 luglio</div></span>
+          <span class="price">210 €</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Chi conduce</div>
+      <div class="bio">
+        <img class="bio-photo" src="img/paolo-frigo-bio.jpg" alt="Paolo Frigo">
+        <div>
+          <h3>Paolo Frigo</h3>
+          <div class="role">Formatore · Conduttore di laboratori esperienziali · Specialista in dinamiche relazionali</div>
+          <p>Laureato in Scienze dello Spettacolo con una specializzazione in Teatro Sociale e Teatro dell'Oppresso, Paolo non è un formatore che parla solo di teoria. Prima di dedicarsi interamente alla formazione, ha vissuto per anni i ritmi, le scadenze e le pressioni del mondo aziendale.</p>
+          <p>Oggi unisce la sua solida esperienza nel mondo del lavoro alla sua ricerca artistica come musicista, autore e regista. Il suo approccio rifiuta le classiche lezioni frontali: crea situazioni pratiche in cui si prova, si sbaglia e ci si ascolta davvero, usando il corpo oltre che la testa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="le-iscrizione">
+    <div class="wrap">
+      <div class="eyebrow">Iscrizione</div>
+      <h2>Prenota il tuo posto</h2>
+      <p class="intro">Compila il modulo: riceverai una mail di conferma con il riepilogo e le istruzioni per l'anticipo.</p>
+      <form id="laboratori-estivi-form" class="form-box" action="https://formspree.io/f/xykvvegn" method="POST">
+        <input type="hidden" name="_subject" value="Iscrizione — Laboratori estivi">
+        <div class="fb-section-label">Dati personali</div>
+        <label>Nome e cognome *</label>
+        <input type="text" name="nome" required>
+        <label>Email *</label>
+        <input type="email" name="email" required>
+        <label>Numero di telefono</label>
+        <input type="tel" name="telefono">
+        <label>A quale laboratorio vuoi iscriverti *</label>
+        <select name="laboratorio" required>
+          <option value="">Seleziona…</option>
+          <option>Presenza e leadership</option>
+          <option>Comunicazione e conflitti</option>
+          <option>Entrambi i percorsi</option>
+        </select>
+        <label>Cosa ti spinge a partecipare a questo laboratorio?</label>
+        <textarea name="motivazione"></textarea>
+
+        <div class="fb-section-label">Dati per la fattura</div>
+        <label>Intestatario *</label>
+        <input type="text" name="fatt_intestatario" required>
+        <label>Codice fiscale / P.IVA *</label>
+        <input type="text" name="fatt_cf_piva" required>
+        <label>Indirizzo di fatturazione *</label>
+        <input type="text" name="fatt_indirizzo" required>
+        <label>Città</label>
+        <input type="text" name="fatt_citta">
+        <label>CAP</label>
+        <input type="text" name="fatt_cap">
+        <label>PEC (se azienda)</label>
+        <input type="text" name="fatt_pec">
+        <label>Codice SDI (se azienda)</label>
+        <input type="text" name="fatt_sdi">
+
+        <button type="submit" class="btn">Invia iscrizione</button>
+        <p class="gdpr-note">I tuoi dati sono trattati nel rispetto del GDPR e utilizzati esclusivamente per la gestione dell'iscrizione e l'emissione della fattura. Non verranno ceduti a terzi.</p>
+      </form>
+    </div>
+  </section>
+
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
 
@@ -1141,50 +1396,6 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
 
-<!-- TAROTEATRO -->
-<div class="page" id="page-taroteatro">
-  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('laboratori')">← Laboratori</span></div>
-  <section class="io-hero">
-    <div class="io-hero-c1"></div><div class="io-hero-c2"></div><div class="io-hero-c3"></div>
-    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:1.5rem;display:block;position:relative;z-index:1;font-weight:600">Laboratorio aperto al pubblico</span>
-    <h1 class="io-title" style="position:relative;z-index:1">Taro<em>Teatro</em></h1>
-    <p class="io-sub" style="position:relative;z-index:1">Un laboratorio teatrale attraverso gli archetipi dei tarocchi. Simboli e figure archetipiche come strumento di esplorazione interiore e presenza scenica.</p>
-    <span class="btn-primary" onclick="showPage('contatti')" style="position:relative;z-index:1">Prenota il tuo posto →</span>
-  </section>
-  <section class="section">
-    <p class="section-label">Il laboratorio</p>
-    <p class="lead">"Gli archetipi dei tarocchi come specchio: non per predire il futuro, ma per incontrare il presente."</p>
-    <p class="body-text">Attraverso gli archetipi dei tarocchi usiamo il teatro come strumento di esplorazione. Ogni figura diventa un personaggio da abitare, una prospettiva da attraversare con il corpo. Un modo concreto e creativo per incontrare parti di sé.</p>
-  </section>
-  <section class="section">
-    <p class="section-label">Cosa faremo</p>
-    <div class="outcomes-grid">
-      <div class="outcome-card"><strong>Incontro con l'archetipo</strong><p>Scegliamo una figura dei tarocchi e la esploriamo attraverso il corpo e l'improvvisazione.</p></div>
-      <div class="outcome-card"><strong>Teatro Immagine</strong><p>Sculture corporee e lavoro di gruppo per dare forma agli archetipi in scena.</p></div>
-      <div class="outcome-card"><strong>Presenza e scena</strong><p>Portiamo l'archetipo in scena: una creazione collettiva e la sua rielaborazione.</p></div>
-    </div>
-  </section>
-  <section class="section">
-    <p class="section-label">Date e informazioni</p>
-    <div class="info-grid-4">
-      <div class="info-item"><p class="il">Data</p><p class="iv">Domenica 28 giugno 2026</p></div>
-      <div class="info-item"><p class="il">Orario</p><p class="iv">10:00 — 17:00</p></div>
-      <div class="info-item"><p class="il">Luogo</p><p class="iv">SpazioKiros &nbsp;·&nbsp; Abano Terme (PD)</p></div>
-      <div class="info-item"><p class="il">Costo</p><p class="iv">80 €</p></div>
-    </div>
-    <p style="font-size:.9rem;line-height:1.8;color:var(--muted);margin-top:2rem;font-style:italic">Posti: massimo 15. Abbigliamento comodo consigliato. Via Stazione 6, Abano Terme (Padova).</p>
-  </section>
-  <section class="cta-warm">
-    <p class="cta-warm-title">Prenota il tuo posto.</p>
-    <p class="cta-warm-sub">Massimo 15 partecipanti. Per informazioni e prenotazioni scrivi a:</p>
-    <div style="display:inline-flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--sage-dark);letter-spacing:.02em">pao.frigo@gmail.com</span>
-      <button onclick="navigator.clipboard.writeText('pao.frigo@gmail.com').then(()=>{this.textContent='Copiata ✓';setTimeout(()=>{this.textContent='Copia'},2000)})" style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);background:transparent;border:1.5px solid var(--sage);padding:.45rem 1rem;cursor:pointer;font-family:'Jost',sans-serif;font-weight:600">Copia</button>
-    </div>
-  </section>
-  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
-</div>
-
 <!-- CONTATTI -->
 <div class="page" id="page-contatti">
   <section class="cont-hero">
@@ -1230,7 +1441,17 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   </footer>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+emailjs.init({ publicKey: '0AkARzNP-kAOqyljJ' });
+
+// Template EmailJS di conferma iscrizione, per percorso scelto
+const LABORATORI_ESTIVI_TEMPLATES = {
+  'Presenza e leadership': 'template_q88mr39',
+  'Comunicazione e conflitti': 'template_hn7dvvk',
+  'Entrambi i percorsi': 'template_tsq0c2h'
+};
+
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
@@ -1273,13 +1494,21 @@ document.addEventListener('submit', async function(e) {
   const originalText = btn.textContent;
   btn.textContent = 'Invio in corso...';
   btn.disabled = true;
+  const formData = new FormData(form);
   try {
     const res = await fetch(form.action, {
       method: 'POST',
-      body: new FormData(form),
+      body: formData,
       headers: { 'Accept': 'application/json' }
     });
     if (res.ok) {
+      if (form.id === 'laboratori-estivi-form') {
+        const templateId = LABORATORI_ESTIVI_TEMPLATES[formData.get('laboratorio')];
+        if (templateId) {
+          emailjs.send('service_ppjkdgt', templateId, Object.fromEntries(formData.entries()))
+            .catch(err => console.error('Errore invio mail di conferma EmailJS:', err));
+        }
+      }
       form.innerHTML = `
         <div style="padding:2rem 0;text-align:center">
           <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--sage-dark);margin-bottom:.75rem">Grazie per averci scritto.</p>
