@@ -523,21 +523,11 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 #page-laboratori-estivi .bio h3{font-size:24px;color:var(--mauve-dark);margin-bottom:4px}
 #page-laboratori-estivi .bio .role{font-size:14px;color:var(--sage-text);margin-bottom:14px}
 #page-laboratori-estivi .bio p{font-size:15px;color:#4A3D41;margin:0 0 12px}
-#page-laboratori-estivi .form-box{background:#fff;border:1px solid var(--sage);padding:40px}
-#page-laboratori-estivi .form-box label{display:block;font-size:13px;font-weight:500;color:var(--mauve-dark);margin-bottom:6px;margin-top:18px}
-#page-laboratori-estivi .form-box label:first-child{margin-top:0}
-#page-laboratori-estivi .form-box input,#page-laboratori-estivi .form-box select,#page-laboratori-estivi .form-box textarea{width:100%;font-family:'Jost',sans-serif;font-size:15px;padding:10px 12px;border:1px solid #D8C4C9;background:#FBF6F7;color:var(--ink)}
-#page-laboratori-estivi .form-box textarea{resize:vertical;min-height:70px}
-#page-laboratori-estivi .form-box .fb-section-label{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--mauve-dark);margin-top:30px;padding-top:20px;border-top:1px solid var(--sage)}
-#page-laboratori-estivi .form-box .fb-section-label:first-child{border-top:none;padding-top:0;margin-top:0}
-#page-laboratori-estivi .form-box button{margin-top:26px;width:100%}
-#page-laboratori-estivi .gdpr-note{font-size:12px;color:#7A6B6F;margin-top:16px}
 @media (max-width:640px){
   #page-laboratori-estivi .le-hero h1{font-size:32px}
   #page-laboratori-estivi .percorsi-grid{grid-template-columns:1fr}
   #page-laboratori-estivi .dates-grid{grid-template-columns:1fr}
   #page-laboratori-estivi .bio{flex-direction:column;align-items:center;text-align:center}
-  #page-laboratori-estivi .form-box{padding:26px 20px}
 }
 </style>
 <!-- Meta Pixel Code -->
@@ -879,48 +869,11 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   </section>
 
   <section id="le-iscrizione">
-    <div class="wrap">
-      <div class="eyebrow">Iscrizione</div>
+    <div class="wrap" style="text-align:center">
+      <div class="eyebrow" style="justify-content:center">Iscrizione</div>
       <h2>Prenota il tuo posto</h2>
-      <p class="intro">Compila il modulo: riceverai una mail di conferma con il riepilogo e le istruzioni per l'anticipo.</p>
-      <form id="laboratori-estivi-form" class="form-box" action="https://formspree.io/f/xykvvegn" method="POST">
-        <input type="hidden" name="_subject" value="Iscrizione — Laboratori estivi">
-        <div class="fb-section-label">Dati personali</div>
-        <label>Nome e cognome *</label>
-        <input type="text" name="nome" required>
-        <label>Email *</label>
-        <input type="email" name="email" required>
-        <label>Numero di telefono</label>
-        <input type="tel" name="telefono">
-        <label>A quale laboratorio vuoi iscriverti *</label>
-        <select name="laboratorio" required>
-          <option value="">Seleziona…</option>
-          <option>Presenza e leadership</option>
-          <option>Comunicazione e conflitti</option>
-          <option>Entrambi i percorsi</option>
-        </select>
-        <label>Cosa ti spinge a partecipare a questo laboratorio?</label>
-        <textarea name="motivazione"></textarea>
-
-        <div class="fb-section-label">Dati per la fattura</div>
-        <label>Intestatario *</label>
-        <input type="text" name="fatt_intestatario" required>
-        <label>Codice fiscale / P.IVA *</label>
-        <input type="text" name="fatt_cf_piva" required>
-        <label>Indirizzo di fatturazione *</label>
-        <input type="text" name="fatt_indirizzo" required>
-        <label>Città</label>
-        <input type="text" name="fatt_citta">
-        <label>CAP</label>
-        <input type="text" name="fatt_cap">
-        <label>PEC (se azienda)</label>
-        <input type="text" name="fatt_pec">
-        <label>Codice SDI (se azienda)</label>
-        <input type="text" name="fatt_sdi">
-
-        <button type="submit" class="btn">Invia iscrizione</button>
-        <p class="gdpr-note">I tuoi dati sono trattati nel rispetto del GDPR e utilizzati esclusivamente per la gestione dell'iscrizione e l'emissione della fattura. Non verranno ceduti a terzi.</p>
-      </form>
+      <p class="intro" style="margin-left:auto;margin-right:auto">Per informazioni contattami:</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--mauve-dark)">Paolo Frigo &nbsp;·&nbsp; 349.51.22.159 &nbsp;·&nbsp; pao.frigo@gmail.com</p>
     </div>
   </section>
 
@@ -1449,17 +1402,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-emailjs.init({ publicKey: '0AkARzNP-kAOqyljJ' });
-
-// Template EmailJS di conferma iscrizione, per percorso scelto
-const LABORATORI_ESTIVI_TEMPLATES = {
-  'Presenza e leadership': 'template_q88mr39',
-  'Comunicazione e conflitti': 'template_hn7dvvk',
-  'Entrambi i percorsi': 'template_tsq0c2h'
-};
-
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
@@ -1510,13 +1453,6 @@ document.addEventListener('submit', async function(e) {
       headers: { 'Accept': 'application/json' }
     });
     if (res.ok) {
-      if (form.id === 'laboratori-estivi-form') {
-        const templateId = LABORATORI_ESTIVI_TEMPLATES[formData.get('laboratorio')];
-        if (templateId) {
-          emailjs.send('service_ppjkdgt', templateId, Object.fromEntries(formData.entries()))
-            .catch(err => console.error('Errore invio mail di conferma EmailJS:', err));
-        }
-      }
       form.innerHTML = `
         <div style="padding:2rem 0;text-align:center">
           <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--sage-dark);margin-bottom:.75rem">Grazie per averci scritto.</p>
