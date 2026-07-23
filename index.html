@@ -952,7 +952,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
           <label class="tariffa-option"><input type="radio" name="tariffa" value="Team Pass (2+ partecipanti) — 250€ x persona"><strong>Team Pass (2+ partecipanti) — 250€ x persona</strong></label>
           <label class="tariffa-option"><input type="radio" name="tariffa" value="Quota Standard Single Pass — 320€"><strong>Quota Standard Single Pass — 320€</strong><span>dal 6 agosto</span></label>
         </div>
-        <p class="payment-note">Modalità di pagamento: bonifico bancario. Le coordinate IBAN verranno mostrate a schermo subito dopo l'invio del modulo.</p>
+        <p class="payment-note">Modalità di pagamento: bonifico bancario. Le coordinate IBAN verranno mostrate a schermo e inviate via email subito dopo l'invio del modulo.</p>
         <label class="privacy-check"><input type="checkbox" name="privacy" value="Acconsento" required> Dichiaro di aver preso visione dell'informativa privacy e autorizzo il trattamento dei dati personali per le sole finalità organizzative e logistiche del corso RE-FRAME.</label>
 
         <button type="submit" class="btn">Invia iscrizione e ricevi coordinate bonifico</button>
@@ -1486,7 +1486,10 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   </footer>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+emailjs.init({ publicKey: '0AkARzNP-kAOqyljJ' });
+
 let reframeParticipantCount = 1;
 function addParticipant() {
   reframeParticipantCount++;
@@ -1561,10 +1564,15 @@ document.addEventListener('submit', async function(e) {
     });
     if (res.ok) {
       if (form.id === 'reframe-form') {
+        const reframeEmail = formData.get('p1_email');
+        if (reframeEmail) {
+          emailjs.send('service_ppjkdgt', 'template_tsq0c2h', Object.fromEntries(formData.entries()))
+            .catch(err => console.error('Errore invio mail di conferma EmailJS:', err));
+        }
         form.innerHTML = `
           <div style="padding:2rem 0;text-align:left">
             <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--mauve-dark);margin-bottom:.75rem">Iscrizione ricevuta!</p>
-            <p style="font-size:.95rem;color:#4A3D41;line-height:1.8;margin-bottom:1rem">Ecco le coordinate per il bonifico. Conservale per effettuare il pagamento.</p>
+            <p style="font-size:.95rem;color:#4A3D41;line-height:1.8;margin-bottom:1rem">Ecco le coordinate per il bonifico. Le riceverai anche via email a breve.</p>
             <div class="iban-box">
               <p><strong>Intestatario:</strong> Frigo Paolo</p>
               <p><strong>Banca:</strong> Banco BPM</p>
