@@ -638,18 +638,6 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <section class="section">
-    <p class="section-label">Prossimi laboratori</p>
-    <div class="lab-grid">
-      <div class="lab-card" onclick="showPage('re-frame')">
-        <span class="lab-tag">Aperto al pubblico</span>
-        <p class="lab-name">RE-FRAME</p>
-        <p class="lab-info">Presenza, leadership e comunicazione: percorso blended.</p>
-        <p class="lab-date">Settembre &nbsp;·&nbsp; Verona + Online</p>
-      </div>
-    </div>
-  </section>
-
   <section class="quote-section">
     <div class="quote-line"></div>
     <div>
@@ -687,15 +675,11 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
       <div class="labs-carousel-dot" onclick="labsGoTo(5)"></div>
     </div>
   </div>
-  <div class="labs-cards">
-    <div class="lab-full-card" onclick="showPage('re-frame')">
-      <span class="lfc-tag">Percorso blended &nbsp;·&nbsp; Online + in presenza a Verona</span>
-      <p class="lfc-title">RE-FRAME</p>
-      <p class="lfc-date">Settembre 2026 &nbsp;·&nbsp; Verona &nbsp;·&nbsp; da 250 €</p>
-      <p class="lfc-desc">Un percorso esperienziale di 10 ore tra corpo, teatro e coordinamento online per sviluppare presenza, leadership e comunicazione. Due laboratori in presenza, tre incontri online e un aperitivo di networking incluso.</p>
-      <span class="lfc-link">Scopri e iscriviti →</span>
-    </div>
-  </div>
+  <section class="cta-warm" style="text-align:center;margin:0 3rem">
+    <p class="cta-warm-title">Nessun laboratorio aperto al pubblico in questo momento.</p>
+    <p class="cta-warm-sub">Scrivimi per essere avvisato non appena si apre un nuovo percorso.</p>
+    <span class="btn-mauve" onclick="showPage('contatti')">Scrivimi →</span>
+  </section>
   <footer>
     <div class="footer-logo">Follucida Teatro</div>
     <span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span>
@@ -704,7 +688,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
 
 <!-- LABORATORI ESTIVI -->
 <div class="page" id="page-re-frame">
-  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('laboratori')">← Laboratori</span></div>
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('percorsi-condivisi')">← Percorsi condivisi</span></div>
 
   <section class="le-hero">
     <div class="hero-circle c1"></div>
@@ -964,6 +948,169 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
         <p class="body-text"><strong style="font-weight:600;color:var(--ink)">Conduce Paolo Frigo</strong> &nbsp;—&nbsp; laureato in Scienze e Tecniche delle Arti e dello Spettacolo, specializzato in Teatro Sociale e nelle tecniche di Teatro dell'Oppresso.</p>
       </div>
     </div>
+  </section>
+  <section class="section">
+    <p class="section-label">I percorsi</p>
+    <div class="az-labs" style="grid-template-columns:repeat(2,1fr)">
+      <div class="az-lab-card" onclick="showPage('percorsi-condivisi')">
+        <div class="az-accent" style="background:var(--mauve)"></div>
+        <span class="az-lab-tag">Con altre aziende &nbsp;·&nbsp; Gruppi misti</span>
+        <p class="az-lab-name">Percorsi condivisi</p>
+        <p class="az-lab-sub">Mandi una o due persone, non serve coinvolgere tutta l'azienda</p>
+        <p class="az-lab-desc">Percorsi già in partenza, con gruppi misti tra persone di aziende diverse. Il confronto con altre realtà porta a galla dinamiche che tra soli colleghi restano spesso invisibili.</p>
+        <span class="az-lab-link">Scopri i percorsi condivisi →</span>
+      </div>
+      <div class="az-lab-card" onclick="showPage('percorsi-su-misura')">
+        <div class="az-accent" style="background:var(--sage-dark)"></div>
+        <span class="az-lab-tag">Solo il tuo team &nbsp;·&nbsp; Su richiesta</span>
+        <p class="az-lab-name">Percorsi su misura</p>
+        <p class="az-lab-sub">Un laboratorio pensato per il tuo gruppo</p>
+        <p class="az-lab-desc">Se vuoi coinvolgere l'intero team, scegliamo insieme il tema e costruiamo tempi e contenuti su misura per la tua organizzazione.</p>
+        <span class="az-lab-link">Scopri i percorsi su misura →</span>
+      </div>
+    </div>
+  </section>
+  <section class="cta-warm" style="text-align:center">
+    <p class="cta-warm-title">Portiamo questo lavoro nel tuo gruppo.</p>
+    <p class="cta-warm-sub">Scrivimi per parlare del tuo contesto e trovare il percorso più adatto.</p>
+    <span class="btn-mauve" onclick="showPage('contatti')">Contattami →</span>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- PERCORSI CONDIVISI -->
+<div class="page" id="page-percorsi-condivisi">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('aziende')">← Per le aziende</span></div>
+  <section class="az-hero">
+    <div class="az-hero-circle"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2rem;display:block;font-weight:600">Per le aziende &nbsp;·&nbsp; Percorsi condivisi</span>
+    <h1 class="az-title">Non serve portare<br>tutto il team.<br>Basta <em>una persona</em><br>che vuole cambiare.</h1>
+    <div class="az-divider"></div>
+    <p class="az-sub">Percorsi teatrali in piccoli gruppi, condivisi tra aziende differenti. Iscrivi una o due persone a un percorso già in partenza, insieme a persone di altre realtà.</p>
+    <p class="az-note">Il gruppo misto non è un compromesso, è un vantaggio: il confronto con chi lavora altrove porta a galla dinamiche che tra soli colleghi restano spesso invisibili.</p>
+  </section>
+  <section class="section">
+    <p class="section-label">I percorsi condivisi in partenza</p>
+    <div class="az-labs" style="grid-template-columns:repeat(2,1fr)">
+      <div class="az-lab-card" onclick="showPage('re-frame')">
+        <div class="az-accent" style="background:var(--mauve)"></div>
+        <span class="az-lab-tag">Aperto anche al pubblico &nbsp;·&nbsp; Percorso blended</span>
+        <p class="az-lab-name">RE-FRAME</p>
+        <p class="az-lab-sub">Presenza, leadership e comunicazione</p>
+        <p class="az-lab-desc">Un percorso esperienziale di 10 ore tra corpo, teatro e coordinamento online. Due laboratori in presenza, tre incontri online e un aperitivo di networking incluso.</p>
+        <span class="az-lab-link">Scopri e iscriviti →</span>
+      </div>
+      <div class="az-lab-card" onclick="showPage('percorso-condiviso')">
+        <div class="az-accent" style="background:var(--sage-dark)"></div>
+        <span class="az-lab-tag">4 incontri &nbsp;·&nbsp; Verona</span>
+        <p class="az-lab-name">Percorso condiviso</p>
+        <p class="az-lab-sub">Presenza, leadership, ascolto e relazione</p>
+        <p class="az-lab-desc">Quattro incontri pomeridiani tra aziende differenti: dalla centratura personale alla gestione dei conflitti nei gruppi di lavoro.</p>
+        <span class="az-lab-link">Scopri il percorso →</span>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- PERCORSO CONDIVISO -->
+<div class="page" id="page-percorso-condiviso">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('percorsi-condivisi')">← Percorsi condivisi</span></div>
+  <section class="az-hero">
+    <div class="az-hero-circle"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2rem;display:block;font-weight:600">Percorso condiviso &nbsp;·&nbsp; Per aziende</span>
+    <h1 class="az-title">Non serve portare<br>tutto il team.<br>Basta <em>una persona</em><br>che vuole cambiare.</h1>
+    <div class="az-divider"></div>
+    <p class="az-sub">Un percorso teatrale in piccoli gruppi, condiviso tra aziende differenti: quattro incontri su presenza, leadership, ascolto e relazione.</p>
+    <span class="btn-primary" onclick="document.getElementById('pc-date').scrollIntoView({behavior:'smooth'})">Guarda le prossime date →</span>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Cosa è</p>
+    <p class="body-text">Molti percorsi di formazione aziendale partono da un problema pratico: per farli serve un gruppo intero, giornate bloccate, un budget importante. Così restano fermi, anche quando la persona giusta ci sarebbe.</p>
+    <p class="body-text" style="margin-top:1rem">Il percorso condiviso nasce per aggirare questo ostacolo. Non serve organizzare nulla per tutta l'azienda: basta iscrivere una o due persone a un gruppo già in partenza, insieme a persone di altre realtà.</p>
+    <p class="body-text" style="margin-top:1rem">Il gruppo misto non è un compromesso, è un vantaggio. Confrontarsi con chi lavora altrove, con altri ruoli e altre pressioni, porta a galla dinamiche che in un gruppo di soli colleghi restano spesso invisibili.</p>
+
+    <div class="outcomes-list" style="margin-top:2rem">
+      <div class="outcome" style="padding:.9rem 0"><div class="outcome-dash"></div><div class="outcome-text"><strong>Durata</strong>4 incontri da 4 ore.</div></div>
+      <div class="outcome" style="padding:.9rem 0"><div class="outcome-dash"></div><div class="outcome-text"><strong>Quando</strong>Pomeriggio, 14:00 – 18:00.</div></div>
+      <div class="outcome" style="padding:.9rem 0;border-bottom:none"><div class="outcome-dash"></div><div class="outcome-text"><strong>Gruppo</strong>Da 5 a 8 persone.</div></div>
+    </div>
+
+    <div style="background:var(--sage-pale);padding:2rem;border-left:3px solid var(--sage);margin-top:2rem">
+      <p style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;font-weight:600">Prima e dopo il laboratorio</p>
+      <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Sono a disposizione del gruppo in due momenti online: uno prima, per conoscerci e spiegare che tipo di esperienza sarà, uno dopo, per rivedere il percorso a mente fredda e darsi un feedback.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-soft)">
+    <p class="section-label">Perché funziona</p>
+    <div class="outcomes-grid">
+      <div class="outcome-card"><strong>Organizzo tutto io</strong><p>Voi mandate le persone che preferite, scegliendo tra le date disponibili. Nessuna organizzazione da parte vostra.</p></div>
+      <div class="outcome-card"><strong>Confronto con altre realtà</strong><p>I vostri collaboratori si confrontano con persone che lavorano altrove, arricchendosi e condividendo punti di vista e valori diversi dai propri.</p></div>
+      <div class="outcome-card"><strong>Continuità nel tempo</strong><p>16 ore su quattro incontri danno lo spazio per approfondire davvero i temi, non solo sfiorarli in una giornata.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Come lavoriamo</p>
+    <p class="body-text">La relazione e il gioco sono il collante del percorso. Ogni incontro ha un momento di riscaldamento e centratura, giochi, e un momento di feedback finale.</p>
+    <p class="body-text" style="margin-top:1rem">Per esplorare il tema della giornata si usano giochi di ruolo, improvvisazioni, creazione di scene e giochi teatrali. Si lavora con il corpo prima che con le parole, e quello che emerge nel gruppo diventa materiale vivo da portare in scena.</p>
+  </section>
+
+  <section class="section" style="background:var(--bg-soft)">
+    <p class="section-label">I quattro incontri</p>
+    <p class="body-text" style="margin-bottom:2rem">Non sono quattro temi separati, ma un unico percorso. Si parte da sé stessi, si passa per come ci si mostra agli altri, si arriva a come si gestisce la relazione quando si complica.</p>
+    <div class="steps-line"></div>
+    <div class="steps-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="step"><div class="step-num">01</div><p class="step-title">Centratura e presenza</p><p class="step-desc">Il punto di partenza: essere centrati, stabili, presenti a sé stessi prima di comunicare con gli altri.</p></div>
+      <div class="step"><div class="step-num">02</div><p class="step-title">Leadership personale, carisma e magnetismo</p><p class="step-desc">Come la presenza diventa influenza. Il modo di occupare lo spazio, di guardare, di farsi ascoltare.</p></div>
+      <div class="step"><div class="step-num">03</div><p class="step-title">Ascolto e comunicazione</p><p class="step-desc">Dalla presenza alla relazione. Ascoltare davvero, esprimersi con chiarezza, senza perdere sé stessi.</p></div>
+      <div class="step"><div class="step-num">04</div><p class="step-title">Relazioni e conflitti</p><p class="step-desc">Riconoscere le tensioni prima che esplodano, e trasformarle in occasione di dialogo.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="pc-date">
+    <p class="section-label">Prossime date</p>
+    <p class="body-text">Due percorsi in partenza, il mercoledì pomeriggio (in subordine il martedì, secondo la disponibilità della sala). Si svolgono a Verona.</p>
+    <div class="outcomes-grid" style="grid-template-columns:repeat(2,1fr);margin-top:2rem">
+      <div class="outcome-card"><strong>14 ottobre</strong><p>Percorso autunno, 4 mercoledì consecutivi &nbsp;·&nbsp; 14:00 – 18:00</p></div>
+      <div class="outcome-card"><strong>11 novembre</strong><p>Percorso autunno, 4 mercoledì consecutivi &nbsp;·&nbsp; 14:00 – 18:00</p></div>
+    </div>
+    <p class="body-text" style="margin-top:1.5rem;font-size:.85rem;font-style:italic">Ogni percorso parte con un minimo di 5 partecipanti, massimo 8.</p>
+  </section>
+
+  <section class="cta-warm" style="text-align:center">
+    <p class="cta-warm-title">Porta una persona del tuo team.</p>
+    <p class="cta-warm-sub">Scrivimi per il percorso condiviso o per un percorso su misura per la tua azienda.</p>
+    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;margin:0 auto;text-align:left">
+      <input type="hidden" name="_subject" value="Richiesta — Percorso condiviso">
+      <div class="form-group"><label class="form-label-t">Laboratorio</label><input class="form-input" type="text" name="oggetto" value="Percorso condiviso — per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
+      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
+      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="nome@azienda.it" required></div>
+      <div class="form-group"><label class="form-label-t">Cosa ti interessa</label>
+        <select class="form-input" name="interesse" required style="background:transparent">
+          <option value="">Scegli un'opzione</option>
+          <option value="Percorso condiviso">Percorso condiviso, mando 1 o 2 persone</option>
+          <option value="Percorso su misura">Percorso su misura per la mia azienda</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami qualcosa in più sulla tua richiesta"></textarea></div>
+      <button type="submit" class="btn-mauve">Invia richiesta →</button>
+    </form>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- PERCORSI SU MISURA -->
+<div class="page" id="page-percorsi-su-misura">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('aziende')">← Per le aziende</span></div>
+  <section class="az-hero">
+    <div class="az-hero-circle"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2rem;display:block;font-weight:600">Per le aziende &nbsp;·&nbsp; Percorsi su misura</span>
+    <h1 class="az-title">Un percorso pensato<br>e costruito per il<br><em>tuo gruppo.</em></h1>
+    <div class="az-divider"></div>
+    <p class="az-sub">Se vuoi coinvolgere l'intero team, scegliamo insieme il laboratorio più adatto e adattiamo tempi, spazi e contenuti alle esigenze della tua organizzazione.</p>
   </section>
   <section class="section">
     <p class="section-label">I laboratori</p>
