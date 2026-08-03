@@ -157,21 +157,11 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .outcome-card strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--sage-dark);margin-bottom:.6rem}
 .outcome-card p{font-size:.9rem;line-height:1.75;color:var(--muted)}
 
-.info-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem}
-.info-item .il{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.5rem;font-weight:600}
-.info-item .iv{font-size:.95rem;color:var(--ink);font-weight:500}
-
 .cta-warm{padding:5rem 3rem;background:var(--sage-pale);text-align:center;border-top:2px solid var(--sage-light)}
 .cta-warm-title{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:500;color:var(--sage-dark);margin-bottom:1rem;font-style:italic}
 .cta-warm-sub{font-size:.97rem;color:var(--muted);margin-bottom:2.5rem;line-height:1.8}
 .btn-mauve{display:inline-block;padding:.9rem 2.75rem;background:var(--mauve);color:#fff;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-weight:600}
 .btn-sage-solid{display:inline-block;padding:.9rem 2.75rem;background:var(--sage-dark);color:#fff;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-weight:600}
-
-/* ======== PRATICHE ======== */
-.pratiche-hero{padding:7rem 3rem 6rem;border-bottom:3px solid var(--sage);position:relative}
-.pratiche-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end}
-.pratiche-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,4.8rem);font-weight:500;line-height:.95;color:var(--ink)}
-.pratiche-title em{font-style:italic;color:var(--mauve)}
 
 /* ======== AZIENDE ======== */
 .az-hero{padding:6rem 3rem;border-bottom:3px solid #9EC0A2;position:relative;overflow:hidden}
@@ -380,12 +370,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
   /* Io chi */
   .io-hero{padding:3rem 1.5rem}
   .outcomes-grid{grid-template-columns:1fr}
-  .info-grid-4{grid-template-columns:1fr 1fr}
   .cta-warm{padding:3rem 1.5rem}
-
-  /* Pratiche */
-  .pratiche-hero{padding:3rem 1.5rem}
-  .pratiche-layout{grid-template-columns:1fr;gap:2rem}
 
   /* Aziende */
   .az-hero{padding:3rem 1.5rem}
@@ -661,12 +646,6 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
         <p class="lab-name">RE-FRAME</p>
         <p class="lab-info">Presenza, leadership e comunicazione: percorso blended.</p>
         <p class="lab-date">Settembre &nbsp;·&nbsp; Verona + Online</p>
-      </div>
-      <div class="lab-card" onclick="showPage('pratiche')" style="opacity:.7">
-        <span class="lab-tag">Percorso continuativo</span>
-        <p class="lab-name">Pratiche teatrali</p>
-        <p class="lab-info">Lunedì sera, da gennaio a maggio.</p>
-        <p class="lab-date">Prossima edizione: gen 2027</p>
       </div>
     </div>
   </section>
@@ -960,44 +939,6 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
-</div>
-
-<!-- PRATICHE -->
-<div class="page" id="page-pratiche">
-  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('laboratori')">← Laboratori</span></div>
-  <section class="pratiche-hero">
-    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:4rem;display:block;font-weight:600">Percorso continuativo &nbsp;·&nbsp; 17 incontri</span>
-    <div class="pratiche-layout">
-      <h1 class="pratiche-title">Pratiche<br>teatrali di<br>lavoro su<br><em>di sé.</em></h1>
-      <div style="padding-bottom:.5rem">
-        <p style="font-size:1rem;line-height:1.85;color:var(--muted);max-width:380px;margin-bottom:2.5rem">Un percorso lungo per chi vuole usare il teatro come strumento di conoscenza e trasformazione personale. Lunedì sera, da gennaio a maggio.</p>
-        <span class="hero-cta" onclick="showPage('contatti')">Informazioni →</span>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <p class="section-label">Il percorso</p>
-    <p class="lead">"Partendo dal corpo si possono esplorare posture e abitudini, situazioni che fanno emergere difficoltà, meccanicità e talenti."</p>
-    <p class="body-text">Nello spazio protetto del gruppo, esploreremo attraverso il teatro i temi fondanti del lavoro su di sé: la meccanicità e la presenza, la frammentazione dell'io, le maschere, la legge dello specchio. Ognuno lavorerà su di sé partendo dai propri meccanismi.</p>
-  </section>
-  <section class="section">
-    <p class="section-label">Informazioni pratiche</p>
-    <div class="info-grid-4">
-      <div class="info-item"><p class="il">Quando</p><p class="iv">Lunedì, 20:15 — 22:30</p></div>
-      <div class="info-item"><p class="il">Dove</p><p class="iv">Centro Culturale Thirtha, Pescantina</p></div>
-      <div class="info-item"><p class="il">Durata</p><p class="iv">17 incontri &nbsp;·&nbsp; gen — mag</p></div>
-      <div class="info-item"><p class="il">Costo</p><p class="iv">300 € (inclusa tessera)</p></div>
-    </div>
-  </section>
-  <section class="cta-warm">
-    <p class="cta-warm-title">Prossima edizione: gennaio 2027.</p>
-    <p class="cta-warm-sub">Scrivimi per essere tra i primi a ricevere informazioni.</p>
-    <div style="display:inline-flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--sage-dark);letter-spacing:.02em">pao.frigo@gmail.com</span>
-      <button onclick="navigator.clipboard.writeText('pao.frigo@gmail.com').then(()=>{this.textContent='Copiata ✓';setTimeout(()=>{this.textContent='Copia'},2000)})" style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);background:transparent;border:1.5px solid var(--sage);padding:.45rem 1rem;cursor:pointer;font-family:'Jost',sans-serif;font-weight:600">Copia</button>
-    </div>
-  </section>
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
 
