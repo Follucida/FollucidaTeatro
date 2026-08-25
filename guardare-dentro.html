@@ -793,7 +793,7 @@
     </div>
     <p class="form-intro">Compila il modulo: riceverai una mail di conferma con un piccolo riepilogo. Il posto è confermato al versamento dell'acconto.</p>
 
-    <form action="https://formspree.io/f/xlgzaogd" method="POST" id="form-iscrizione">
+    <form action="https://formspree.io/f/maewgpdg" method="POST" id="form-iscrizione">
       <div class="form-grid">
         <div class="form-section-label">Dati personali</div>
         <div class="form-group"><label for="nome">Nome e cognome <span class="req">*</span></label><input type="text" id="nome" name="Nome e cognome" placeholder="Mario Rossi" required></div>
@@ -852,7 +852,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var nome = document.getElementById('nome').value.trim();
     var email = document.getElementById('email').value.trim();
     try{
-      var res = await fetch('https://formspree.io/f/xlgzaogd', {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
+      var res = await fetch('https://formspree.io/f/maewgpdg', {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
       if(res.ok){
         try{ await emailjs.send('service_ppjkdgt','template_i7mqnjm',{nome:nome,email:email}); }catch(ex){ console.warn('EmailJS:', ex); }
         form.style.display = 'none';
