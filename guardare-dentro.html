@@ -493,6 +493,31 @@
   }
   .form-success-sub{ color: var(--text-muted); font-size: .95rem; margin: 0; }
 
+  .calendar-cta{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 24px 26px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .calendar-cta-title{ font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; color: var(--text); margin: 0 0 6px; }
+  .calendar-cta-sub{ font-size: .92rem; color: var(--text-muted); margin: 0 0 16px; }
+  .calendar-cta-btn{
+    display: inline-block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .82rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--accent-strong);
+    border-radius: 3px;
+    padding: 13px 26px;
+    text-decoration: none;
+  }
+  .calendar-cta-note{ font-size: .85rem; color: var(--text-muted); margin-top: 14px; }
+  .calendar-cta-note a{ color: var(--accent-strong); text-decoration: underline; }
+
   /* iban */
   .iban-block{
     margin-top: 18px;
@@ -792,6 +817,13 @@
       <h2 class="section-title">Prenota il tuo posto</h2>
     </div>
     <p class="form-intro">Compila il modulo: riceverai una mail di conferma con un piccolo riepilogo. Il posto è confermato al versamento dell'acconto.</p>
+
+    <div class="calendar-cta">
+      <p class="calendar-cta-title">Preferisci fissare subito un appuntamento?</p>
+      <p class="calendar-cta-sub">Scegli il giorno e l'orario che preferisci direttamente nel calendario prenotazioni.</p>
+      <a class="calendar-cta-btn" href="https://calendar.app.google/1j6GsQsxhEBTcdK3A" target="_blank" rel="noopener">Apri il calendario prenotazioni →</a>
+      <p class="calendar-cta-note">Non trovi il tuo orario preferito? Contattami a <a href="mailto:pao.frigo@gmail.com">pao.frigo@gmail.com</a>.</p>
+    </div>
 
     <form action="https://formspree.io/f/maewgpdg" method="POST" id="form-iscrizione">
       <div class="form-grid">
