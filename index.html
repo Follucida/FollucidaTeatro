@@ -176,9 +176,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .az-lab-card{border:2px solid var(--sage-light);padding:2.5rem 2rem;cursor:pointer;transition:background .2s,border-color .2s;position:relative;overflow:hidden}
 .az-lab-card:hover{background:var(--sage-pale);border-color:var(--sage-dark)}
 .az-lab-card+.az-lab-card{border-left:none}
-.az-labs-4{grid-template-columns:repeat(2,1fr)}
-.az-labs-4 .az-lab-card:nth-child(3){border-left:2px solid var(--sage-light)}
-.az-labs-4 .az-lab-card:nth-child(n+3){border-top:none}
+.az-labs-2{grid-template-columns:repeat(2,1fr)}
 .az-accent{width:2.5rem;height:3px;margin-bottom:1.5rem}
 .az-lab-tag{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;display:block;font-weight:600}
 .az-lab-name{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;margin-bottom:.75rem;line-height:1.08;color:var(--ink)}
@@ -380,7 +378,6 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
   .az-hero-circle{display:none}
   .az-labs{grid-template-columns:1fr}
   .az-lab-card+.az-lab-card{border-left:1.5px solid var(--line);border-top:none}
-  .az-labs-4 .az-lab-card:nth-child(3){border-left:1.5px solid var(--line)}
   .az-two-col{grid-template-columns:1fr;gap:2rem}
   .how-grid{grid-template-columns:1fr}
   .how-item{padding:1.5rem 0;border-right:none;border-bottom:1px solid var(--line)}
@@ -771,32 +768,8 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <p class="az-sub">Se vuoi coinvolgere l'intero team, scegliamo insieme il laboratorio più adatto e adattiamo tempi, spazi e contenuti alle esigenze della tua organizzazione.</p>
   </section>
   <section class="section">
-    <p class="section-label">I laboratori</p>
-    <div class="az-labs az-labs-4">
-      <div class="az-lab-card" onclick="showPage('la-stessa-strada')">
-        <div class="az-accent" style="background:var(--rose)"></div>
-        <span class="az-lab-tag">Relazioni &nbsp;·&nbsp; Legami &nbsp;·&nbsp; Ascolto</span>
-        <p class="az-lab-name">La Stessa Strada</p>
-        <p class="az-lab-sub">Costruire relazioni nei gruppi di lavoro</p>
-        <p class="az-lab-desc">Uno spazio per incontrarsi davvero. Il teatro per andare oltre la superficie e scoprire, in chi ci sta di fronte, la stessa umanità.</p>
-        <span class="az-lab-link">Scopri il laboratorio →</span>
-      </div>
-      <div class="az-lab-card" onclick="showPage('dall-altra-parte')">
-        <div class="az-accent" style="background:var(--mauve)"></div>
-        <span class="az-lab-tag">Conflitto &nbsp;·&nbsp; Dialogo &nbsp;·&nbsp; Trasformazione</span>
-        <p class="az-lab-name">Dall'Altra Parte</p>
-        <p class="az-lab-sub">Il conflitto nei gruppi di lavoro</p>
-        <p class="az-lab-desc">Quando il dialogo manca, le tensioni si accumulano in silenzio. Questo laboratorio trasforma il conflitto in potenziale creativo.</p>
-        <span class="az-lab-link">Scopri il laboratorio →</span>
-      </div>
-      <div class="az-lab-card" onclick="showPage('stare')">
-        <div class="az-accent" style="background:var(--sage-dark)"></div>
-        <span class="az-lab-tag">Presenza &nbsp;·&nbsp; Comunicazione &nbsp;·&nbsp; Leadership</span>
-        <p class="az-lab-name">Stare</p>
-        <p class="az-lab-sub">Presenza, comunicazione e leadership personale</p>
-        <p class="az-lab-desc">Comunicare bene non è una questione di tecnica. È una questione di presenza. Queste non sono qualità innate — si allenano.</p>
-        <span class="az-lab-link">Scopri il laboratorio →</span>
-      </div>
+    <p class="section-label">Le proposte</p>
+    <div class="az-labs az-labs-2">
       <div class="az-lab-card" onclick="showPage('team-building')">
         <div class="az-accent" style="background:var(--rose-deep)"></div>
         <span class="az-lab-tag">Gioco &nbsp;·&nbsp; Relazioni &nbsp;·&nbsp; Fiducia</span>
@@ -804,6 +777,14 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
         <p class="az-lab-sub">Una giornata (6 ore) dedicata al gruppo</p>
         <p class="az-lab-desc">Una giornata di gioco e attività ludica per conoscersi meglio, rompere il ghiaccio e rafforzare le relazioni su cui il gruppo costruisce, nel tempo, un modo di lavorare più affiatato.</p>
         <span class="az-lab-link">Scopri la giornata →</span>
+      </div>
+      <div class="az-lab-card" onclick="showPage('competenze-relazionali')">
+        <div class="az-accent" style="background:var(--mauve)"></div>
+        <span class="az-lab-tag">Presenza &nbsp;·&nbsp; Comunicazione &nbsp;·&nbsp; Conflitto</span>
+        <p class="az-lab-name">Competenze Relazionali</p>
+        <p class="az-lab-sub">Un percorso in tre laboratori</p>
+        <p class="az-lab-desc">Per PMI e professionisti per cui il dialogo, la vendita o la relazione con le persone sono centrali nel lavoro quotidiano. Il teatro come laboratorio pratico per capire come si comunica davvero e trasformare l'attrito in chiarezza.</p>
+        <span class="az-lab-link">Scopri il percorso →</span>
       </div>
     </div>
   </section>
@@ -883,6 +864,118 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;margin:0 auto;text-align:left">
       <input type="hidden" name="_subject" value="Richiesta — Team Building">
       <div class="form-group"><label class="form-label-t">Proposta</label><input class="form-input" type="text" name="oggetto" value="Team Building — una giornata per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
+      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
+      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
+      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami il tuo gruppo..."></textarea></div>
+      <button type="submit" class="btn-mauve">Scrivimi →</button>
+    </form>
+  </section>
+  <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
+</div>
+
+<!-- COMPETENZE RELAZIONALI -->
+<div class="page" id="page-competenze-relazionali">
+  <div style="padding:1rem 3rem;border-bottom:3px solid #9EC0A2"><span class="back-link" onclick="showPage('percorsi-su-misura')">← Percorsi su misura</span></div>
+  <section class="lss-hero">
+    <div class="lss-c1"></div><div class="lss-c2"></div><div class="lss-c3"></div>
+    <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:1.5rem;display:block;position:relative;z-index:1;font-weight:600">Per PMI e professionisti</span>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,4.8rem);font-weight:500;line-height:1.02;margin-bottom:1.5rem;max-width:700px;position:relative;z-index:1">Competenze<br><em style="color:var(--mauve)">Relazionali</em></h1>
+    <p style="font-size:1.02rem;line-height:1.85;color:var(--muted);max-width:580px;margin-bottom:.75rem;position:relative;z-index:1">Percorso per le competenze relazionali, in tre laboratori.</p>
+    <p style="font-size:.88rem;line-height:1.75;color:var(--sage-dark);max-width:540px;margin-bottom:2.5rem;position:relative;z-index:1;font-style:italic">Pensato per PMI e professionisti per cui il dialogo, la vendita o la relazione con le persone sono centrali nel lavoro quotidiano: HR e chi gestisce le persone, venditori, chiunque lavori ogni giorno a contatto con colleghi o clienti.</p>
+    <span class="btn-primary" onclick="showPage('contatti')" style="position:relative;z-index:1">Richiedi informazioni →</span>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Il problema che affronta</p>
+    <p class="lead">"In azienda, comunicazione e conflitto sono spesso il costo più alto e il più difficile da riconoscere."</p>
+    <p class="body-text">Le competenze tecniche ci sono già: il percorso offre il tempo e gli strumenti per capire come si comunica davvero, come si viene percepiti, e come trasformare i momenti di attrito in occasioni di chiarezza.</p>
+  </section>
+
+  <section class="section">
+    <p class="section-label">L'approccio</p>
+    <div class="az-two-col">
+      <div>
+        <p class="lead" style="font-size:1.25rem">"Il percorso usa il teatro come laboratorio pratico: si impara facendo, con il corpo prima delle parole."</p>
+      </div>
+      <div>
+        <p class="body-text">Uno spazio dove sperimentare fa parte dell'esercizio. Sotto ai tre laboratori corre lo stesso filo: la relazione, con se stessi prima e con gli altri poi, e le dinamiche che nascono quando le persone stanno insieme in un gruppo. Quest'ultimo tema attraversa tutto il percorso come sfondo comune ai tre laboratori.</p>
+        <p class="body-text" style="margin-top:1rem">Un secondo filo lega i tre passaggi: i bisogni. Il bisogno personale, esplorato nel primo laboratorio, torna nel terzo come chiave per leggere il conflitto. Nella Comunicazione Non Violenta, ogni conflitto nasce da un bisogno che cerca di farsi riconoscere ed esprimere: dal capire chi sono e cosa mi serve, si arriva a capire cosa muove davvero uno scontro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Cosa succede durante gli incontri</p>
+    <p class="body-text" style="max-width:760px">Ogni laboratorio alterna gioco, esercizi individuali e di gruppo, improvvisazioni, momenti di confronto. Si parte sempre dal corpo, si arriva alla parola.</p>
+    <div style="background:var(--sage-pale);padding:2rem;border-left:3px solid var(--sage);margin-top:2rem;max-width:760px">
+      <p style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;font-weight:600">La restituzione</p>
+      <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Come nel team building, la restituzione ha un suo spazio dedicato in ogni incontro: prima di passare all'esercizio successivo, si mette sempre in parole cosa è successo.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">I tre laboratori — cosa porti a casa</p>
+    <div class="az-labs">
+      <div class="az-lab-card" onclick="showPage('stare')">
+        <div class="az-accent" style="background:var(--sage-dark)"></div>
+        <span class="az-lab-tag">01 &nbsp;·&nbsp; Presenza &nbsp;·&nbsp; Centratura &nbsp;·&nbsp; Leadership personale</span>
+        <p class="az-lab-name">Stare</p>
+        <p class="az-lab-desc">Maggiore chiarezza su chi sei quando decidi sotto pressione, sui tuoi bisogni e desideri reali.</p>
+        <span class="az-lab-link">Scopri il laboratorio →</span>
+      </div>
+      <div class="az-lab-card" onclick="showPage('la-stessa-strada')">
+        <div class="az-accent" style="background:var(--rose)"></div>
+        <span class="az-lab-tag">02 &nbsp;·&nbsp; Ascolto profondo &nbsp;·&nbsp; Comunicazione</span>
+        <p class="az-lab-name">La Stessa Strada</p>
+        <p class="az-lab-desc">Uno strumento di ascolto attivo e una consapevolezza più chiara di come il tuo mondo incontra quello dell'altro, e di dove nascono le occasioni migliori per capirsi.</p>
+        <span class="az-lab-link">Scopri il laboratorio →</span>
+      </div>
+      <div class="az-lab-card" onclick="showPage('dall-altra-parte')">
+        <div class="az-accent" style="background:var(--mauve)"></div>
+        <span class="az-lab-tag">03 &nbsp;·&nbsp; Conflitto &nbsp;·&nbsp; Dinamiche di gruppo</span>
+        <p class="az-lab-name">Dall'Altra Parte</p>
+        <p class="az-lab-desc">Strumenti pratici di comunicazione assertiva e non violenta per leggere un conflitto a partire dai bisogni che lo muovono, e trasformarlo in un'occasione di chiarezza.</p>
+        <span class="az-lab-link">Scopri il laboratorio →</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Formato</p>
+    <div class="az-two-col">
+      <div>
+        <p class="lead" style="font-size:1.25rem">"Ogni laboratorio è proposto in 3 incontri da 2 ore."</p>
+      </div>
+      <div>
+        <p class="body-text">Si può scegliere il percorso completo, oppure partire da uno o due dei tre laboratori: alcune combinazioni si valutano caso per caso secondo le specifiche esigenze.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Informazioni pratiche</p>
+    <div class="az-two-col">
+      <div>
+        <div class="outcomes-list">
+          <div class="outcome" style="padding:.9rem 0"><div class="outcome-dash"></div><div class="outcome-text"><strong>Partecipanti</strong>Minimo 6, massimo 12.</div></div>
+          <div class="outcome" style="padding:.9rem 0"><div class="outcome-dash"></div><div class="outcome-text"><strong>Abbigliamento</strong>Comodo, a strati, colori scuri e neutri. Si lavora senza scarpe, con calzettoni antiscivolo.</div></div>
+          <div class="outcome" style="padding:.9rem 0"><div class="outcome-dash"></div><div class="outcome-text"><strong>Materiali</strong>A carico del formatore.</div></div>
+          <div class="outcome" style="padding:.9rem 0;border-bottom:none"><div class="outcome-dash"></div><div class="outcome-text"><strong>Durata e costi</strong>Concordati secondo le necessità della tua organizzazione.</div></div>
+        </div>
+      </div>
+      <div style="background:var(--sage-pale);padding:2rem;border-left:3px solid var(--sage)">
+        <p style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;font-weight:600">Spazio</p>
+        <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Sala chiusa e privata di dimensioni adatte al numero dei partecipanti, climatizzata e confortevole, con pavimento caldo se possibile. Può essere fornita dall'azienda o concordata separatamente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-warm" style="text-align:center">
+    <p class="cta-warm-title">Portiamo questo percorso nella tua organizzazione.</p>
+    <p class="cta-warm-sub">Durata e costi vengono concordati secondo le esigenze della tua organizzazione. Scrivimi per parlare del tuo contesto.</p>
+    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;margin:0 auto;text-align:left">
+      <input type="hidden" name="_subject" value="Richiesta — Competenze Relazionali">
+      <div class="form-group"><label class="form-label-t">Percorso</label><input class="form-input" type="text" name="oggetto" value="Competenze Relazionali — percorso per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
       <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
       <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
       <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami il tuo gruppo..."></textarea></div>
