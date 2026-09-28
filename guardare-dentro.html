@@ -816,7 +816,7 @@
       <span class="section-num">10</span>
       <h2 class="section-title">Prenota il tuo posto</h2>
     </div>
-    <p class="form-intro">Compila il modulo: riceverai una mail di conferma con un piccolo riepilogo. Il posto è confermato al versamento dell'acconto.</p>
+    <p class="form-intro">Per iscriverti scrivimi: ti rispondo con tutti i dettagli. Il posto è confermato al versamento dell'acconto.</p>
 
     <div class="calendar-cta">
       <p class="calendar-cta-title">Preferisci fissare subito un appuntamento?</p>
@@ -825,30 +825,7 @@
       <p class="calendar-cta-note">Non trovi il tuo orario preferito? Contattami a <a href="mailto:pao.frigo@gmail.com">pao.frigo@gmail.com</a>.</p>
     </div>
 
-    <form action="https://formspree.io/f/maewgpdg" method="POST" id="form-iscrizione">
-      <div class="form-grid">
-        <div class="form-section-label">Dati personali</div>
-        <div class="form-group"><label for="nome">Nome e cognome <span class="req">*</span></label><input type="text" id="nome" name="Nome e cognome" placeholder="Mario Rossi" required></div>
-        <div class="form-group"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" placeholder="mario@email.com" required></div>
-        <div class="form-group"><label for="telefono">Numero di telefono</label><input type="tel" id="telefono" name="Telefono" placeholder="+39 333 000 0000"></div>
-        <div class="form-group full"><label for="motivazione">Cosa ti spinge a partecipare?</label><textarea id="motivazione" name="Motivazione" placeholder="Raccontami..."></textarea></div>
-
-        <div class="form-section-label">Dati per la fattura <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:11px">(necessari per l'emissione)</span></div>
-        <div class="form-group"><label for="fn">Intestatario <span class="req">*</span></label><input type="text" id="fn" name="Intestatario fattura" placeholder="Nome cognome o ragione sociale" required></div>
-        <div class="form-group"><label for="cf">Codice fiscale / P.IVA <span class="req">*</span></label><input type="text" id="cf" name="Codice fiscale P.IVA" placeholder="RSSMRA80A01H501U" required></div>
-        <div class="form-group full"><label for="fi">Indirizzo di fatturazione <span class="req">*</span></label><input type="text" id="fi" name="Indirizzo fatturazione" placeholder="Via, numero, CAP, Città" required></div>
-
-        <input type="hidden" name="Laboratorio" value="Guardare dentro, Tirtha di Pescantina, lunedì sera (28 set–30 nov 2026)">
-        <input type="hidden" name="_subject" value="Nuova iscrizione: Guardare dentro (lunedì)">
-
-        <div class="form-note">I tuoi dati sono trattati nel rispetto del GDPR e utilizzati esclusivamente per la gestione dell'iscrizione e l'emissione della fattura. Non verranno ceduti a terzi.</div>
-        <div class="submit-row"><button type="submit" class="btn-primary">Invia la mia iscrizione</button></div>
-      </div>
-    </form>
-    <div class="form-success" id="form-success">
-      <p class="form-success-title">Grazie, ho ricevuto la tua iscrizione.</p>
-      <p class="form-success-sub">Riceverai a breve una mail di conferma. Il posto è confermato al versamento dell'acconto di 100&nbsp;&euro;.</p>
-    </div>
+    <a class="btn-primary" href="index.html#contatti" style="display:block;text-align:center;text-decoration:none">Contattami →</a>
   </section>
 
 </main>
@@ -869,34 +846,5 @@
   <svg viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67a8.2 8.2 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c.01-4.55 3.71-8.24 8.25-8.24m-4.52 4.71c-.15 0-.4.06-.61.29-.21.24-.8.78-.8 1.9s.82 2.2.93 2.36c.12.15 1.6 2.5 3.97 3.44 1.97.78 2.37.63 2.79.59.43-.04 1.39-.57 1.58-1.11.2-.55.2-1.02.14-1.11-.06-.1-.21-.16-.44-.28-.24-.12-1.39-.69-1.6-.76-.22-.08-.37-.12-.53.12s-.61.76-.75.92-.28.18-.51.06c-.24-.12-1-.37-1.9-1.18-.7-.63-1.18-1.4-1.31-1.64-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.53-1.32-.74-1.8-.19-.47-.39-.4-.53-.41z"/></svg>
 </a>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-emailjs.init({ publicKey: '0AkARzNP-kAOqyljJ' });
-document.addEventListener('DOMContentLoaded', function(){
-  var form = document.getElementById('form-iscrizione');
-  if(!form) return;
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    var btn = form.querySelector('button[type=submit]');
-    btn.disabled = true; btn.textContent = 'Invio in corso...';
-    var nome = document.getElementById('nome').value.trim();
-    var email = document.getElementById('email').value.trim();
-    try{
-      var res = await fetch('https://formspree.io/f/maewgpdg', {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
-      if(res.ok){
-        try{ await emailjs.send('service_ppjkdgt','template_5mtts7j',{nome:nome,email:email}); }catch(ex){ console.warn('EmailJS:', ex); }
-        form.style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-      } else {
-        btn.disabled = false; btn.textContent = 'Invia la mia iscrizione';
-        alert('Errore. Scrivimi a pao.frigo@gmail.com');
-      }
-    } catch(err){
-      btn.disabled = false; btn.textContent = 'Invia la mia iscrizione';
-      alert('Errore di connessione. Scrivimi a pao.frigo@gmail.com');
-    }
-  });
-});
-</script>
 </body>
 </html>

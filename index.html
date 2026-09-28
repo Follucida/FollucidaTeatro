@@ -4,7 +4,7 @@
 <script defer src="/_vercel/insights/script.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Follucida Teatro — Paolo Frigo</title>
+<title>Follucida Teatro · Paolo Frigo</title>
 <meta name="description" content="Laboratori teatrali di Paolo Frigo. Pratiche teatrali per il lavoro su di sé, per aziende e gruppi organizzati. Verona.">
 <meta name="keywords" content="laboratorio teatrale Verona, teatro sociale, formazione teatrale, lavoro su di sé, teatro aziende, Paolo Frigo, Follucida Teatro">
 <meta name="author" content="Paolo Frigo">
@@ -14,14 +14,14 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://follucida-teatro-24v3.vercel.app/">
-<meta property="og:title" content="Follucida Teatro — Paolo Frigo">
+<meta property="og:title" content="Follucida Teatro · Paolo Frigo">
 <meta property="og:description" content="Laboratori teatrali per il lavoro su di sé e per aziende. Verona.">
 <meta property="og:image" content="https://follucida-teatro-24v3.vercel.app/img/ritratto-01.jpg">
 <meta property="og:locale" content="it_IT">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Follucida Teatro — Paolo Frigo">
+<meta name="twitter:title" content="Follucida Teatro · Paolo Frigo">
 <meta name="twitter:description" content="Laboratori teatrali per il lavoro su di sé e per aziende. Verona.">
 <meta name="twitter:image" content="https://follucida-teatro-24v3.vercel.app/img/ritratto-01.jpg">
 
@@ -95,8 +95,10 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .hero-eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2.5rem;font-weight:600}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.2rem);font-weight:500;line-height:1.08;margin-bottom:2rem;color:var(--ink)}
 .hero-title em{font-style:italic;color:var(--mauve)}
+.hero-quote{font-size:clamp(2.2rem,3.6vw,3.2rem);margin-bottom:.75rem}
+.hero-quote-author{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mauve);font-weight:600;margin-bottom:2rem}
 .hero-divider{width:3.5rem;height:3px;background:var(--sage);margin-bottom:2rem}
-.hero-sub{font-size:1rem;line-height:1.85;color:var(--muted);max-width:28rem;margin-bottom:3rem;font-weight:400}
+.hero-sub{font-size:1rem;line-height:1.85;color:var(--muted);max-width:34rem;margin-bottom:1.1rem;font-weight:400}
 .hero-cta{display:inline-flex;align-items:center;gap:.75rem;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:.25rem;width:fit-content;cursor:pointer;font-weight:600}
 .hero-right{position:relative;overflow:hidden;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;padding:3rem 2rem}
 .circle-solid{position:absolute;width:120px;height:120px;border-radius:50%;background:var(--sage-dark);bottom:3rem;left:-3rem;z-index:2;opacity:.7}
@@ -303,8 +305,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .cont-title em{font-style:italic;color:var(--sage-light)}
 .cont-sub{font-size:.97rem;line-height:1.85;color:rgba(245,240,232,.75);max-width:480px}
 
-.cont-body{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid #9EC0A2}
-.form-sec{padding:4rem 3rem;border-right:1px solid var(--line)}
+.cont-body{display:grid;grid-template-columns:1fr;border-bottom:3px solid #9EC0A2}
 .form-group{margin-bottom:2rem}
 .form-label-t{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.6rem;display:block;font-weight:600}
 .form-input{width:100%;padding:.85rem 0;border:none;border-bottom:2px solid var(--line);background:transparent;font-family:'Jost',sans-serif;font-size:.97rem;color:var(--ink);font-weight:400;outline:none;transition:border-color .2s}
@@ -313,7 +314,8 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .form-textarea:focus{border-bottom-color:var(--sage)}
 .form-select{width:100%;padding:.85rem 0;border:none;border-bottom:2px solid var(--line);background:transparent;font-family:'Jost',sans-serif;font-size:.97rem;color:var(--ink);font-weight:400;outline:none;appearance:none;cursor:pointer}
 
-.info-sec{padding:4rem 3rem;background:var(--sage-pale)}
+.info-sec{padding:4rem 3rem;background:var(--sage-pale);display:grid;grid-template-columns:repeat(3,1fr);gap:0 3rem}
+.info-sec .info-note{grid-column:1/-1}
 .info-block{margin-bottom:2.5rem}
 .info-block-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;font-weight:600}
 .info-block-value{font-size:1rem;color:var(--ink);line-height:1.7;font-weight:500}
@@ -425,18 +427,11 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
   /* Contatti */
   .cont-hero{padding:3rem 1.5rem}
   .cont-body{grid-template-columns:1fr}
-  .form-sec{padding:2.5rem 1.5rem;border-right:none;border-bottom:3px solid #9EC0A2}
-  .info-sec{padding:2.5rem 1.5rem}
+  .info-sec{padding:2.5rem 1.5rem;grid-template-columns:1fr}
 }
 
-/* ======== CAROSELLO ======== */
-.carousel{position:relative;width:100%;max-height:680px;overflow:hidden}
-.carousel-inner{display:flex;height:100%;transition:transform .7s ease}
-.carousel-slide{min-width:100%;height:100%;flex-shrink:0}
-.carousel-slide img{width:100%;max-height:680px;object-fit:contain;display:block;background:var(--bg-soft)}
-.carousel-dots{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:3}
-.carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:background .3s}
-.carousel-dot.active{background:#fff}
+/* ======== FOTO HERO ======== */
+.hero-photo{width:100%;max-height:680px;object-fit:contain;display:block;position:relative}
 
 /* carosello laboratori */
 .labs-carousel-wrap{position:relative;overflow:hidden;border-bottom:3px solid #9EC0A2}
@@ -487,33 +482,47 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <div class="circle-deco-2"></div>
     <div class="hero-left">
       <p class="hero-eyebrow">Paolo Frigo &nbsp;·&nbsp; Formatore teatrale</p>
-      <h1 class="hero-title">Uso il teatro<br>come <em>specchio.</em><br>Per conoscerti,<br>sceglierti.</h1>
+      <h1 class="hero-title hero-quote">«Il corpo sa cose che la testa <em>non sa ancora.</em>»</h1>
+      <p class="hero-quote-author">J. Lecoq</p>
       <div class="hero-divider"></div>
-      <p class="hero-sub">Attraverso pratiche teatrali e l'esperienza nel corpo, lavoriamo insieme per prendere in mano la propria vita e affrontare le proprie sfide con presenza e consapevolezza.</p>
-      <span class="hero-cta" onclick="showPage('laboratori')">Scopri i laboratori →</span>
+      <p class="hero-sub">Uso il teatro come strumento di formazione, per creare spazi in cui le persone possono osservarsi: i propri meccanismi, le abitudini e le sensazioni che di solito non si concedono di guardare.</p>
+      <p class="hero-sub">Lavoro con gruppi e team in contesti aziendali e formativi.<br>Non lezioni frontali: situazioni in cui si prova, si sbaglia, ci si ascolta davvero.<br>Con il corpo oltre che con la testa.</p>
+      <p class="hero-sub">Mi occupo di formazione relazionale per team e organizzazioni. Il mio focus sono le relazioni, la gestione del conflitto, la comunicazione autentica e la capacità di mettersi nei panni dell'altro.</p>
+      <p class="hero-sub">Il risultato più frequente? Le persone comunicano meglio, il gruppo si compatta, e qualcuno dice "non mi ero mai concesso di..."</p>
+      <p class="hero-sub">Se stai cercando qualcuno che sappia portare le persone a esprimersi meglio — creando gruppo, fiducia e un clima in cui ognuno si sente nella condizione di dire la sua — possiamo parlare.</p>
     </div>
     <div class="hero-right">
-      <div class="carousel" id="carousel-ritratto">
-        <div class="carousel-inner">
-          <div class="carousel-slide"><img src="img/ritratto-01.jpg" alt="Paolo Frigo"></div>
-          <div class="carousel-slide"><img src="img/ritratto-02.jpg" alt="Paolo Frigo"></div>
-        </div>
-        <div class="carousel-dots">
-          <div class="carousel-dot active" onclick="goTo('carousel-ritratto',0)"></div>
-          <div class="carousel-dot" onclick="goTo('carousel-ritratto',1)"></div>
-        </div>
-      </div>
+      <img class="hero-photo" src="img/ritratto-01.jpg" alt="Paolo Frigo">
       <div class="circle-solid"></div>
       <p style="position:absolute;bottom:.75rem;right:1rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(74,63,72,.5);z-index:3;font-weight:500">Foto di Elena Sartorari</p>
     </div>
   </section>
+
+  <div class="labs-carousel-wrap" id="carousel-labs-home">
+    <div class="labs-carousel-inner">
+      <div class="labs-carousel-slide"><img src="img/rimini-01.jpg" alt="Laboratorio"></div>
+      <div class="labs-carousel-slide"><img src="img/rimini-02.jpg" alt="Laboratorio"></div>
+      <div class="labs-carousel-slide"><img src="img/rimini-03.jpg" alt="Laboratorio"></div>
+      <div class="labs-carousel-slide"><img src="img/pratiche-01.jpg" alt="Pratiche teatrali"></div>
+      <div class="labs-carousel-slide"><img src="img/pratiche-02.jpg" alt="Pratiche teatrali"></div>
+      <div class="labs-carousel-slide"><img src="img/iochi-01.jpg" alt="Io... chi?"></div>
+    </div>
+    <div class="labs-carousel-dots">
+      <div class="labs-carousel-dot active" onclick="labsGoTo('carousel-labs-home',0)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs-home',1)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs-home',2)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs-home',3)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs-home',4)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs-home',5)"></div>
+    </div>
+  </div>
 
   <section class="section">
     <p class="section-label">Due percorsi</p>
     <div class="home-two-col">
       <div class="path-card" onclick="showPage('laboratori')">
         <p class="path-title">Per chi vuole<br>conoscersi più a fondo</p>
-        <p class="path-desc">Laboratori aperti a chiunque voglia usare il teatro come strumento di indagine interiore. Non serve esperienza — serve voglia di andare a fondo.</p>
+        <p class="path-desc">Laboratori aperti a chiunque voglia usare il teatro come strumento di indagine interiore. Non serve esperienza: serve voglia di andare a fondo.</p>
         <span class="path-link">Vedi i laboratori →</span>
       </div>
       <div class="path-card" onclick="showPage('aziende')">
@@ -553,20 +562,20 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
       <div class="labs-carousel-slide"><img src="img/iochi-01.jpg" alt="Io... chi?"></div>
     </div>
     <div class="labs-carousel-dots">
-      <div class="labs-carousel-dot active" onclick="labsGoTo(0)"></div>
-      <div class="labs-carousel-dot" onclick="labsGoTo(1)"></div>
-      <div class="labs-carousel-dot" onclick="labsGoTo(2)"></div>
-      <div class="labs-carousel-dot" onclick="labsGoTo(3)"></div>
-      <div class="labs-carousel-dot" onclick="labsGoTo(4)"></div>
-      <div class="labs-carousel-dot" onclick="labsGoTo(5)"></div>
+      <div class="labs-carousel-dot active" onclick="labsGoTo('carousel-labs',0)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs',1)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs',2)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs',3)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs',4)"></div>
+      <div class="labs-carousel-dot" onclick="labsGoTo('carousel-labs',5)"></div>
     </div>
   </div>
   <section class="cta-warm" style="text-align:center;margin:0 3rem">
-    <p class="cta-warm-title">«Io... chi?» — un dittico in due serate</p>
+    <p class="cta-warm-title">«Io... chi?»: un dittico in due serate</p>
     <p class="cta-warm-sub">Lo stesso tema, due direzioni, al Tirtha di Pescantina: <em>Guardare dentro</em> il lunedì sera e <em>Portare fuori</em> il giovedì sera. Da fine settembre a inizio dicembre 2026.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a class="btn-mauve" href="guardare-dentro.html">Guardare dentro — lunedì →</a>
-      <a class="btn-mauve" href="portare-fuori.html" style="background:var(--sage-dark)">Portare fuori — giovedì →</a>
+      <a class="btn-mauve" href="guardare-dentro.html">Guardare dentro (lunedì) →</a>
+      <a class="btn-mauve" href="portare-fuori.html" style="background:var(--sage-dark)">Portare fuori (giovedì) →</a>
     </div>
   </section>
   <footer>
@@ -582,7 +591,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <span style="font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:2rem;display:block;font-weight:600">Per aziende e gruppi organizzati</span>
     <h1 class="az-title">Il teatro come spazio<br>in cui le persone si<br>incontrano <em>davvero.</em></h1>
     <div class="az-divider"></div>
-    <p class="az-sub">Porto laboratori teatrali a team aziendali, cooperative, associazioni e gruppi di lavoro. Non esercizi teorici — esperienze concrete in cui le persone si incontrano con il corpo e con la presenza.</p>
+    <p class="az-sub">Porto laboratori teatrali a team aziendali, cooperative, associazioni e gruppi di lavoro. Non esercizi teorici, ma esperienze concrete in cui le persone si incontrano con il corpo e con la presenza.</p>
     <p class="az-note">Questi laboratori pongono una base solida di apertura, fiducia e collaborazione autentica tra le persone. Danno la possibilità di fare esperienza reale di dinamiche e competenze che nella vita professionale restano spesso solo teoria. Attraverso il corpo e l'esperienza, si vivono in prima persona situazioni e relazioni, per affrontarle poi con più consapevolezza nella realtà di ogni giorno.</p>
   </section>
   <section class="section">
@@ -590,11 +599,11 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <div class="az-two-col">
       <div>
         <p class="lead">"La voce, lo sguardo, il respiro, il movimento: tutto parla prima ancora che apriamo la bocca."</p>
-        <p class="body-text">Il teatro è uno strumento antico e potente per lavorare sulle relazioni umane. Nei laboratori che conduco, il corpo viene prima delle parole. Questo permette di accedere a dinamiche autentiche — quelle che nelle riunioni restano non dette.</p>
+        <p class="body-text">Il teatro è uno strumento antico e potente per lavorare sulle relazioni umane. Nei laboratori che conduco, il corpo viene prima delle parole. Questo permette di accedere a dinamiche autentiche, quelle che nelle riunioni restano non dette.</p>
       </div>
       <div>
         <p class="body-text" style="margin-bottom:1.5rem">Ogni laboratorio è adattabile nelle tempistiche secondo le esigenze della tua organizzazione. Non è richiesta alcuna esperienza teatrale.</p>
-        <p class="body-text"><strong style="font-weight:600;color:var(--ink)">Conduce Paolo Frigo</strong> &nbsp;—&nbsp; laureato in Scienze e Tecniche delle Arti e dello Spettacolo, specializzato in Teatro Sociale e nelle tecniche di Teatro dell'Oppresso.</p>
+        <p class="body-text"><strong style="font-weight:600;color:var(--ink)">Conduce Paolo Frigo</strong>, laureato in Scienze e Tecniche delle Arti e dello Spettacolo, specializzato in Teatro Sociale e nelle tecniche di Teatro dell'Oppresso.</p>
       </div>
     </div>
   </section>
@@ -724,37 +733,16 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   <section class="section" style="background:var(--bg-soft)">
     <p class="section-label">Tariffe di partecipazione</p>
     <div class="outcomes-list">
-      <div class="outcome"><div class="outcome-dash"></div><div class="outcome-text"><strong>🏷️ Quota standard</strong>560 € a persona, per l'intero percorso — 16 ore, 4 incontri da 4 ore.</div></div>
+      <div class="outcome"><div class="outcome-dash"></div><div class="outcome-text"><strong>🏷️ Quota standard</strong>560 € a persona, per l'intero percorso (16 ore, 4 incontri da 4 ore).</div></div>
       <div class="outcome"><div class="outcome-dash"></div><div class="outcome-text"><strong>👥 Sconto gruppo</strong>Dal terzo partecipante iscritto allo stesso laboratorio, sconto del 20%.</div></div>
     </div>
-    <p class="body-text" style="margin-top:1.5rem;font-size:.85rem;font-style:italic">Operazione esente IVA — Regime Forfettario.</p>
+    <p class="body-text" style="margin-top:1.5rem;font-size:.85rem;font-style:italic">Operazione esente IVA (Regime Forfettario).</p>
   </section>
 
   <section class="cta-warm" style="text-align:center">
     <p class="cta-warm-title">Porta una persona del tuo team.</p>
     <p class="cta-warm-sub">Scrivimi per il percorso condiviso o per un percorso su misura per la tua azienda.</p>
-    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;margin:0 auto;text-align:left">
-      <input type="hidden" name="_subject" value="Richiesta — Percorso condiviso">
-      <div class="form-group"><label class="form-label-t">Laboratorio</label><input class="form-input" type="text" name="oggetto" value="Percorso condiviso — per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
-      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
-      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="nome@azienda.it" required></div>
-      <div class="form-group"><label class="form-label-t">Data che ti interessa</label>
-        <select class="form-input" name="data" required style="background:transparent">
-          <option value="">Scegli una data</option>
-          <option value="14 ottobre">14 ottobre</option>
-          <option value="11 novembre">11 novembre</option>
-        </select>
-      </div>
-      <div class="form-group"><label class="form-label-t">Cosa ti interessa</label>
-        <select class="form-input" name="interesse" required style="background:transparent">
-          <option value="">Scegli un'opzione</option>
-          <option value="Percorso condiviso">Percorso condiviso, mando 1 o 2 persone</option>
-          <option value="Percorso su misura">Percorso su misura per la mia azienda</option>
-        </select>
-      </div>
-      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami qualcosa in più sulla tua richiesta"></textarea></div>
-      <button type="submit" class="btn-mauve">Scegli la tua data e prenota il tuo posto →</button>
-    </form>
+    <span class="btn-mauve" onclick="showPage('contatti')" style="position:relative;z-index:1">Contattami →</span>
   </section>
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
@@ -782,10 +770,10 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
       </div>
       <div class="az-lab-card" onclick="showPage('competenze-relazionali')">
         <div class="az-accent" style="background:var(--mauve)"></div>
-        <span class="az-lab-tag">Presenza &nbsp;·&nbsp; Comunicazione &nbsp;·&nbsp; Conflitto</span>
+        <span class="az-lab-tag">Leadership &nbsp;·&nbsp; Comunicazione &nbsp;·&nbsp; Conflitto</span>
         <p class="az-lab-name">Competenze Relazionali</p>
         <p class="az-lab-sub">Un percorso in tre laboratori</p>
-        <p class="az-lab-desc">Per PMI e professionisti per cui il dialogo, la vendita o la relazione con le persone sono centrali nel lavoro quotidiano. Il teatro come laboratorio pratico per capire come si comunica davvero e trasformare l'attrito in chiarezza.</p>
+        <p class="az-lab-desc">Per PMI e professionisti per cui il dialogo, la vendita o la relazione con le persone sono centrali nel lavoro quotidiano. Il teatro come laboratorio pratico per capire come si comunica davvero e trasformare l'attrito in forza.</p>
         <span class="az-lab-link">Scopri il percorso →</span>
       </div>
     </div>
@@ -795,7 +783,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <div class="how-grid">
       <div class="how-item"><div class="how-num">01</div><p class="how-title">Mi contatti</p><p class="how-desc">Raccontami il tuo gruppo e le esigenze. Definiremo insieme il laboratorio più adatto.</p></div>
       <div class="how-item"><div class="how-num">02</div><p class="how-title">Progettiamo</p><p class="how-desc">Ogni proposta è adattabile nelle tempistiche. Concordiamo data, spazio e logistica.</p></div>
-      <div class="how-item"><div class="how-num">03</div><p class="how-title">Facciamo</p><p class="how-desc">4 ore di lavoro vivo, con il corpo e con la presenza. Materiali a carico del formatore.</p></div>
+      <div class="how-item"><div class="how-num">03</div><p class="how-title">Facciamo</p><p class="how-desc">Lavoro vivo in presenza. Un laboratorio per corpo, mente e spirito. Materiali a carico del formatore.</p></div>
     </div>
   </section>
   <section class="cta-warm" style="text-align:center">
@@ -842,19 +830,19 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <div class="steps-line"></div>
     <div class="steps-grid steps-grid-3">
       <div class="step"><div class="step-num">01</div><p class="step-title">Gioco e movimento</p><p class="step-desc">La prima parte della giornata, per rompere il ghiaccio e mettersi in gioco insieme.</p></div>
-      <div class="step"><div class="step-num">02</div><p class="step-title">Coppie e piccoli gruppi</p><p class="step-desc">Nella parte centrale, attività a coppie e in piccoli gruppi.</p></div>
+      <div class="step"><div class="step-num">02</div><p class="step-title">Grandi e piccoli gruppi</p><p class="step-desc">L'attività principale sarà fatta di giochi teatrali, improvvisazioni e creazioni.</p></div>
       <div class="step"><div class="step-num">03</div><p class="step-title">Condivisione collettiva</p><p class="step-desc">Un momento conclusivo di condivisione con tutto il gruppo.</p></div>
     </div>
     <div style="background:var(--sage-pale);padding:2rem;border-left:3px solid var(--sage);margin-top:2.5rem;max-width:760px">
       <p style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;font-weight:600">La restituzione</p>
-      <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Dopo ogni attività, ampio spazio alla restituzione: si mette in parole cosa è successo e cosa si porta nel lavoro di ogni giorno. È una parte centrale della giornata, tanto quanto il gioco stesso.</p>
+      <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Dopo le attività, ampio spazio alla restituzione: si verbalizza l'esperienza, per poterla portare anche nel lavoro di ogni giorno. È una parte centrale della giornata, tanto quanto il gioco stesso.</p>
     </div>
   </section>
 
   <section class="section">
     <p class="section-label">Cosa porti a casa</p>
     <div class="outcomes-grid">
-      <div class="outcome-card"><strong>Un gruppo che si conosce meglio</strong><p>Più occasioni per incontrarsi al di là dei compiti di ogni giorno.</p></div>
+      <div class="outcome-card"><strong>Un gruppo che si conosce meglio</strong><p>Un'occasione per incontrarsi al di là dei compiti di ogni giorno.</p></div>
       <div class="outcome-card"><strong>Relazioni più solide</strong><p>Una base su cui costruire, nel tempo, un modo di lavorare più affiatato.</p></div>
       <div class="outcome-card"><strong>Divertendosi</strong><p>Il tutto, costruito attraverso il gioco e il divertimento.</p></div>
     </div>
@@ -863,14 +851,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   <section class="cta-warm" style="text-align:center">
     <p class="cta-warm-title">Portiamo questa giornata nel tuo gruppo.</p>
     <p class="cta-warm-sub">Durata e costi vengono concordati secondo le esigenze della tua organizzazione. Scrivimi per parlare del tuo contesto.</p>
-    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;margin:0 auto;text-align:left">
-      <input type="hidden" name="_subject" value="Richiesta — Team Building">
-      <div class="form-group"><label class="form-label-t">Proposta</label><input class="form-input" type="text" name="oggetto" value="Team Building — una giornata per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
-      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
-      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
-      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami il tuo gruppo..."></textarea></div>
-      <button type="submit" class="btn-mauve">Scrivimi →</button>
-    </form>
+    <span class="btn-mauve" onclick="showPage('contatti')" style="position:relative;z-index:1">Contattami →</span>
   </section>
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
@@ -916,7 +897,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   </section>
 
   <section class="section">
-    <p class="section-label">I tre laboratori — cosa porti a casa</p>
+    <p class="section-label">I tre laboratori: cosa porti a casa</p>
     <div class="az-labs">
       <div class="az-lab-card" onclick="showPage('stare')">
         <div class="az-accent" style="background:var(--sage-dark)"></div>
@@ -975,14 +956,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   <section class="cta-warm" style="text-align:center">
     <p class="cta-warm-title">Portiamo questo percorso nella tua organizzazione.</p>
     <p class="cta-warm-sub">Durata e costi vengono concordati secondo le esigenze della tua organizzazione. Scrivimi per parlare del tuo contesto.</p>
-    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;margin:0 auto;text-align:left">
-      <input type="hidden" name="_subject" value="Richiesta — Competenze Relazionali">
-      <div class="form-group"><label class="form-label-t">Percorso</label><input class="form-input" type="text" name="oggetto" value="Competenze Relazionali — percorso per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
-      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
-      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
-      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami il tuo gruppo..."></textarea></div>
-      <button type="submit" class="btn-mauve">Scrivimi →</button>
-    </form>
+    <span class="btn-mauve" onclick="showPage('contatti')" style="position:relative;z-index:1">Contattami →</span>
   </section>
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
@@ -1065,14 +1039,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   <section class="cta-warm" style="text-align:center">
     <p class="cta-warm-title">Portiamo questo lavoro nel tuo gruppo.</p>
     <p class="cta-warm-sub">Durata e costi vengono concordati secondo le esigenze della tua organizzazione. Scrivimi per parlare del tuo contesto.</p>
-    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;margin:0 auto;text-align:left">
-      <input type="hidden" name="_subject" value="Richiesta — La Stessa Strada">
-      <div class="form-group"><label class="form-label-t">Laboratorio</label><input class="form-input" type="text" name="oggetto" value="La Stessa Strada — laboratorio per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
-      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
-      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
-      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami il tuo gruppo..."></textarea></div>
-      <button type="submit" class="btn-mauve">Scrivimi →</button>
-    </form>
+    <span class="btn-mauve" onclick="showPage('contatti')" style="position:relative;z-index:1">Contattami →</span>
   </section>
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
@@ -1165,14 +1132,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <div class="dap-cta-diag"></div>
     <p class="dap-cta-title">Trasformiamo le tensioni in risorsa.</p>
     <p class="dap-cta-sub">Durata e costi vengono concordati secondo le esigenze della tua organizzazione. Scrivimi per parlare del tuo contesto.</p>
-    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;position:relative;z-index:1;text-align:left">
-      <input type="hidden" name="_subject" value="Richiesta — Dall'Altra Parte">
-      <div class="form-group"><label class="form-label-t" style="color:var(--sage-light)">Laboratorio</label><input class="form-input" type="text" name="oggetto" value="Dall'Altra Parte — laboratorio per aziende" readonly style="color:var(--sage-light);font-weight:500;border-bottom-color:rgba(158,192,162,.4)"></div>
-      <div class="form-group"><label class="form-label-t" style="color:var(--sage-light)">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required style="color:var(--cream);border-bottom-color:rgba(158,192,162,.4)"></div>
-      <div class="form-group"><label class="form-label-t" style="color:var(--sage-light)">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required style="color:var(--cream);border-bottom-color:rgba(158,192,162,.4)"></div>
-      <div class="form-group"><label class="form-label-t" style="color:var(--sage-light)">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami il tuo gruppo..." style="color:var(--cream);border-bottom-color:rgba(158,192,162,.4)"></textarea></div>
-      <button type="submit" class="btn-sage-outline">Scrivimi →</button>
-    </form>
+    <span class="btn-sage-outline" onclick="showPage('contatti')" style="position:relative;z-index:1">Contattami →</span>
   </section>
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
@@ -1256,14 +1216,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
 
   <section class="stare-cta" style="flex-direction:column;align-items:flex-start;gap:2.5rem">
     <p class="stare-cta-title">Portiamo la presenza nel tuo team.</p>
-    <form action="https://formspree.io/f/xykvvegn" method="POST" style="max-width:480px;width:100%">
-      <input type="hidden" name="_subject" value="Richiesta — Stare">
-      <div class="form-group"><label class="form-label-t">Laboratorio</label><input class="form-input" type="text" name="oggetto" value="Stare — laboratorio per aziende" readonly style="color:var(--sage-dark);font-weight:500"></div>
-      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
-      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
-      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami il tuo gruppo..."></textarea></div>
-      <button type="submit" class="btn-ink">Scrivimi →</button>
-    </form>
+    <span class="btn-ink" onclick="showPage('contatti')" style="position:relative;z-index:1">Contattami →</span>
   </section>
   <footer><div class="footer-logo">Follucida Teatro</div><span style="font-size:.78rem;color:rgba(245,240,232,.75);letter-spacing:.1em;font-weight:500">pao.frigo@gmail.com &nbsp;·&nbsp; 349.51.22.159</span></footer>
 </div>
@@ -1297,7 +1250,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <div class="formation-3">
       <div class="fi"><p class="fl">Formazione</p><p class="fv">Scienze e Tecniche delle Arti e dello Spettacolo</p></div>
       <div class="fi"><p class="fl">Specializzazione</p><p class="fv">Teatro Sociale &amp; Teatro dell'Oppresso</p></div>
-      <div class="fi"><p class="fl">Regia</p><p class="fv">"Insogna" — novembre 2024</p></div>
+      <div class="fi"><p class="fl">Regia</p><p class="fv">"Insogna", novembre 2024</p></div>
     </div>
   </section>
   <section class="foto-section">
@@ -1323,14 +1276,6 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <p class="cont-sub">Che tu voglia partecipare a un laboratorio o portare un percorso nella tua organizzazione, scrivimi. Rispondo entro 48 ore.</p>
   </section>
   <section class="cont-body">
-    <form class="form-sec" action="https://formspree.io/f/xykvvegn" method="POST">
-      <input type="hidden" name="_subject" value="Nuovo messaggio — Follucida Teatro">
-      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
-      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
-      <div class="form-group"><label class="form-label-t">Oggetto</label><input class="form-input" type="text" name="oggetto" placeholder="Di cosa vuoi scrivermi?" required></div>
-      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami..."></textarea></div>
-      <button type="submit" class="btn-sage-solid">Invia messaggio</button>
-    </form>
     <div class="info-sec">
       <div class="info-block"><p class="info-block-label">Email</p><p class="info-block-value"><a href="mailto:pao.frigo@gmail.com">pao.frigo@gmail.com</a></p></div>
       <div class="info-block">
@@ -1351,7 +1296,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
           <a href="https://www.linkedin.com/in/paolofrigo79/" target="_blank">LinkedIn</a>
         </p>
       </div>
-      <div class="info-note">Ogni proposta per aziende è adattabile nelle tempistiche. Scrivimi per raccontarmi il tuo contesto — ti rispondo con una proposta su misura.</div>
+      <div class="info-note">Ogni proposta per aziende è adattabile nelle tempistiche. Scrivimi per raccontarmi il tuo contesto: ti rispondo con una proposta su misura.</div>
     </div>
   </section>
   <footer>
@@ -1360,33 +1305,7 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
   </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-emailjs.init({ publicKey: '0AkARzNP-kAOqyljJ' });
-
-let reframeParticipantCount = 1;
-function addParticipant() {
-  reframeParticipantCount++;
-  const n = reframeParticipantCount;
-  const div = document.createElement('div');
-  div.className = 'reveal-fields';
-  div.id = 'participant-' + n;
-  div.innerHTML =
-    '<div class="fb-section-label participant-label">Partecipante ' + n +
-    '<span class="remove-participant" onclick="removeParticipant(' + n + ')">Rimuovi ✕</span></div>' +
-    '<label>Nome e Cognome Partecipante ' + n + '</label>' +
-    '<input type="text" name="p' + n + '_nome">' +
-    '<label>Email Partecipante ' + n + '</label>' +
-    '<input type="email" name="p' + n + '_email">' +
-    '<label>Telefono / WhatsApp Partecipante ' + n + '</label>' +
-    '<input type="tel" name="p' + n + '_telefono">';
-  document.getElementById('extra-participants').appendChild(div);
-}
-function removeParticipant(n) {
-  const el = document.getElementById('participant-' + n);
-  if (el) el.remove();
-}
-
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
@@ -1420,96 +1339,22 @@ window.addEventListener('popstate', () => {
   showPage(hash || 'home');
 });
 
-// Invio AJAX per tutti i form Formspree
-document.addEventListener('submit', async function(e) {
-  const form = e.target;
-  if (!form.action.includes('formspree.io')) return;
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  const originalText = btn.textContent;
-  btn.textContent = 'Invio in corso...';
-  btn.disabled = true;
-  const formData = new FormData(form);
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      if (form.id === 'reframe-form') {
-        const reframeEmail = formData.get('p1_email');
-        if (reframeEmail) {
-          emailjs.send('service_ppjkdgt', 'template_tsq0c2h', Object.fromEntries(formData.entries()))
-            .catch(err => console.error('Errore invio mail di conferma EmailJS:', err));
-        }
-        form.innerHTML = `
-          <div style="padding:2rem 0;text-align:left">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--mauve-dark);margin-bottom:.75rem">Iscrizione ricevuta!</p>
-            <p style="font-size:.95rem;color:#4A3D41;line-height:1.8;margin-bottom:1rem">Ecco le coordinate per il bonifico. Le riceverai anche via email a breve.</p>
-            <div class="iban-box">
-              <p><strong>Intestatario:</strong> Frigo Paolo</p>
-              <p><strong>Banca:</strong> Banco BPM</p>
-              <p><strong>IBAN:</strong> IT06 J050 3401 7530 0000 0043 677</p>
-              <p><strong>BIC/SWIFT:</strong> BAPPIT22XXX</p>
-            </div>
-          </div>`;
-      } else {
-        form.innerHTML = `
-          <div style="padding:2rem 0;text-align:center">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--sage-dark);margin-bottom:.75rem">Grazie per averci scritto.</p>
-            <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Ti risponderemo il prima possibile.</p>
-          </div>`;
-      }
-    } else {
-      btn.textContent = originalText;
-      btn.disabled = false;
-      alert('Qualcosa è andato storto. Riprova o scrivimi direttamente a pao.frigo@gmail.com');
-    }
-  } catch {
-    btn.textContent = originalText;
-    btn.disabled = false;
-    alert('Errore di connessione. Riprova o scrivimi direttamente a pao.frigo@gmail.com');
-  }
-});
+// Caroselli laboratori (home + laboratori)
+const labsIdx = {};
 
-// Caroselli ritratto (home + chi sono)
-const ritrattoCfg = [
-  { id: 'carousel-ritratto', total: 2 },
-  { id: 'carousel-ritratto-chi', total: 2 }
-];
-const ritrattoIdx = {};
-ritrattoCfg.forEach(cfg => { ritrattoIdx[cfg.id] = 0; });
-
-function goTo(id, idx) {
+function labsGoTo(id, idx) {
   const el = document.getElementById(id);
   if (!el) return;
-  const cfg = ritrattoCfg.find(c => c.id === id);
-  ritrattoIdx[id] = idx;
-  el.querySelector('.carousel-inner').style.transform = `translateX(-${idx * 100}%)`;
-  el.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
-}
-
-ritrattoCfg.forEach(cfg => {
-  setInterval(() => {
-    const next = (ritrattoIdx[cfg.id] + 1) % cfg.total;
-    goTo(cfg.id, next);
-  }, 4000);
-});
-
-// Carosello laboratori
-let labsIdx = 0;
-const labsTotal = 6;
-
-function labsGoTo(idx) {
-  labsIdx = idx;
-  const el = document.getElementById('carousel-labs');
-  if (!el) return;
+  labsIdx[id] = idx;
   el.querySelector('.labs-carousel-inner').style.transform = `translateX(-${idx * 100}%)`;
   el.querySelectorAll('.labs-carousel-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
 }
 
-setInterval(() => { labsGoTo((labsIdx + 1) % labsTotal); }, 3500);
+['carousel-labs-home', 'carousel-labs'].forEach(id => {
+  labsIdx[id] = 0;
+  const total = document.querySelectorAll('#' + id + ' .labs-carousel-slide').length;
+  setInterval(() => { labsGoTo(id, (labsIdx[id] + 1) % total); }, 3500);
+});
 </script>
 
 </body>
