@@ -88,7 +88,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);font-weight:600}
 
 /* ======== HOME ======== */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:85vh;border-bottom:3px solid #9EC0A2;position:relative;overflow:hidden}
+.hero{display:grid;grid-template-columns:1.6fr 1fr;min-height:85vh;border-bottom:3px solid #9EC0A2;position:relative;overflow:hidden}
 .circle-deco{position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(106,148,112,0.18);top:-80px;left:-120px;pointer-events:none;z-index:0}
 .circle-deco-2{position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(212,160,176,0.22);bottom:60px;left:200px;pointer-events:none;z-index:0}
 .hero-left{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line);position:relative;z-index:1;border-left:10px solid var(--sage-dark)}
@@ -98,7 +98,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .hero-quote{font-size:clamp(2.2rem,3.6vw,3.2rem);margin-bottom:.75rem}
 .hero-quote-author{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mauve);font-weight:600;margin-bottom:2rem}
 .hero-divider{width:3.5rem;height:3px;background:var(--sage);margin-bottom:2rem}
-.hero-sub{font-size:1rem;line-height:1.85;color:var(--muted);max-width:34rem;margin-bottom:1.1rem;font-weight:400}
+.hero-sub{font-size:1rem;line-height:1.85;color:var(--muted);max-width:42rem;margin-bottom:1.1rem;font-weight:400}
 .hero-cta{display:inline-flex;align-items:center;gap:.75rem;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:.25rem;width:fit-content;cursor:pointer;font-weight:600}
 .hero-right{position:relative;overflow:hidden;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;padding:3rem 2rem}
 .circle-solid{position:absolute;width:120px;height:120px;border-radius:50%;background:var(--sage-dark);bottom:3rem;left:-3rem;z-index:2;opacity:.7}
@@ -305,7 +305,8 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .cont-title em{font-style:italic;color:var(--sage-light)}
 .cont-sub{font-size:.97rem;line-height:1.85;color:rgba(245,240,232,.75);max-width:480px}
 
-.cont-body{display:grid;grid-template-columns:1fr;border-bottom:3px solid #9EC0A2}
+.cont-body{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid #9EC0A2}
+.form-sec{padding:4rem 3rem;border-right:1px solid var(--line)}
 .form-group{margin-bottom:2rem}
 .form-label-t{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.6rem;display:block;font-weight:600}
 .form-input{width:100%;padding:.85rem 0;border:none;border-bottom:2px solid var(--line);background:transparent;font-family:'Jost',sans-serif;font-size:.97rem;color:var(--ink);font-weight:400;outline:none;transition:border-color .2s}
@@ -314,8 +315,7 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
 .form-textarea:focus{border-bottom-color:var(--sage)}
 .form-select{width:100%;padding:.85rem 0;border:none;border-bottom:2px solid var(--line);background:transparent;font-family:'Jost',sans-serif;font-size:.97rem;color:var(--ink);font-weight:400;outline:none;appearance:none;cursor:pointer}
 
-.info-sec{padding:4rem 3rem;background:var(--sage-pale);display:grid;grid-template-columns:repeat(3,1fr);gap:0 3rem}
-.info-sec .info-note{grid-column:1/-1}
+.info-sec{padding:4rem 3rem;background:var(--sage-pale)}
 .info-block{margin-bottom:2.5rem}
 .info-block-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.75rem;font-weight:600}
 .info-block-value{font-size:1rem;color:var(--ink);line-height:1.7;font-weight:500}
@@ -427,11 +427,12 @@ footer{padding:1.75rem 3rem;display:flex;justify-content:space-between;align-ite
   /* Contatti */
   .cont-hero{padding:3rem 1.5rem}
   .cont-body{grid-template-columns:1fr}
-  .info-sec{padding:2.5rem 1.5rem;grid-template-columns:1fr}
+  .form-sec{padding:2.5rem 1.5rem;border-right:none;border-bottom:3px solid #9EC0A2}
+  .info-sec{padding:2.5rem 1.5rem}
 }
 
 /* ======== FOTO HERO ======== */
-.hero-photo{width:100%;max-height:680px;object-fit:contain;display:block;position:relative}
+.hero-photo{width:auto;max-width:100%;max-height:340px;object-fit:contain;display:block;position:relative}
 
 /* carosello laboratori */
 .labs-carousel-wrap{position:relative;overflow:hidden;border-bottom:3px solid #9EC0A2}
@@ -1276,6 +1277,14 @@ src="https://www.facebook.com/tr?id=1037557170704097&ev=PageView&noscript=1"
     <p class="cont-sub">Che tu voglia partecipare a un laboratorio o portare un percorso nella tua organizzazione, scrivimi. Rispondo entro 48 ore.</p>
   </section>
   <section class="cont-body">
+    <form class="form-sec" action="https://formspree.io/f/xykvvegn" method="POST">
+      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Follucida Teatro">
+      <div class="form-group"><label class="form-label-t">Nome e cognome</label><input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required></div>
+      <div class="form-group"><label class="form-label-t">Email</label><input class="form-input" type="email" name="email" placeholder="la@tua.email" required></div>
+      <div class="form-group"><label class="form-label-t">Oggetto</label><input class="form-input" type="text" name="oggetto" placeholder="Di cosa vuoi scrivermi?" required></div>
+      <div class="form-group"><label class="form-label-t">Messaggio</label><textarea class="form-textarea" name="messaggio" placeholder="Raccontami..."></textarea></div>
+      <button type="submit" class="btn-sage-solid">Invia messaggio</button>
+    </form>
     <div class="info-sec">
       <div class="info-block"><p class="info-block-label">Email</p><p class="info-block-value"><a href="mailto:pao.frigo@gmail.com">pao.frigo@gmail.com</a></p></div>
       <div class="info-block">
@@ -1337,6 +1346,39 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('popstate', () => {
   const hash = location.hash.replace('#', '');
   showPage(hash || 'home');
+});
+
+// Invio AJAX del form contatti (Formspree)
+document.addEventListener('submit', async function(e) {
+  const form = e.target;
+  if (!form.action.includes('formspree.io')) return;
+  e.preventDefault();
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = 'Invio in corso...';
+  btn.disabled = true;
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.innerHTML = `
+        <div style="padding:2rem 0;text-align:center">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--sage-dark);margin-bottom:.75rem">Grazie per averci scritto.</p>
+          <p style="font-size:.95rem;color:var(--muted);line-height:1.8">Ti risponderemo il prima possibile.</p>
+        </div>`;
+    } else {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      alert('Qualcosa è andato storto. Riprova o scrivimi direttamente a pao.frigo@gmail.com');
+    }
+  } catch {
+    btn.textContent = originalText;
+    btn.disabled = false;
+    alert('Errore di connessione. Riprova o scrivimi direttamente a pao.frigo@gmail.com');
+  }
 });
 
 // Caroselli laboratori (home + laboratori)
